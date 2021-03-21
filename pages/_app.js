@@ -1,7 +1,7 @@
 import "../styles/globals.css";
 import Head from "next/head";
 import Layout from "../components/Layout";
-// import Header from "../components/Header";
+import Header from "../components/Header";
 import Footer from "../components/Footer";
 
 function MyApp({ Component, pageProps }) {
@@ -18,7 +18,7 @@ function MyApp({ Component, pageProps }) {
         <link rel="icon" href="./favicon-white.png" type="image/png" />
         <title>Bilpo</title>
       </Head>
-      {/* <Header /> */}
+      <Header />
       <Component {...pageProps} />
       <Footer />
     </Layout>

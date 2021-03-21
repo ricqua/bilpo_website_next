@@ -3,6 +3,7 @@
   --viewDesktopWide: 1250px;
   --viewMobileWide: 900px;
   --viewMobileNormal: 400px;
+  --clr-darkGray: rgb(92, 92, 92);
 }
 
 html,
@@ -36,7 +37,7 @@ h1 {
 }
 
 h2 {
-  color: rgb(92, 92, 92);
+  color: var(--clr-darkGray);
   font-size: 36px;
   text-align: center;
   font-style: normal;
@@ -46,7 +47,7 @@ h2 {
 }
 
 p {
-  color: rgb(92, 92, 92);
+  color: var(--clr-darkGray);
   text-align: center;
   font-size: 1em;
   /* font-family: "Barlow", "NanumGothicCoding", "Apple SD Gothic Neo",
