@@ -1,6 +1,7 @@
 .merch_main {
   padding-top: 5em;
   background: var(--gradient-dark1);
+  padding-bottom: 3rem;
 }
 
 .merch_main h2 {
@@ -14,6 +15,7 @@
   max-width: 1200px;
   margin: auto;
   display: flex;
+  flex-flow: row wrap;
   justify-content: space-around;
 }
 .merch_card {
@@ -29,7 +31,7 @@
 }
 
 .merch_card img {
-  max-width: 400px;
+  max-width: 90%;
 }
 
 @media screen and (min-width: 1000px) {
