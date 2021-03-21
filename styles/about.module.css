@@ -1,11 +1,13 @@
 .aboutSplash_Section {
-  height: 540px;
+  height: 640px;
   background: grey;
   display: flex;
   justify-content: center;
   align-items: center;
   background-image: url("../public/aboutImages/Cape-Town-Table-Mountain.jpg");
-  width: 100vw;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .main {
