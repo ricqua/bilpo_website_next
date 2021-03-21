@@ -10,7 +10,7 @@ export default function About() {
       </Head>
 
       <div className={styles.aboutSplash_Section}>
-        <h1>About</h1>
+        <h1>회사소개</h1>
       </div>
       <main className={styles.main}>
         <section className={styles.section}>

@@ -20,23 +20,33 @@ function Header() {
         <nav className={styles.nav}>
           <ul>
             <li>
+              <Link className={styles.link} href="/home">
+                <label>홈</label>
+              </Link>
+            </li>
+            <li>
+              <Link className={styles.link} href="/giftsets">
+                <label>선물세트</label>
+              </Link>
+            </li>
+            <li>
+              <Link className={styles.link} href="/biltong">
+                <label>빌통</label>
+              </Link>
+            </li>
+            <li>
+              <Link className={styles.link} href="/merchandise">
+                <label>상품</label>
+              </Link>
+            </li>
+            <li>
               <Link className={styles.link} href="/about">
-                <label>About</label>
-              </Link>
-            </li>
-            <li>
-              <Link className={styles.link} href="/service">
-                <label>services</label>
-              </Link>
-            </li>
-            <li>
-              <Link className={styles.link} href="/projects">
-                <label>projects</label>
+                <label>회사소개</label>
               </Link>
             </li>
             <li>
               <Link className={styles.link} href="/contact">
-                <label>contact</label>
+                <label>고객센터</label>
               </Link>
             </li>
           </ul>
