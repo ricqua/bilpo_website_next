@@ -1,3 +1,10 @@
+:root {
+  --viewDesktopFull: 100vw;
+  --viewDesktopWide: 1250px;
+  --viewMobileWide: 900px;
+  --viewMobileNormal: 400px;
+}
+
 html,
 body {
   padding: 0;
@@ -6,11 +13,45 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
+}
+
+h1 {
+  color: rgb(255, 255, 255);
+  text-align: center;
+  font-size: 2.571em;
+  line-height: 1.2;
+  font-style: normal;
+  font-weight: normal;
+  /* font-family: "Barlow", "NanumGothicCoding", "Apple SD Gothic Neo",
+    "Malgun Gothic", "Nanum Gothic", "Noto Sans", "sans-serif"; */
+}
+
+h2 {
+  color: rgb(92, 92, 92);
+  font-size: 36px;
+  text-align: center;
+  font-style: normal;
+  font-weight: normal;
+  /* font-family: "Barlow", "NanumGothicCoding", "Apple SD Gothic Neo",
+    "Malgun Gothic", "Nanum Gothic", "Noto Sans", "sans-serif"; */
+}
+
+p {
+  color: rgb(92, 92, 92);
+  text-align: center;
+  font-size: 1em;
+  /* font-family: "Barlow", "NanumGothicCoding", "Apple SD Gothic Neo",
+    "Malgun Gothic", "Nanum Gothic", "Noto Sans", "sans-serif"; */
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1.6rem;
 }

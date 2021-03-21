@@ -1,0 +1,40 @@
+.aboutSplash_Section {
+  height: 540px;
+  background: grey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../public/aboutImages/Cape-Town-Table-Mountain.jpg");
+  width: 100vw;
+}
+
+.main {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.section {
+  /* background: green; */
+  width: 850px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section h2 {
+  margin-top: 2em;
+}
+
+.section p {
+  margin: 1.25em 1em;
+}
+
+.section br {
+  margin: 1em;
+}
+
+.section img {
+  margin-top: 1em;
+  width: 100%;
+}
