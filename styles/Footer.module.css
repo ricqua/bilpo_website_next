@@ -25,22 +25,33 @@
   text-align: left;
   font-size: 0.8em;
 }
-
-.socialDiv p a {
-  display: flex;
-  align-items: center;
+.socialCard {
+  /* border: 1px solid black; */
+  margin: 1em;
 }
 
-.socialDiv p a {
+.socialCard {
   display: flex;
   align-items: center;
-  font-size: 1rem;
   text-decoration: none;
+  cursor: pointer;
+  transition: transform ease-in-out 150ms;
 }
 
-.socialDiv img {
+.socialCard label {
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+
+.socialCard:hover {
+  /* background: red; */
+  transform: scale(1.05, 1.05);
+  transition: transform ease-in-out 150ms;
+}
+
+.socialCard img {
   height: 2em;
-  margin: 0.5em;
+  margin-right: 0.5em;
 }
 
 .copyrightNotice {

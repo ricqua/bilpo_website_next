@@ -20,28 +20,29 @@ function Footer() {
             <p>계좌 번호: 110-453-949540</p>
             <p>황문성 (빌포푸드) </p>
           </div>
-          <div className={styles.socialDiv}>
+          <div>
             <strong>Follow us:</strong>
-            <p>
-              <a target="_blank" href="https://www.instagram.com/bilpofood/">
-                <img
-                  className={styles.socialIcon}
-                  src="./socialIcons/instagramIcon(colorGradients_simple).svg"
-                  alt="Instagram icon"
-                />
-                <p> /BilpoFood</p>
-              </a>
-            </p>
-            <p>
-              <a target="_blank" href="https://www.facebook.com/bilpofoods/">
-                <img
-                  className={styles.socialIcon}
-                  src="./socialIcons/facebookIcon.svg"
-                  alt="Facebook icon"
-                />
-                <p> /BilpoFood</p>
-              </a>
-            </p>
+
+            <a
+              className={styles.socialCard}
+              target="_blank"
+              href="https://www.instagram.com/bilpofood/"
+            >
+              <img
+                src="./socialIcons/instagramIcon(colorGradients_simple).svg"
+                alt="Instagram icon"
+              />
+              <label> /BilpoFood</label>
+            </a>
+
+            <a
+              className={styles.socialCard}
+              target="_blank"
+              href="https://www.facebook.com/BilpoFoods/"
+            >
+              <img src="./socialIcons/facebookIcon.svg" alt="Facebook icon" />
+              <label> /BilpoFoods</label>
+            </a>
           </div>
           <div>
             <p>
