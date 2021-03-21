@@ -4,6 +4,8 @@
   --viewMobileWide: 900px;
   --viewMobileNormal: 400px;
   --clr-darkGray: rgb(92, 92, 92);
+  --gradient-light1: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+  --gradient-dark1: linear-gradient(to right, #434343 0%, black 100%);
 }
 
 html,

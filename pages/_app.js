@@ -11,10 +11,7 @@ function MyApp({ Component, pageProps }) {
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta httpEquiv="X-UA-Compatible" content="ie-edge" />
-        <meta
-          name="description"
-          content="SiamLocalise is a translation and content localisation agency with a strong presence in the Thai and Chinese markets."
-        />
+        <meta name="description" content="Bilpo" />
         <link rel="icon" href="./favicon-white.png" type="image/png" />
         <title>Bilpo</title>
       </Head>

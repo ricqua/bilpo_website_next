@@ -26,6 +26,23 @@
   font-size: 0.8em;
 }
 
+.socialDiv p a {
+  display: flex;
+  align-items: center;
+}
+
+.socialDiv p a {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+.socialDiv img {
+  height: 2em;
+  margin: 0.5em;
+}
+
 .copyrightNotice {
   display: flex;
   justify-content: center;

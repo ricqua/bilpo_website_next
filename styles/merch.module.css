@@ -1,0 +1,45 @@
+.merch_main {
+  padding-top: 5em;
+  background: var(--gradient-dark1);
+}
+
+.merch_main h2 {
+  margin-top: 4em;
+  text-align: center;
+  color: white;
+  margin: 1em;
+}
+
+.merch_cards {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+}
+.merch_card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2em;
+}
+
+.merch_card p {
+  color: white;
+  margin-top: 1em;
+}
+
+.merch_card img {
+  max-width: 400px;
+}
+
+@media screen and (min-width: 1000px) {
+  .merch_card {
+    transition: transform ease-in-out 250ms;
+    cursor: pointer;
+  }
+
+  .merch_card:hover {
+    transform: scale(1.05, 1.05);
+    transition: transform ease-in-out 250ms;
+  }
+}
