@@ -1,0 +1,69 @@
+.footerSection {
+  width: 100%;
+  margin-top: 2em;
+  border-top: 1px solid darkgray;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: auto;
+
+    div {
+      margin: 1em 1em;
+      flex-grow: 1;
+
+      p,
+      strong {
+        font-size: 0.8rem;
+        line-height: 0.8rem;
+        margin: 1rem;
+      }
+    }
+  }
+}
+
+.socialCard {
+  margin: 1em;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform ease-in-out 150ms;
+
+  label {
+    cursor: pointer;
+    font-size: 0.8rem;
+  }
+
+  &:hover {
+    /* background: red; */
+    transform: scale(1.05, 1.05);
+    transition: transform ease-in-out 150ms;
+  }
+
+  img {
+    height: 2em;
+    margin-right: 0.5em;
+  }
+}
+
+.copyrightNotice {
+  display: flex;
+  justify-content: center;
+  font-size: 0.8rem;
+  margin: 1em 0;
+}
+
+@media (min-width: 1440px) {
+  .footerSection__wrapper {
+    width: 1440px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: auto;
+  }
+}

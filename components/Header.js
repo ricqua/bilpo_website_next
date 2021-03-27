@@ -1,51 +1,54 @@
 import React from "react";
 import Link from "next/link";
-import styles from "../styles/Header.module.css";
 
-function Header() {
+const Header = () => {
   return (
     <React.Fragment>
-      <div className={styles.header}>
-        <Link href="/about">
+      <div className="header">
+        <Link href="/home">
           <img
             src="./bilpoLogos/Bilpo Logo Hv4 (Name-black).svg"
             alt="Bilpo logo"
-            className={styles.logo}
+            className="logo"
           />
         </Link>
-        <input type="checkbox" className={styles.nav_toggle} id="nav_toggle" />
-        <label htmlFor="nav_toggle" className={styles.nav_toggle_label}>
+        <input
+          type="checkbox"
+          className="header__navToggleInput"
+          id="navToggleInput"
+        />
+        <label htmlFor="navToggleInput" className="header__navToggleLabel">
           <span></span>
         </label>
-        <nav className={styles.nav}>
+        <nav>
           <ul>
             <li>
-              <Link className={styles.link} href="/home">
+              <Link className="link" href="/home">
                 <label>홈</label>
               </Link>
             </li>
             <li>
-              <Link className={styles.link} href="/giftsets">
+              <Link className="link" href="/giftsets">
                 <label>선물세트</label>
               </Link>
             </li>
             <li>
-              <Link className={styles.link} href="/biltong">
+              <Link className="link" href="/biltong">
                 <label>빌통</label>
               </Link>
             </li>
             <li>
-              <Link className={styles.link} href="/merchandise">
+              <Link className="link" href="/merchandise">
                 <label>상품</label>
               </Link>
             </li>
             <li>
-              <Link className={styles.link} href="/about">
+              <Link className="link" href="/about">
                 <label>회사소개</label>
               </Link>
             </li>
             <li>
-              <Link className={styles.link} href="/contact">
+              <Link className="link" href="/contact">
                 <label>고객센터</label>
               </Link>
             </li>
@@ -54,6 +57,6 @@ function Header() {
       </div>
     </React.Fragment>
   );
-}
+};
 
 export default Header;

@@ -1,11 +1,11 @@
 import React from "react";
-import styles from "../styles/Footer.module.css";
+import Head from "next/head";
 
-function Footer() {
+const Footer = () => {
   return (
     <React.Fragment>
-      <main className={styles.footerSection_main}>
-        <div className={styles.footerSection_wrapper}>
+      <main className="footerSection">
+        <div className="footerSection__wrapper">
           <div>
             <strong>Bilpo Foods</strong>
             <p>Tel. 010-4295-2928</p>
@@ -24,7 +24,7 @@ function Footer() {
             <strong>Follow us:</strong>
 
             <a
-              className={styles.socialCard}
+              className="socialCard"
               target="_blank"
               href="https://www.instagram.com/bilpofood/"
             >
@@ -36,7 +36,7 @@ function Footer() {
             </a>
 
             <a
-              className={styles.socialCard}
+              className="socialCard"
               target="_blank"
               href="https://www.facebook.com/BilpoFoods/"
             >
@@ -53,10 +53,10 @@ function Footer() {
             </p>
           </div>
         </div>
-        <p className={styles.copyrightNotice}>Copyright @ Bilpo 2021</p>
+        <p className="copyrightNotice">Copyright @ Bilpo 2021</p>
       </main>
     </React.Fragment>
   );
-}
+};
 
 export default Footer;

@@ -1,0 +1,149 @@
+.header {
+  background: white;
+  // text-align: center;
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  top: 0;
+  filter: drop-shadow(0px 0px 5px grey);
+
+  img {
+    margin: 0.8rem 2.6rem;
+    height: 1.6rem;
+  }
+
+  nav {
+    position: absolute;
+    background: white;
+    width: 80%;
+    text-align: right;
+    top: 100%;
+    right: 0;
+    transform: scale(0, 1);
+    transform-origin: right;
+    transition: transform 400ms ease-in-out;
+
+    lu {
+      margin: 0;
+      padding: 0;
+    }
+
+    li {
+      list-style: none;
+      margin: 2em;
+    }
+
+    label {
+      color: var(--clr-black);
+      text-decoration: none;
+      font-size: 1.1rem;
+      text-transform: uppercase;
+      opacity: 0;
+      transition: opacity 150ms ease-in-out;
+    }
+  }
+  &__navToggleInput {
+    display: none;
+
+    &:checked ~ nav {
+      transform: scale(1, 1);
+
+      label {
+        opacity: 1;
+        transition: opacity 250ms ease-in-out 250ms;
+      }
+    }
+  }
+  &__navToggleLabel {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: 2em;
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+    span,
+    span::before,
+    span::after {
+      display: block;
+      background: var(--clr-black);
+      height: 0.12rem;
+      width: 1.6em;
+      border-radius: 2px;
+      position: relative;
+    }
+    span::before,
+    span::after {
+      content: "";
+      position: absolute;
+    }
+    span::before {
+      bottom: 0.5rem;
+    }
+
+    span::after {
+      top: 0.5rem;
+    }
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .header {
+    display: flex;
+    background: white;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5%;
+
+    &__navToggleLabel {
+      display: none;
+    }
+
+    img {
+      max-height: 4rem;
+      transition: transform ease-in-out 150ms;
+      &:hover {
+        transform: scale(1.025, 1.025);
+        transition: transform ease-in-out 150ms;
+      }
+    }
+
+    nav {
+      all: unset;
+      height: 100%;
+
+      ul {
+        display: flex;
+        justify-content: flex-end;
+      }
+
+      li {
+        font-size: 1rem;
+        margin: 0.5em 1.5em;
+      }
+
+      label {
+        opacity: 1;
+        position: relative;
+
+        &::after {
+          content: "";
+          display: block;
+          height: 5px;
+          background: black;
+          position: absolute;
+          bottom: -0.5em;
+          left: 0;
+          right: 0;
+          transform: scale(0, 1);
+          transition: transform ease-in-out 250ms;
+        }
+
+        &:hover::after {
+          transform: scale(1, 1);
+        }
+      }
+    }
+  }
+}

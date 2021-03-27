@@ -1,7 +1,6 @@
 import React from "react";
-import styles from "../styles/merch.module.css";
 
-function Footer() {
+const Merchandise = () => {
   return (
     <React.Fragment>
       <main className={styles.merch_main}>
@@ -27,6 +26,6 @@ function Footer() {
       </main>
     </React.Fragment>
   );
-}
+};
 
-export default Footer;
+export default Merchandise;
