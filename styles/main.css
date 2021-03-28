@@ -144,17 +144,6 @@ p {
           transform: translateY(-3px);
 }
 
-.layout {
-  min-height: 100vh;
-  margin: 0 auto;
-}
-
-.layout__main {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
 .footerSection {
   width: 100%;
   margin-top: 2em;
@@ -509,22 +498,42 @@ p {
   }
 }
 
-.aboutSplash_Section {
+.about__splash {
   height: 450px;
-  background: grey;
+  background-image: url("../public/aboutImages/Cape-Town-Table-Mountain.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.about__splash h1 {
+  color: white;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  height: 100%;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-image: url("../public/aboutImages/Cape-Town-Table-Mountain.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+}
+
+.about__info {
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+}
+
+.about__info h2 {
+  margin-top: 2rem;
+  line-height: 4rem;
+}
+
+.about__info p {
+  line-height: 2rem;
+  margin: 2rem 1rem;
 }
 
 .main {

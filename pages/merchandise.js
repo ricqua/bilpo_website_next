@@ -3,10 +3,10 @@ import React from "react";
 const Merchandise = () => {
   return (
     <React.Fragment>
-      <main className={styles.merch_main}>
+      <main className="merch_main">
         <h2>상품</h2>
-        <div className={styles.merch_cards}>
-          <div className={styles.merch_card}>
+        <div className="merch_cards">
+          <div className="merch_card">
             <img
               src="./merchandise/bottleOpeners.jpg"
               alt="Bilpo bottle openers"
@@ -14,7 +14,7 @@ const Merchandise = () => {
             <p>빌포 우드 오프너 (미니 병따개)</p>
             <p>₩7,800</p>
           </div>
-          <div className={styles.merch_card}>
+          <div className="merch_card">
             <img
               src="./merchandise/coaster.jpg"
               alt="Bilpo laser engraved coasters"

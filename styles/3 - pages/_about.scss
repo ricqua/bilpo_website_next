@@ -1,13 +1,36 @@
-.aboutSplash_Section {
-  height: 450px;
-  background: grey;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-image: url("../public/aboutImages/Cape-Town-Table-Mountain.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+.about {
+  &__splash {
+    height: 450px;
+
+    background-image: url("../public/aboutImages/Cape-Town-Table-Mountain.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    h1 {
+      color: white;
+      display: flex;
+      justify-content: center;
+      height: 100%;
+      align-items: center;
+    }
+  }
+
+  &__info {
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+
+    h2 {
+      margin-top: 2rem;
+      line-height: 4rem;
+    }
+
+    p {
+      line-height: 2rem;
+      margin: 2rem 1rem;
+    }
+  }
 }
 
 .main {
