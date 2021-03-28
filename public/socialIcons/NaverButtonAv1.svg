@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="100"
+   height="40"
+   viewBox="0 0 26.458333 10.583334"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)"
+   sodipodi:docname="NaverButtonAv1.svg">
+  <defs
+     id="defs2">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient851">
+      <stop
+         style="stop-color:#1eb601;stop-opacity:1"
+         offset="0"
+         id="stop847" />
+      <stop
+         style="stop-color:#1fe200;stop-opacity:1"
+         offset="1"
+         id="stop849" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient851"
+       id="linearGradient962"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.60179913,0,0,0.23241095,-746.13477,-634.68962)"
+       x1="158.74303"
+       y1="296.99997"
+       x2="158.74303"
+       y2="84.734131" />
+    <filter
+       style="color-interpolation-filters:sRGB"
+       inkscape:label="Drop Shadow"
+       id="filter1199">
+      <feFlood
+         flood-opacity="0.498039"
+         flood-color="rgb(0,0,0)"
+         result="flood"
+         id="feFlood1189" />
+      <feComposite
+         in="flood"
+         in2="SourceGraphic"
+         operator="in"
+         result="composite1"
+         id="feComposite1191" />
+      <feGaussianBlur
+         in="composite1"
+         stdDeviation="4.7"
+         result="blur"
+         id="feGaussianBlur1193" />
+      <feOffset
+         dx="0"
+         dy="0"
+         result="offset"
+         id="feOffset1195" />
+      <feComposite
+         in="SourceGraphic"
+         in2="offset"
+         operator="over"
+         result="composite2"
+         id="feComposite1197" />
+    </filter>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1221">
+      <rect
+         style="opacity:1;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.16627999;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:3.5999999;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
+         id="rect1223"
+         width="96.640022"
+         height="78.642899"
+         x="-461.465"
+         y="-638.72144" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1392">
+      <rect
+         inkscape:export-filename="D:\Ricqua\2019 - CMC Korea\2019 - Bilpo\Marketing\Email Marketing\Naver launch banner Av2.png"
+         y="-950.53839"
+         x="-132.26608"
+         height="221.30901"
+         width="88.97216"
+         id="rect1394"
+         style="opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#ff0000;stroke-width:0.52992809;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
+         inkscape:export-xdpi="96"
+         inkscape:export-ydpi="96" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1398">
+      <rect
+         y="-638.72144"
+         x="-461.465"
+         height="78.642899"
+         width="47.136391"
+         id="rect1400"
+         style="opacity:1;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.11612871;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:3.5999999;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal" />
+    </clipPath>
+    <filter
+       style="color-interpolation-filters:sRGB"
+       inkscape:label="Drop Shadow"
+       id="filter1858">
+      <feFlood
+         flood-opacity="0.498039"
+         flood-color="rgb(0,0,0)"
+         result="flood"
+         id="feFlood1848" />
+      <feComposite
+         in="flood"
+         in2="SourceGraphic"
+         operator="in"
+         result="composite1"
+         id="feComposite1850" />
+      <feGaussianBlur
+         in="composite1"
+         stdDeviation="4.7"
+         result="blur"
+         id="feGaussianBlur1852" />
+      <feOffset
+         dx="0"
+         dy="0"
+         result="offset"
+         id="feOffset1854" />
+      <feComposite
+         in="SourceGraphic"
+         in2="offset"
+         operator="over"
+         result="composite2"
+         id="feComposite1856" />
+    </filter>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1864">
+      <rect
+         style="opacity:1;fill:#008000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.21183908;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
+         id="rect1866"
+         width="130.66042"
+         height="221.30902"
+         x="-66.442513"
+         y="-950.53839" />
+    </clipPath>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient851"
+       id="linearGradient962-8"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.60179912,0,0,0.23241095,64.318652,151.29719)"
+       x1="158.74303"
+       y1="296.99997"
+       x2="158.74303"
+       y2="84.734131" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient851"
+       id="linearGradient1085"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.31496074,0,0,0.12598424,64.318665,182.90587)"
+       x1="158.74303"
+       y1="296.99997"
+       x2="158.74303"
+       y2="84.734131" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.73693746"
+     inkscape:cx="564.86397"
+     inkscape:cy="234.49984"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     units="px"
+     inkscape:snap-page="true"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-286.41665)">
+    <g
+       id="g1095"
+       transform="matrix(0.26458333,0,0,0.26458333,-17.01765,238.70616)">
+      <rect
+         ry="0"
+         inkscape:export-filename="D:\Ricqua\2019 - CMC Korea\2019 - Bilpo\Marketing\Email Marketing\Naver launch banner Av2.png"
+         y="180.32312"
+         x="64.31868"
+         height="40"
+         width="100"
+         id="rect960"
+         style="opacity:1;fill:url(#linearGradient1085);fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.01991992;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
+         inkscape:export-xdpi="96"
+         inkscape:export-ydpi="96" />
+      <g
+         transform="matrix(1.0368709,0,0,1.0368709,487.43843,-11.428381)"
+         id="g968">
+        <path
+           sodipodi:nodetypes="cccccccccccccccc"
+           inkscape:connector-curvature="0"
+           id="path964"
+           d="m -386.77278,193.659 v 21.12533 h 21.12531 V 193.659 Z m 5.11699,5.75797 h 3.72898 l 3.41374,4.91287 v -4.91287 h 3.74861 v 9.92497 h -3.82767 l -3.33468,-4.9723 v 5.05085 h -3.72898 z"
+           style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.1;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal" />
+        <path
+           inkscape:connector-curvature="0"
+           id="path966"
+           d="m -334.69225,196.86501 v 8.38915 h 1.45521 v -8.38915 z m -9.83403,0.69556 v 1.45521 h 0.99994 v 4.06228 h -1.30638 v 1.45521 h 6.30867 l 2.40813,-0.2558 -0.15452,-1.44745 -1.84382,0.19637 v -4.01061 h 1.36324 v -1.45521 z m -9.06042,0.14056 v 2.23036 c 0,0.48037 -0.51652,1.26869 -0.83405,1.51567 -0.0499,0.0388 -0.40491,0.27994 -0.82632,0.5488 -0.42137,0.26887 -0.9417,0.59378 -1.44539,0.9064 -1.00735,0.62527 -1.95284,1.20096 -1.95284,1.20096 l 0.75756,1.24231 c 0,0 0.95004,-0.5783 1.96321,-1.20717 0.50657,-0.31442 1.02846,-0.64112 1.4588,-0.9157 0.43038,-0.27459 0.73653,-0.47059 0.93742,-0.62684 0.2299,-0.17881 0.46038,-0.40704 0.66818,-0.67127 0.20751,0.26423 0.43776,0.49246 0.66765,0.67127 0.2009,0.15625 0.50758,0.35225 0.93795,0.62684 0.43034,0.27458 0.9543,0.60128 1.46087,0.9157 1.01317,0.62887 1.96268,1.20717 1.96268,1.20717 l 0.75808,-1.24231 c 0,0 -0.94599,-0.57569 -1.95336,-1.20096 -0.50366,-0.31262 -1.02399,-0.63753 -1.44539,-0.9064 -0.42138,-0.26886 -0.77637,-0.50997 -0.8263,-0.5488 -0.31755,-0.24698 -0.83354,-1.0353 -0.83354,-1.51567 v -2.23036 z m 11.51557,1.31465 h 2.50219 v 4.06228 h -2.50219 z m -13.57797,6.26732 v 2.78329 h -3.87109 v 1.45521 h 13.32219 v -1.45521 h -3.73258 v -2.72851 h -1.45521 v 2.72851 h -2.80863 v -2.78329 z m 18.17357,0.21859 c -1.18351,0 -2.26666,0.30861 -3.09957,0.85576 -0.83288,0.54715 -1.44539,1.38881 -1.44539,2.38073 0,0.99192 0.61251,1.83359 1.44539,2.38074 0.83291,0.54715 1.91606,0.85576 3.09957,0.85576 1.1835,0 2.26666,-0.30861 3.09954,-0.85576 0.83288,-0.54715 1.44539,-1.38882 1.44539,-2.38074 0,-0.99192 -0.61251,-1.83358 -1.44539,-2.38073 -0.83288,-0.54715 -1.91604,-0.85576 -3.09954,-0.85576 z m 0,1.45521 c 0.92517,0 1.75164,0.2548 2.30063,0.61546 0.54901,0.36065 0.78909,0.77248 0.78909,1.16582 0,0.39334 -0.24008,0.80569 -0.78909,1.16634 -0.54899,0.36065 -1.37546,0.61495 -2.30063,0.61495 -0.92517,0 -1.75165,-0.2543 -2.30063,-0.61495 -0.54902,-0.36065 -0.78912,-0.773 -0.78912,-1.16634 0,-0.39334 0.2401,-0.80517 0.78912,-1.16582 0.54898,-0.36066 1.37546,-0.61546 2.30063,-0.61546 z"
+           style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.4552083;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate" />
+      </g>
+    </g>
+  </g>
+</svg>

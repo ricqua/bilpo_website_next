@@ -1,0 +1,61 @@
+.ProductCard {
+  &__title {
+    margin-bottom: 1rem;
+  }
+
+  section {
+    margin: 1rem;
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__description {
+    font-style: italic;
+    margin-bottom: 2rem;
+  }
+
+  &__price {
+    color: grey;
+    text-decoration: line-through;
+    font-size: 0.8rem;
+    text-align: right;
+    display: inline-block;
+  }
+
+  &__sale {
+    display: inline-block;
+    text-align: right;
+    margin: 0.5rem 1rem 0.5rem 0;
+  }
+
+  &__links {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+
+    img {
+      border-radius: 10px;
+      height: 2rem;
+      cursor: pointer;
+      margin-right: 1rem;
+      transition: transform ease-in-out 250ms;
+
+      &:hover {
+        transform: scale(1.05, 1.05);
+        transition: transform ease-in-out 250ms;
+      }
+    }
+
+    img:nth-child(2) {
+      border: 1px solid rgba(73, 73, 73, 0.5);
+    }
+
+    p {
+      margin: 1rem;
+    }
+  }
+}

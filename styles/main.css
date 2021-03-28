@@ -67,86 +67,21 @@ p {
   font-weight: 300;
 }
 
-.button_light {
-  font-size: 1rem;
-  border: 2px solid white;
-  text-decoration: none;
-  display: block;
-  -webkit-transition: -webkit-transform 450ms;
-  transition: -webkit-transform 450ms;
-  transition: transform 450ms;
-  transition: transform 450ms, -webkit-transform 450ms;
-  cursor: pointer;
-  border-radius: 3rem;
-  background: none;
-  -ms-flex-item-align: start;
-      align-self: flex-start;
+.button__naver {
+  background: green;
   color: white;
-}
-
-.button_light p {
-  margin: 0.6rem 1.2rem;
-}
-
-.button_light span {
-  margin-left: 1.6rem;
-}
-
-.button_light:hover {
-  -webkit-transition: -webkit-transform 125ms;
-  transition: -webkit-transform 125ms;
-  transition: transform 125ms;
-  transition: transform 125ms, -webkit-transform 125ms;
-  -webkit-transform: translateY(-3px);
-          transform: translateY(-3px);
-}
-
-.input_light {
-  background: var(--clr-white);
-  border-radius: 10px;
+  padding: 0.5rem 1rem;
+  border-radius: 0.2rem;
   border: none;
-  color: #a9a9a9;
-  margin: 15px;
-  text-decoration: none;
-  display: inline;
-  font-size: 17pt;
-}
-
-.button_dark {
-  border: none;
-  border-radius: 32px;
-  background: var(--gradient-cyan-purple);
-  -ms-flex-item-align: start;
-      align-self: flex-start;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline;
-  -webkit-transition: -webkit-transform 450ms;
-  transition: -webkit-transform 450ms;
-  transition: transform 450ms;
-  transition: transform 450ms, -webkit-transform 450ms;
   cursor: pointer;
-  font-size: 17pt;
 }
 
-.button_dark span {
-  padding: 0 0 0 20px;
-}
-
-.button_dark:hover {
-  -webkit-transition: -webkit-transform 125ms;
-  transition: -webkit-transform 125ms;
-  transition: transform 125ms;
-  transition: transform 125ms, -webkit-transform 125ms;
-  -webkit-transform: translateY(-3px);
-          transform: translateY(-3px);
+.button__naver:hover {
+  background: darkgreen;
 }
 
 .footerSection {
   width: 100%;
-  margin-top: 2em;
   border-top: 1px solid darkgray;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -430,22 +365,100 @@ p {
   }
 }
 
-.merch_main {
-  padding-top: 5em;
-  background: var(--gradient-dark1);
-  padding-bottom: 3rem;
+.ProductCard__title {
+  margin-bottom: 1rem;
 }
 
-.merch_main h2 {
-  margin-top: 4em;
+.ProductCard section {
+  margin: 1rem;
+}
+
+.ProductCard__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.ProductCard__description {
+  font-style: italic;
+  margin-bottom: 2rem;
+}
+
+.ProductCard__price {
+  color: grey;
+  text-decoration: line-through;
+  font-size: 0.8rem;
+  text-align: right;
+  display: inline-block;
+}
+
+.ProductCard__sale {
+  display: inline-block;
+  text-align: right;
+  margin: 0.5rem 1rem 0.5rem 0;
+}
+
+.ProductCard__links {
+  width: 100%;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.ProductCard__links img {
+  border-radius: 10px;
+  height: 2rem;
+  cursor: pointer;
+  margin-right: 1rem;
+  -webkit-transition: -webkit-transform ease-in-out 250ms;
+  transition: -webkit-transform ease-in-out 250ms;
+  transition: transform ease-in-out 250ms;
+  transition: transform ease-in-out 250ms, -webkit-transform ease-in-out 250ms;
+}
+
+.ProductCard__links img:hover {
+  -webkit-transform: scale(1.05, 1.05);
+          transform: scale(1.05, 1.05);
+  -webkit-transition: -webkit-transform ease-in-out 250ms;
+  transition: -webkit-transform ease-in-out 250ms;
+  transition: transform ease-in-out 250ms;
+  transition: transform ease-in-out 250ms, -webkit-transform ease-in-out 250ms;
+}
+
+.ProductCard__links img:nth-child(2) {
+  border: 1px solid rgba(73, 73, 73, 0.5);
+}
+
+.ProductCard__links p {
+  margin: 1rem;
+}
+
+.biltong {
+  background: #ebebeb;
+}
+
+.biltong__title {
+  margin: 1rem;
+  margin-top: 7rem;
   text-align: center;
-  color: white;
-  margin: 1em;
 }
 
-.merch_cards {
+.biltong__description {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.biltong__cards {
   max-width: 1200px;
   margin: auto;
+  margin-bottom: 5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -457,45 +470,50 @@ p {
       justify-content: space-around;
 }
 
-.merch_card {
+.biltong__card {
+  margin: 1rem;
+  max-width: 400px;
+  background: white;
+  -webkit-filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.2));
+          filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.2));
+}
+
+.merch {
+  background: #ebebeb;
+}
+
+.merch__title {
+  margin: 1rem;
+  margin-top: 7rem;
+  text-align: center;
+}
+
+.merch__description {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.merch__cards {
+  max-width: 1200px;
+  margin: auto;
+  margin-bottom: 5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin: 2em;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
-.merch_card p {
-  color: white;
-  margin-top: 1em;
-}
-
-.merch_card img {
-  max-width: 90%;
-}
-
-@media screen and (min-width: 1000px) {
-  .merch_card {
-    -webkit-transition: -webkit-transform ease-in-out 250ms;
-    transition: -webkit-transform ease-in-out 250ms;
-    transition: transform ease-in-out 250ms;
-    transition: transform ease-in-out 250ms, -webkit-transform ease-in-out 250ms;
-    cursor: pointer;
-  }
-  .merch_card:hover {
-    -webkit-transform: scale(1.05, 1.05);
-            transform: scale(1.05, 1.05);
-    -webkit-transition: -webkit-transform ease-in-out 250ms;
-    transition: -webkit-transform ease-in-out 250ms;
-    transition: transform ease-in-out 250ms;
-    transition: transform ease-in-out 250ms, -webkit-transform ease-in-out 250ms;
-  }
+.merch__card {
+  margin: 1rem;
+  max-width: 400px;
+  background: white;
+  -webkit-filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.2));
+          filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.2));
 }
 
 .about__splash {

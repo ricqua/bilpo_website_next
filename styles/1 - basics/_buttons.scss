@@ -1,59 +1,12 @@
-.button_light {
-  font-size: 1rem;
-  border: 2px solid white;
-  text-decoration: none;
-  display: block;
-  transition: transform 450ms;
-  cursor: pointer;
-  border-radius: 3rem;
-  background: none;
-  align-self: flex-start;
+.button__naver {
+  background: green;
   color: white;
-}
-
-.button_light p {
-  margin: 0.6rem 1.2rem;
-}
-.button_light span {
-  margin-left: 1.6rem;
-}
-
-.button_light:hover {
-  transition: transform 125ms;
-  transform: translateY(-3px);
-}
-
-.input_light {
-  background: var(--clr-white);
-  border-radius: 10px;
+  padding: 0.5rem 1rem;
+  border-radius: 0.2rem;
   border: none;
-  color: #a9a9a9;
-  margin: 15px;
-  text-decoration: none;
-  display: inline;
-  font-size: 17pt;
-}
-
-.button_dark {
-  border: none;
-  border-radius: 32px;
-  background: var(--gradient-cyan-purple);
-  align-self: flex-start;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline;
-  transition: transform 450ms;
   cursor: pointer;
-  font-size: 17pt;
-}
 
-.button_dark span {
-  padding: 0 0 0 20px;
-}
-
-.button_dark:hover {
-  transition: transform 125ms;
-  transform: translateY(-3px);
+  &:hover {
+    background: darkgreen;
+  }
 }

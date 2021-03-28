@@ -3,23 +3,23 @@ import Image from "next/image";
 import Head from "next/head";
 
 import ProductCard from "../components/ProductCard";
-import { merch } from "../data/productData";
+import { biltongBags } from "../data/productData";
 
-const Merchandise = () => {
+const Biltong = () => {
   return (
     <React.Fragment>
       <Head>
-        <title>Bilpo - Merchandise</title>
+        <title>Bilpo - Biltong</title>
       </Head>
-      <main className="merch">
-        <h2 className="merch__title">추가상품</h2>
-        <p className="merch__description">
+      <main className="biltong">
+        <h2 className="biltong__title">빌통</h2>
+        <p className="biltong__description">
           This is a description of all the products Bilpo offers.
         </p>
-        <div className="merch__cards">
-          {merch.map((item) => {
+        <div className="biltong__cards">
+          {biltongBags.map((item) => {
             return (
-              <div className="merch__card">
+              <div className="biltong__card">
                 <ProductCard data={item} key={item.id} />
               </div>
             );
@@ -30,4 +30,4 @@ const Merchandise = () => {
   );
 };
 
-export default Merchandise;
+export default Biltong;
