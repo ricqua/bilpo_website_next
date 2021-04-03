@@ -7,7 +7,16 @@ function ProductCard(props) {
   return (
     <React.Fragment>
       <div className="ProductCard">
-        <Image src={data.img} alt={data.alt} width={500} height={500} />
+        <div>
+          <Image
+            src={data.img}
+            alt={data.alt}
+            width={500}
+            height={500}
+            layout="responsive"
+            loading={props.loading}
+          />
+        </div>
         <section>
           <h4 className="ProductCard__title">{data.title}</h4>
           <hr />

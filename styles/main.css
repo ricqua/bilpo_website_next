@@ -1,16 +1,5 @@
 :root {
-  --clr-white: white;
-  --clr-black: black;
-  --clr-lightgrey: lightgrey;
-  --clr-darkgrey: darkgrey;
-  --clr-light-bg: #1aa4dc;
-  --clr-dark-bg: #6959a0;
-  --clr-siam-orange: rgba(251, 133, 0);
-  --gradient-cyan-purple: linear-gradient(
-    var(--clr-light-bg),
-    var(--clr-dark-bg)
-  );
-  --view_smallPhones: 480px;
+  --view_phones: 480px;
   --view_tablets: 768px;
   --view_laptops: 1279px;
   --view_desktop: 1280px;
@@ -44,6 +33,45 @@ main {
           flex-direction: column;
 }
 
+.button__naver {
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.2rem;
+  border: none;
+  cursor: pointer;
+}
+
+.button__light {
+  background: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.2rem;
+  cursor: pointer;
+  -webkit-transition: -webkit-transform ease-in-out 250ms;
+  transition: -webkit-transform ease-in-out 250ms;
+  transition: transform ease-in-out 250ms;
+  transition: transform ease-in-out 250ms, -webkit-transform ease-in-out 250ms;
+}
+
+.button__light span {
+  margin-left: 1rem;
+}
+
+.button__light:hover {
+  -webkit-transform: scale(1.05, 1.05);
+          transform: scale(1.05, 1.05);
+  -webkit-transition: -webkit-transform ease-in-out 250ms;
+  transition: -webkit-transform ease-in-out 250ms;
+  transition: transform ease-in-out 250ms;
+  transition: transform ease-in-out 250ms, -webkit-transform ease-in-out 250ms;
+}
+
+:root {
+  --clr-light-text: white;
+  --clr-dark-text: black;
+  --clr-light-bg: #ebebeb;
+  --clr-dark-bg: #1c1c1e;
+}
+
 h1 {
   font-size: 40pt;
   font-weight: 100;
@@ -64,20 +92,20 @@ h3 {
 
 p {
   font-size: 1rem;
+  line-height: 1.6rem;
   font-weight: 300;
 }
 
-.button__naver {
-  background: green;
-  color: white;
-  padding: 0.5rem 1rem;
+textArea {
+  background: white;
   border-radius: 0.2rem;
   border: none;
-  cursor: pointer;
-}
-
-.button__naver:hover {
-  background: darkgreen;
+  color: black;
+  padding: 1rem 1.6rem;
+  display: inline;
+  font-size: 1rem;
+  resize: none;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
 .footerSection {
@@ -187,7 +215,7 @@ p {
 
 .header {
   background: white;
-  height: 100px;
+  height: 75px;
   position: fixed;
   width: 100%;
   z-index: 999;
@@ -205,6 +233,7 @@ p {
 .header img {
   margin: 0.8rem 2.6rem;
   height: 1.6rem;
+  cursor: pointer;
 }
 
 .header nav {
@@ -214,10 +243,10 @@ p {
   text-align: right;
   top: 100%;
   right: 0;
-  -webkit-transform: scale(0, 1);
-          transform: scale(0, 1);
-  -webkit-transform-origin: right;
-          transform-origin: right;
+  -webkit-transform: scale(1, 0);
+          transform: scale(1, 0);
+  -webkit-transform-origin: top;
+          transform-origin: top;
   -webkit-transition: -webkit-transform 400ms ease-in-out;
   transition: -webkit-transform 400ms ease-in-out;
   transition: transform 400ms ease-in-out;
@@ -236,7 +265,7 @@ p {
 }
 
 .header nav label {
-  color: var(--clr-black);
+  color: var(--clr-dark-text);
   text-decoration: none;
   font-size: 1.1rem;
   text-transform: uppercase;
@@ -278,7 +307,7 @@ p {
 .header__navToggleLabel span::before,
 .header__navToggleLabel span::after {
   display: block;
-  background: var(--clr-black);
+  background: var(--clr-dark-text);
   height: 0.12rem;
   width: 1.6em;
   border-radius: 2px;
@@ -354,7 +383,7 @@ p {
     content: "";
     display: block;
     height: 5px;
-    background: black;
+    background: var(--clr-dark-text);
     position: absolute;
     bottom: -0.5em;
     left: 0;
@@ -377,7 +406,7 @@ p {
 }
 
 .ProductCard section {
-  margin: 1rem;
+  padding: 1rem;
 }
 
 .ProductCard__info {
@@ -447,8 +476,64 @@ p {
   margin: 1rem;
 }
 
+.GiftsetCard section {
+  padding: 1rem;
+}
+
+.GiftsetCard__title {
+  margin-bottom: 1rem;
+}
+
+.GiftsetCard__description {
+  font-style: italic;
+  margin-bottom: 1.6rem;
+}
+
+.GiftsetCard__inventory {
+  margin-bottom: 1.6rem;
+  list-style-type: none;
+}
+
+.GiftsetCard__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.GiftsetCard button {
+  margin: 1rem 0;
+}
+
+.giftsets {
+  width: 100%;
+  background: var(--clr-light-bg);
+}
+
+.giftsets__header {
+  padding-top: 7rem;
+  padding-bottom: 3rem;
+  text-align: center;
+  margin: 0 1rem;
+}
+
+.giftsets__section {
+  margin: 1rem;
+}
+
+.giftsets__company__logo {
+  max-width: 60%;
+  margin: 1rem auto;
+}
+
+.giftsets__company__description {
+  margin: 2rem auto;
+}
+
 .biltong {
-  background: #ebebeb;
+  background: var(--clr-light-bg);
 }
 
 .biltong__title {
@@ -463,18 +548,8 @@ p {
 }
 
 .biltong__cards {
-  max-width: 1200px;
   margin: auto;
   margin-bottom: 5rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
 }
 
 .biltong__card {
@@ -485,8 +560,35 @@ p {
           filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.2));
 }
 
+@media (min-width: 768px) {
+  .biltong__cards {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .biltong__card {
+    max-width: 350px;
+  }
+}
+
+@media (min-width: 1279px) {
+  .biltong__cards {
+    width: 1280px;
+  }
+  .biltong__card {
+    max-width: 380px;
+  }
+}
+
 .merch {
-  background: #ebebeb;
+  background: var(--clr-light-bg);
 }
 
 .merch__title {
@@ -501,18 +603,8 @@ p {
 }
 
 .merch__cards {
-  max-width: 1200px;
   margin: auto;
   margin-bottom: 5rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
 }
 
 .merch__card {
@@ -521,6 +613,37 @@ p {
   background: white;
   -webkit-filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.2));
           filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.2));
+}
+
+@media (min-width: 768px) {
+  .merch__cards {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .merch__card {
+    max-width: 350px;
+  }
+}
+
+@media (min-width: 1279px) {
+  .merch__cards {
+    width: 1200px;
+  }
+  .merch__card {
+    max-width: 400px;
+  }
+}
+
+.about {
+  background: var(--clr-light-bg);
 }
 
 .about__splash {
@@ -606,6 +729,123 @@ p {
 @media screen and (min-width: 1000px) {
   .aboutSplash_Section {
     height: 640px;
+  }
+}
+
+.contact {
+  background: var(--clr-light-bg);
+  width: 100%;
+}
+
+.contact__info__headerLine {
+  background: var(--clr-dark-text);
+  height: 0.1rem;
+  width: 3rem;
+  margin: auto;
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+}
+
+.contact__info h2 {
+  color: var(--clr-dark-text);
+  margin: 1rem;
+}
+
+.contact__info p {
+  text-align: center;
+  max-width: 500px;
+  margin: auto;
+  padding: 1rem;
+}
+
+.contact__form form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 650px;
+  margin: auto;
+}
+
+.contact__form input {
+  margin: 0.5rem 1rem;
+  background: white;
+  border-radius: 0.2rem;
+  border: none;
+  color: black;
+  padding: 1rem 1.6rem;
+  display: inline;
+  font-size: 1rem;
+}
+
+.contact__form textArea {
+  margin: 0.5rem 1rem;
+  height: 15rem;
+}
+
+.contact__form button {
+  margin: auto;
+  margin-bottom: 4rem;
+  margin-top: 0.5rem;
+}
+
+@media (min-width: 1279px) {
+  .contactSection_wrapper {
+    width: 100%;
+  }
+  .contactSection {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    max-width: var(--view_desktop);
+    margin: auto;
+  }
+  .contactSection_info h2 {
+    margin-top: 10rem;
+    text-align: left;
+  }
+  .contactSection_info p {
+    text-align: left;
+    margin: 1rem;
+    padding: 0;
+  }
+  .contactSection_social {
+    text-align: left;
+    margin: 1rem;
+    margin-top: 3rem;
+  }
+  .contactSection_social img {
+    cursor: pointer;
+    -webkit-transition: -webkit-transform ease-in-out 150ms;
+    transition: -webkit-transform ease-in-out 150ms;
+    transition: transform ease-in-out 150ms;
+    transition: transform ease-in-out 150ms, -webkit-transform ease-in-out 150ms;
+    margin: 1rem 1.6rem 1rem 0;
+  }
+  .contactSection_social img:hover {
+    cursor: pointer;
+    -webkit-transform: scale(1.2, 1.2);
+            transform: scale(1.2, 1.2);
+    -webkit-transition: -webkit-transform ease-in-out 150ms;
+    transition: -webkit-transform ease-in-out 150ms;
+    transition: transform ease-in-out 150ms;
+    transition: transform ease-in-out 150ms, -webkit-transform ease-in-out 150ms;
+  }
+  .contactSection form {
+    width: 100%;
+    margin: auto;
+    margin-top: 10rem;
+  }
+  .contactSection form > button {
+    margin-left: auto;
+    margin-right: 1rem;
   }
 }
 /*# sourceMappingURL=main.css.map */

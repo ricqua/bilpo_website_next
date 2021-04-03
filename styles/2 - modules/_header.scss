@@ -1,6 +1,6 @@
 .header {
   background: white;
-  height: 100px;
+  height: 75px;
   position: fixed;
   width: 100%;
   z-index: 999;
@@ -12,19 +12,18 @@
   img {
     margin: 0.8rem 2.6rem;
     height: 1.6rem;
+    cursor: pointer;
   }
 
   nav {
     position: absolute;
     background: white;
-    // border: 1px solid red;
     width: 100%;
     text-align: right;
     top: 100%;
     right: 0;
-    // bottom: -100%;
-    transform: scale(0, 1);
-    transform-origin: right;
+    transform: scale(1, 0);
+    transform-origin: top;
     transition: transform 400ms ease-in-out;
 
     lu {
@@ -39,7 +38,7 @@
     }
 
     label {
-      color: var(--clr-black);
+      color: var(--clr-dark-text);
       text-decoration: none;
       font-size: 1.1rem;
       text-transform: uppercase;
@@ -72,7 +71,7 @@
     span::before,
     span::after {
       display: block;
-      background: var(--clr-black);
+      background: var(--clr-dark-text);
       height: 0.12rem;
       width: 1.6em;
       border-radius: 2px;
@@ -136,7 +135,7 @@
           content: "";
           display: block;
           height: 5px;
-          background: black;
+          background: var(--clr-dark-text);
           position: absolute;
           bottom: -0.5em;
           left: 0;

@@ -1,0 +1,36 @@
+.GiftsetCard {
+  //   outline: 1px solid green;
+
+  section {
+    // margin: 1rem;
+    padding: 1rem;
+  }
+
+  &__title {
+    margin-bottom: 1rem;
+  }
+
+  &__description {
+    font-style: italic;
+    margin-bottom: 1.6rem;
+  }
+
+  &__inventory {
+    margin-bottom: 1.6rem;
+    list-style-type: none;
+
+    li {
+      //   color: red;
+      //   text-decoration: none;
+    }
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  button {
+    margin: 1rem 0;
+  }
+}

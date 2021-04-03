@@ -1,0 +1,32 @@
+.giftsets {
+  width: 100%;
+  background: var(--clr-light-bg);
+
+  &__header {
+    padding-top: 7rem;
+    padding-bottom: 3rem;
+    text-align: center;
+    margin: 0 1rem;
+  }
+
+  &__section {
+    // outline: 1px solid black;
+    margin: 1rem;
+  }
+
+  &__company {
+    // outline: 1px solid red;
+
+    &__logo {
+      max-width: 60%;
+      margin: 1rem auto;
+    }
+    &__description {
+      margin: 2rem auto;
+    }
+  }
+
+  &__cards {
+    // outline: 1px solid red;
+  }
+}

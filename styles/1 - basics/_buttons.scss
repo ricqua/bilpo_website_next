@@ -1,5 +1,4 @@
 .button__naver {
-  background: green;
   color: white;
   padding: 0.5rem 1rem;
   border-radius: 0.2rem;
@@ -7,6 +6,23 @@
   cursor: pointer;
 
   &:hover {
-    background: darkgreen;
+  }
+}
+
+.button__light {
+  background: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.2rem;
+  // border: none;
+  cursor: pointer;
+  transition: transform ease-in-out 250ms;
+
+  span {
+    margin-left: 1rem;
+  }
+
+  &:hover {
+    transform: scale(1.05, 1.05);
+    transition: transform ease-in-out 250ms;
   }
 }

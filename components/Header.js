@@ -5,7 +5,7 @@ const Header = () => {
   return (
     <React.Fragment>
       <div className="header">
-        <Link href="/home">
+        <Link href="/">
           <img
             src="./bilpoLogos/Bilpo Logo Hv4 (Name-black).svg"
             alt="Bilpo logo"
@@ -23,7 +23,7 @@ const Header = () => {
         <nav>
           <ul>
             <li>
-              <Link className="link" href="/home">
+              <Link className="link" href="/">
                 <label>홈</label>
               </Link>
             </li>
@@ -48,7 +48,7 @@ const Header = () => {
               </Link>
             </li>
             <li>
-              <Link className="link" href="/contact">
+              <Link className="link" href="#contactSection">
                 <label>고객센터</label>
               </Link>
             </li>
