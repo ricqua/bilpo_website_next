@@ -26,3 +26,21 @@
     transition: transform ease-in-out 250ms;
   }
 }
+
+.button__dark {
+  background: black;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.2rem;
+  cursor: pointer;
+  transition: transform ease-in-out 250ms;
+
+  span {
+    margin-left: 1rem;
+  }
+
+  &:hover {
+    transform: scale(1.05, 1.05);
+    transition: transform ease-in-out 250ms;
+  }
+}

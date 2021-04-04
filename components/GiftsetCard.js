@@ -4,7 +4,7 @@ import Link from "next/link";
 
 function GiftsetCard(props) {
   const data = props.data;
-  //   console.log(data);
+  //   console.log(companyLogo);
 
   return (
     <React.Fragment>
@@ -15,17 +15,18 @@ function GiftsetCard(props) {
             alt={data.alt}
             width={500}
             height={500}
-            layout="responsive"
+            // layout="responsive"
             loading={props.loading}
           />
         </div>
         <section>
-          <h4 className="GiftsetCard__title">{data.title}</h4>
+          {/* <img src={companyLogo.companyLogo} alt="" /> */}
+          <h3 className="GiftsetCard__title">{data.title}</h3>
           <hr />
-          <div>
-            {/* <p className="GiftsetCard__sale">{data.sale}</p>
-            <p className="GiftsetCard__price">{data.price}</p> */}
-          </div>
+          {/* <div>
+            <p className="GiftsetCard__sale">{data.sale}</p>
+            <p className="GiftsetCard__price">{data.price}</p>
+          </div> */}
           <p className="GiftsetCard__description">{data.description}</p>
           <strong>선물세트 상품구성</strong>
           <ul className="GiftsetCard__inventory">
@@ -50,7 +51,7 @@ function GiftsetCard(props) {
               />
             </Link> */}
             <Link href="">
-              <button>Find out more</button>
+              <button className="button__light">Find out more</button>
             </Link>
           </div>
         </section>

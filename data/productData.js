@@ -1,41 +1,44 @@
 export const biltongBags = [
   {
     id: 1,
-    title: "60g Biltogn bag",
+    title: "60g Biltong bag",
     description:
       "Out bottle openers are made from amazing wood with a steel insert ensuring long lasting quality.  A emblam is laser engraved eto ensure a long lasting qulity image.",
     img: "/biltong/biltongBag_1bag.jpg",
     alt: "photo of Bilpo biltong bag",
     price: "",
     sale: "₩9,800",
-    naver: "https://www.naver.com",
-    coupang: "https://www.coupang.com",
+    naver: "https://smartstore.naver.com/bilpo/products/5105201791",
+    coupang:
+      "https://www.coupang.com/vp/products/5076930986?itemId=6881678443&vendorItemId=74174262901&q=biltong&itemsCount=36&searchId=488bd561b9084ce5bfd6a22eb1a857ab&rank=1&isAddedCart=",
     loading: "eager",
   },
   {
     id: 2,
-    title: "60g Biltogn bag (5 bags)",
+    title: "60g Biltong bag (5 bags)",
     description:
       "Out bottle openers are made from amazing wood with a steel insert ensuring long lasting quality.  A emblam is laser engraved eto ensure a long lasting qulity image.",
     img: "/biltong/biltongBag_5bag.jpg",
     alt: "photo of Bilpo biltong bag",
     price: "₩49,000",
     sale: "₩46,500",
-    naver: "https://www.naver.com",
-    coupang: "https://www.coupang.com",
+    naver: "https://smartstore.naver.com/bilpo/products/5105188060",
+    coupang:
+      "https://www.coupang.com/vp/products/5091623438?itemId=6923565061&vendorItemId=74216084595&q=biltong&itemsCount=36&searchId=488bd561b9084ce5bfd6a22eb1a857ab&rank=2&isAddedCart=",
     loading: "eager",
   },
   {
     id: 3,
-    title: "60g Biltogn bag (8 bags)",
+    title: "60g Biltong bag (8 bags)",
     description:
       "Out bottle openers are made from amazing wood with a steel insert ensuring long lasting quality.  A emblam is laser engraved eto ensure a long lasting qulity image.",
     img: "/biltong/biltongBag_8bag.jpg",
     alt: "photo of Bilpo biltong bag",
     price: "₩78,400",
     sale: "₩72,500",
-    naver: "https://www.naver.com",
-    coupang: "https://www.coupang.com",
+    naver: "https://smartstore.naver.com/bilpo/products/5105187287",
+    coupang:
+      "https://www.coupang.com/vp/products/5091623443?itemId=6923565078&vendorItemId=74216084611&q=biltong&itemsCount=36&searchId=488bd561b9084ce5bfd6a22eb1a857ab&rank=15&isAddedCart=",
     loading: "eager",
   },
 ];
@@ -50,8 +53,8 @@ export const merch = [
     alt: "Bilpo bottle openers",
     price: "₩10,000",
     sale: "₩7,800",
-    naver: "https://www.naver.com",
-    coupang: "https://www.coupang.com",
+    naver: "https://smartstore.naver.com/bilpo/products/5353311067",
+    coupang: "",
     loading: "eager",
   },
   {
@@ -63,8 +66,8 @@ export const merch = [
     alt: "Bilpo laser engraved coasters",
     price: "₩3,500",
     sale: "₩2,800",
-    naver: "https://www.naver.com",
-    coupang: "https://www.coupang.com",
+    naver: "https://smartstore.naver.com/bilpo/products/5345113612",
+    coupang: "",
     loading: "eager",
   },
 ];
@@ -81,7 +84,8 @@ export const giftsets = [
         title: "와인 & 빌통 선물세트",
         img: "/giftsets/MishMash - GiftsetAv1.jpg",
         alt: "mishash giftset",
-        description: "This is a product description",
+        description:
+          "빌포(Bilpo) 와 미쉬매쉬(Mishmash) 가 함께 준비한 남아공 수제육포 빌통 & 와인 페어링 선물세트를 소개합니다. Michelin Guide Seoul에 선정된 한식 레스토랑을 운영하는 미쉬매쉬 쉐프님이 직접 여러 와인 테이스팅을 거쳐 빌통과 가장 잘 어울리는 와인을 선별하였습니다.",
         inventory: [
           "1 x MishMash - 추천 와인 1병 (선택)",
           "5 x Bilpo - 오리지널 페퍼스테이크 빌통",
@@ -145,12 +149,12 @@ export const giftsets = [
     company: "브루어리 304",
     companyDescription:
       "빌포 (Bilpo) 와 브루어리304 (Brewery 304) 가 함께 남아공 수제빌통 & 수제맥주 페어링 선물세트를 준비했습니다. 수제 맥주 양조장 브루어리304는 2015년 부터 최상의 재료를 사용하여 아티잔 장인정신을 바탕으로 프리미엄 맥주를 선보이고 있습니다. 정성으로 만들어진 수제선물세트로 특별한 마음을 선물하세요.",
-    logo: "/bilpoLogos/Bilpo Logo Hv4 (Full-black).svg",
+    logo: "/giftsets/Brewery304 - Logo (solidBlack).svg",
     alt: "Brewery 304 logo",
     products: [
       {
         title: "수제맥주 + 수제빌통",
-        img: "/giftsets/Bilpo-biltongGiftsetAv1.jpg",
+        img: "/giftsets/Brewery304-singleGiftset1.jpg",
         alt: "Brewery 304 beer and biltong giftset",
         description:
           "빌포 (Bilpo) 와 브루어리304 (Brewery 304) 가 함께 남아공 수제빌통 & 수제맥주 페어링 선물세트를 준비했습니다. 수제 맥주 양조장 브루어리304는 2015년 부터 최상의 재료를 사용하여 아티잔 장인정신을 바탕으로 프리미엄 맥주를 선보이고 있습니다. 정성으로 만들어진 수제선물세트로 특별한 마음을 선물하세요. ",
@@ -170,7 +174,7 @@ export const giftsets = [
       },
       {
         title: "수제맥주 + 수제빌통 선물세트",
-        img: "/giftsets/Bilpo-biltongGiftsetAv1.jpg",
+        img: "/giftsets/Brewery304-doubleGiftset.jpg",
         alt: "Brewery 304 beer and biltong giftset",
         description:
           "빌포 (Bilpo) 와 브루어리304 (Brewery 304) 가 함께 남아공 수제빌통 & 수제맥주 페어링 선물세트를 준비했습니다. 수제 맥주 양조장 브루어리304는 2015년 부터 최상의 재료를 사용하여 아티잔 장인정신을 바탕으로 프리미엄 맥주를 선보이고 있습니다. 정성으로 만들어진 수제선물세트로 특별한 마음을 선물하세요. ",

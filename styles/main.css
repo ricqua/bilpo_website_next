@@ -65,8 +65,34 @@ main {
   transition: transform ease-in-out 250ms, -webkit-transform ease-in-out 250ms;
 }
 
+.button__dark {
+  background: black;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.2rem;
+  cursor: pointer;
+  -webkit-transition: -webkit-transform ease-in-out 250ms;
+  transition: -webkit-transform ease-in-out 250ms;
+  transition: transform ease-in-out 250ms;
+  transition: transform ease-in-out 250ms, -webkit-transform ease-in-out 250ms;
+}
+
+.button__dark span {
+  margin-left: 1rem;
+}
+
+.button__dark:hover {
+  -webkit-transform: scale(1.05, 1.05);
+          transform: scale(1.05, 1.05);
+  -webkit-transition: -webkit-transform ease-in-out 250ms;
+  transition: -webkit-transform ease-in-out 250ms;
+  transition: transform ease-in-out 250ms;
+  transition: transform ease-in-out 250ms, -webkit-transform ease-in-out 250ms;
+}
+
 :root {
   --clr-light-text: white;
+  --clr-medium-text: rgb(87, 87, 87);
   --clr-dark-text: black;
   --clr-light-bg: #ebebeb;
   --clr-dark-bg: #1c1c1e;
@@ -106,6 +132,40 @@ textArea {
   font-size: 1rem;
   resize: none;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 650px;
+  margin: auto;
+}
+
+input {
+  margin: 0.5rem 1rem;
+  background: white;
+  border-radius: 0.2rem;
+  border: none;
+  color: black;
+  padding: 1rem 1.6rem;
+  display: inline;
+  font-size: 1rem;
+}
+
+textArea {
+  margin: 0.5rem 1rem;
+  height: 15rem;
+}
+
+button {
+  margin: auto;
+  margin-bottom: 4rem;
+  margin-top: 0.5rem;
 }
 
 .footerSection {
@@ -476,11 +536,22 @@ textArea {
   margin: 1rem;
 }
 
+.GiftsetCard {
+  margin: auto;
+  margin-bottom: 3rem;
+  max-width: 400px;
+  padding: 1rem;
+  background: white;
+  -webkit-filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.4));
+          filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.4));
+}
+
 .GiftsetCard section {
   padding: 1rem;
 }
 
 .GiftsetCard__title {
+  margin-top: 1rem;
   margin-bottom: 1rem;
 }
 
@@ -491,7 +562,7 @@ textArea {
 
 .GiftsetCard__inventory {
   margin-bottom: 1.6rem;
-  list-style-type: none;
+  margin-left: 1.6rem;
 }
 
 .GiftsetCard__info {
@@ -504,7 +575,85 @@ textArea {
 }
 
 .GiftsetCard button {
-  margin: 1rem 0;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+  .GiftsetCard {
+    max-width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+    -webkit-transition: -webkit-transform ease-in-out 250ms, -webkit-filter ease-in-out 250ms;
+    transition: -webkit-transform ease-in-out 250ms, -webkit-filter ease-in-out 250ms;
+    transition: transform ease-in-out 250ms, filter ease-in-out 250ms;
+    transition: transform ease-in-out 250ms, filter ease-in-out 250ms, -webkit-transform ease-in-out 250ms, -webkit-filter ease-in-out 250ms;
+    -webkit-filter: grayscale(1);
+            filter: grayscale(1);
+  }
+  .GiftsetCard:hover {
+    -webkit-transform: scale(1.05, 1.05);
+            transform: scale(1.05, 1.05);
+    -webkit-filter: grayscale(0);
+            filter: grayscale(0);
+    -webkit-transition: -webkit-transform ease-in-out 250ms, -webkit-filter ease-in-out 250ms;
+    transition: -webkit-transform ease-in-out 250ms, -webkit-filter ease-in-out 250ms;
+    transition: transform ease-in-out 250ms, filter ease-in-out 250ms;
+    transition: transform ease-in-out 250ms, filter ease-in-out 250ms, -webkit-transform ease-in-out 250ms, -webkit-filter ease-in-out 250ms;
+  }
+  .GiftsetCard section {
+    width: 60%;
+    margin-left: 1.6rem;
+  }
+}
+
+.home section {
+  outline: 1px solid red;
+  min-height: 10rem;
+}
+
+.home__giveawaySection {
+  background: var(--clr-light-bg);
+  width: 100%;
+  text-align: center;
+}
+
+.home__giveawaySection > div {
+  margin: 1rem;
+}
+
+.home__giveawaySection__img {
+  max-width: 480px;
+  margin: 3rem auto 2rem auto;
+}
+
+@media (min-width: 768px) {
+  .home__giveawaySection > div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .home__giveawaySection__img {
+    width: 40%;
+    margin: auto;
+  }
+  .home__giveawaySection__info {
+    width: 40%;
+    margin: auto;
+  }
 }
 
 .giftsets {
@@ -523,13 +672,73 @@ textArea {
   margin: 1rem;
 }
 
-.giftsets__company__logo {
-  max-width: 60%;
-  margin: 1rem auto;
+.giftsets__company__logos {
+  margin: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.giftsets__company__logos img {
+  margin: auto;
+  max-width: 30%;
+}
+
+.giftsets__company__logos span {
+  font-size: 3rem;
+  font-weight: bold;
+  color: var(--clr-medium-text);
+  margin: 1.2rem;
 }
 
 .giftsets__company__description {
-  margin: 2rem auto;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 480px) {
+  .giftsets__header {
+    max-width: 450px;
+    margin: auto;
+  }
+  .giftsets__section {
+    max-width: 450px;
+    margin: auto;
+  }
+  .giftsets__company__logos {
+    max-width: 450px;
+    margin: 1rem auto;
+  }
+}
+
+@media (min-width: 768px) {
+  .giftsets__header {
+    max-width: 768px;
+  }
+  .giftsets__company {
+    max-width: 1000px;
+    margin: auto;
+  }
+  .giftsets__section {
+    margin: 1rem;
+    max-width: 1280px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .giftsets__section {
+    margin: 1rem auto;
+    width: 1600px;
+  }
 }
 
 .biltong {
@@ -756,40 +965,6 @@ textArea {
   max-width: 500px;
   margin: auto;
   padding: 1rem;
-}
-
-.contact__form form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  max-width: 650px;
-  margin: auto;
-}
-
-.contact__form input {
-  margin: 0.5rem 1rem;
-  background: white;
-  border-radius: 0.2rem;
-  border: none;
-  color: black;
-  padding: 1rem 1.6rem;
-  display: inline;
-  font-size: 1rem;
-}
-
-.contact__form textArea {
-  margin: 0.5rem 1rem;
-  height: 15rem;
-}
-
-.contact__form button {
-  margin: auto;
-  margin-bottom: 4rem;
-  margin-top: 0.5rem;
 }
 
 @media (min-width: 1279px) {

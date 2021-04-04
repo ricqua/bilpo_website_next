@@ -1,5 +1,17 @@
 .GiftsetCard {
   //   outline: 1px solid green;
+  margin: auto;
+  margin-bottom: 3rem;
+  max-width: 400px;
+  padding: 1rem;
+  //   background: var(--clr-light-bg);
+  background: white;
+  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.4));
+
+  div {
+    // display: block;
+    // filter: drop-shadow(0 0 10px rgba(41, 22, 22, 0.4));
+  }
 
   section {
     // margin: 1rem;
@@ -7,6 +19,7 @@
   }
 
   &__title {
+    margin-top: 1rem;
     margin-bottom: 1rem;
   }
 
@@ -17,11 +30,10 @@
 
   &__inventory {
     margin-bottom: 1.6rem;
-    list-style-type: none;
+    margin-left: 1.6rem;
+    // list-style-type: none;
 
     li {
-      //   color: red;
-      //   text-decoration: none;
     }
   }
 
@@ -31,6 +43,30 @@
   }
 
   button {
-    margin: 1rem 0;
+    margin-bottom: 1rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .GiftsetCard {
+    // border: 1px solid red;
+    max-width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    transition: transform ease-in-out 250ms, filter ease-in-out 250ms;
+
+    filter: grayscale(1);
+
+    &:hover {
+      transform: scale(1.05, 1.05);
+      filter: grayscale(0);
+      transition: transform ease-in-out 250ms, filter ease-in-out 250ms;
+      // transition: filter ease-in-out 250ms;
+    }
+
+    section {
+      width: 60%;
+      margin-left: 1.6rem;
+    }
   }
 }

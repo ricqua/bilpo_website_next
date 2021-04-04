@@ -6,7 +6,9 @@ import GiftsetCard from "../components/GiftsetCard";
 import { giftsets } from "../data/productData";
 
 const Giftsets = () => {
-  // console.log(giftsets[0].companyDescription);
+  const mishmash = giftsets[0];
+  const bilpo = giftsets[1];
+  const brewery304 = giftsets[2];
 
   return (
     <React.Fragment>
@@ -20,45 +22,72 @@ const Giftsets = () => {
         </div>
 
         {/* ==============  MISHMASH GIFTSETS ============== */}
-
         <section className="giftsets__section">
-          <div className="giftsets__company">
-            <div className="giftsets__company__logo">
-              <Image
-                src={giftsets[0].logo}
-                alt={giftsets[0].alt}
-                width={1000}
-                height={350}
+          {/* <div className="giftsets__company">
+            <div className="giftsets__company__logos">
+              <img
+                src="/bilpoLogos/Bilpo Logo Hv4 (Full-black).svg"
+                alt="Bilpo logo"
+              />
+              <span>+</span>
+              <img
+                src="/giftsets/MishMash - Logo(redText).svg"
+                alt="Mishmash logo"
               />
             </div>
             <p className="giftsets__company__description">
-              {giftsets[0].companyDescription}
+              {mishmash.companyDescription}
             </p>
-          </div>
+          </div> */}
           <div className="giftset_cards">
-            <GiftsetCard data={giftsets[0].products[0]} loading="eager" />
+            <GiftsetCard data={mishmash.products[0]} loading="eager" />
+          </div>
+        </section>
+
+        {/* ==============  BREWERY 304 GIFTSETS ============== */}
+        <section className="giftsets__section">
+          {/* <div className="giftsets__company">
+            <div className="giftsets__company__logos">
+              <img
+                src="/bilpoLogos/Bilpo Logo Hv4 (Full-black).svg"
+                alt="Bilpo logo"
+              />
+              <span>+</span>
+              <img
+                src="/giftsets/Brewery304 - Logo (solidBlack).svg"
+                alt="Brewery 304 logo"
+              />
+            </div>
+            <p className="giftsets__company__description">
+              {brewery304.companyDescription}
+            </p>
+          </div> */}
+          <div className="giftsets__cards">
+            <GiftsetCard
+              //   companyLogo={brewery304}
+              data={brewery304.products[0]}
+              loading="eager"
+            />
+            <GiftsetCard data={brewery304.products[1]} loading="eager" />
           </div>
         </section>
 
         {/* ==============  BILPO GIFTSETS ============== */}
-
         <section className="giftsets__section">
-          <div className="giftsets__company">
-            <div className="giftsets__company__logo">
-              <Image
-                src={giftsets[2].logo}
-                alt={giftsets[2].alt}
-                width={500}
-                height={500}
+          {/* <div className="giftsets__company">
+            <div className="giftsets__company__logos">
+              <img
+                src="/bilpoLogos/Bilpo Logo Hv4 (Full-black).svg"
+                alt="Bilpo logo"
               />
             </div>
             <p className="giftsets__company__description">
-              {giftsets[2].companyDescription}
+              {bilpo.companyDescription}
             </p>
-          </div>
+          </div> */}
           <div className="giftsets__cards">
-            <GiftsetCard data={giftsets[2].products[0]} loading="eager" />
-            <GiftsetCard data={giftsets[2].products[1]} loading="eager" />
+            <GiftsetCard data={bilpo.products[0]} loading="eager" />
+            <GiftsetCard data={bilpo.products[1]} loading="eager" />
           </div>
         </section>
       </main>

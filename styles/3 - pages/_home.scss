@@ -1,0 +1,58 @@
+.home {
+  section {
+    outline: 1px solid red;
+    min-height: 10rem;
+  }
+
+  &__heroSection {
+  }
+
+  &__giveawaySection {
+    background: var(--clr-light-bg);
+    width: 100%;
+    text-align: center;
+
+    > div {
+      margin: 1rem;
+    }
+
+    h2 {
+      //   margin-top: 2rem;
+    }
+    &__img {
+      max-width: 480px;
+      margin: 3rem auto 2rem auto;
+      //   outline: 1px solid red;
+      //   margin: 2rem;
+    }
+  }
+
+  &__biltognVsJerkySection {
+  }
+
+  &__shippingSection {
+  }
+}
+
+@media (min-width: 768px) {
+  .home {
+    &__giveawaySection {
+      > div {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-around;
+        align-items: center;
+        // max-width: 40%;
+      }
+      &__img {
+        width: 40%;
+        margin: auto;
+      }
+
+      &__info {
+        width: 40%;
+        margin: auto;
+      }
+    }
+  }
+}
