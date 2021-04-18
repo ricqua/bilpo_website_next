@@ -8,8 +8,14 @@ import Footer from "../components/Footer";
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
-  const showHeader = router.pathname === "/backorder" ? false : true;
-  const showFooter = router.pathname === "/backorder" ? false : true;
+  const showHeader =
+    router.pathname === "/backorder" || router.pathname === "/spiceCalc"
+      ? false
+      : true;
+  const showFooter =
+    router.pathname === "/backorder" || router.pathname === "/spiceCalc"
+      ? false
+      : true;
   return (
     <Layout>
       <Head>
@@ -23,7 +29,7 @@ function MyApp({ Component, pageProps }) {
       {showHeader && <Header />}
       {/* <Header /> */}
       <Component {...pageProps} />
-      {showHeader && <Footer />}
+      {showFooter && <Footer />}
       {/* <Footer /> */}
     </Layout>
   );

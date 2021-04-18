@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 :root {
   --view_phones: 480px;
   --view_tablets: 768px;
@@ -91,7 +92,7 @@ main {
 }
 
 .button__lightPrimary {
-  background: red;
+  background: #990000;
   color: white;
   border: none;
   width: 5rem;
@@ -195,6 +196,71 @@ button {
   margin: auto;
   margin-bottom: 4rem;
   margin-top: 0.5rem;
+}
+
+.inputBox_effect1 {
+  position: relative;
+  width: 100%;
+  min-height: 2.8rem;
+  margin-bottom: 3rem;
+}
+
+.inputBox_effect1:last-child {
+  margin-bottom: 0px;
+}
+
+.inputBox_effect1 input,
+.inputBox_effect1 textarea {
+  top: 0;
+  left: 0;
+  width: 100%;
+  border: 2px solid #838181;
+  background: white;
+  padding: 1rem;
+  margin: 0;
+  border-radius: 4px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  outline: none;
+  font-size: 1rem;
+}
+
+.inputBox_effect1 input:focus,
+.inputBox_effect1 textarea:focus {
+  border: 2px solid #1f79ad;
+}
+
+.inputBox_effect1 input:focus ~ span,
+.inputBox_effect1 input:valid ~ span,
+.inputBox_effect1 textarea:focus ~ span,
+.inputBox_effect1 textarea:valid ~ span {
+  -webkit-transform: translateY(-1rem) translateX(0.75rem);
+          transform: translateY(-1rem) translateX(0.75rem);
+  font-size: 1rem;
+  color: #1f79ad;
+  background: white;
+  padding: 0.2rem 0.5rem;
+}
+
+.inputBox_effect1 span {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  padding: 1rem;
+  z-index: 1;
+  display: inline-block;
+  pointer-events: none;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  color: #999999;
+  font-size: 1rem;
+}
+
+button {
+  margin: auto;
+  margin-bottom: 2rem;
+  width: 100%;
+  height: 3rem;
 }
 
 .footerSection {
@@ -1052,24 +1118,22 @@ button {
 .backorder {
   min-height: 100vh;
   width: 100vw;
-  background-image: -webkit-gradient(linear, left bottom, left top, from(#09203f), to(#537895));
-  background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
 }
 
 .backorder__logo {
   margin: 2rem auto;
-  max-width: 40%;
+  max-width: 45%;
 }
 
 .backorder__title {
-  color: white;
+  color: black;
   margin: auto;
   max-width: 400px;
   padding: 0.5rem 2.8rem;
 }
 
 .backorder__description {
-  color: white;
+  color: black;
   margin: auto;
   max-width: 400px;
   padding: 0.5rem 2.8rem;
@@ -1077,7 +1141,7 @@ button {
 }
 
 .backorder__copyrightNotice {
-  color: white;
+  color: black;
 }
 
 .backorderForm {
@@ -1086,59 +1150,109 @@ button {
   width: 100%;
 }
 
-.backorderForm__inputBox {
-  position: relative;
-  width: 100%;
-  height: 2.8rem;
-  margin-bottom: 35px;
-}
-
-.backorderForm__inputBox:last-child {
-  margin-bottom: 0px;
-}
-
-.backorderForm__inputBox input {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  border: 1px solid #838181;
-  background: white;
-  padding: 10px;
+.spiceCalc {
   margin: 0;
-  border-radius: 4px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  outline: none;
-}
-
-.backorderForm__inputBox input:focus {
-  border: 1px solid #1f79ad;
-}
-
-.backorderForm__inputBox input:focus ~ span,
-.backorderForm__inputBox input:valid ~ span {
-  -webkit-transform: translateX(-10px) translateY(-32px);
-          transform: translateX(-10px) translateY(-32px);
-  font-size: 0.75rem;
+  padding: 0;
+  min-height: 100vh;
+  width: 100vw;
+  font-size: 1rem;
+  font-family: "Montserrat", sans-serif;
   color: white;
+  background: -webkit-gradient(linear, left top, right top, from(#485563), to(#29323c));
+  background: linear-gradient(to right, #485563, #29323c);
 }
 
-.backorderForm__inputBox span {
-  position: absolute;
-  top: -2px;
-  left: 1px;
-  padding: 10px;
-  z-index: 1;
-  display: inline-block;
-  pointer-events: none;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-  color: #999999;
+.spiceCalc__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  text-align: center;
 }
 
-.backorderForm button {
-  margin: auto;
-  margin-bottom: 2rem;
+.spiceCalc__header img {
+  margin: 3rem auto;
+  width: 150px;
+}
+
+.spiceCalc__header p {
+  font-size: 20pt;
+  font-style: "trajan";
+  margin: 0.5rem 1rem;
+}
+
+.spiceCalc__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 1rem auto;
+}
+
+.spiceCalc__form input {
+  text-align: center;
+  width: 50pt;
+  font-size: 1rem;
+  color: black;
+  margin: 0 5pt 0 10pt;
+  padding: 0.5rem;
+}
+
+.spiceCalc__outputArea {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 25pt 10pt;
+  text-align: center;
+}
+
+.spiceCalc__outputArea__spiceItem {
+  margin: 10pt 30pt;
+}
+
+.spiceCalc__outputArea__spiceItem__item {
+  font-size: 12pt;
+  margin: 0 0px 0 0;
+}
+
+.spiceCalc__outputArea__spiceItem__qty {
+  font-size: 30pt;
+  margin: 0 6px 0 0;
+}
+
+.spiceCalc__outputArea__spiceItem__unit {
+  font-size: 12pt;
+  margin: 0;
+}
+
+.spiceCalc__copyrightNotice {
+  font-size: 10pt;
+  font-style: italic;
+  text-align: center;
 }
 /*# sourceMappingURL=main.css.map */

@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+.spiceCalc {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  width: 100vw;
+  font-size: 1rem;
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  background: linear-gradient(to right, #485563, #29323c);
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    text-align: center;
+    img {
+      margin: 3rem auto;
+      width: 150px;
+    }
+    p {
+      font-size: 20pt;
+      font-style: "trajan";
+      margin: 0.5rem 1rem;
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem auto;
+
+    input {
+      text-align: center;
+      width: 50pt;
+      font-size: 1rem;
+      color: black;
+      margin: 0 5pt 0 10pt;
+      padding: 0.5rem;
+    }
+  }
+  &__outputArea {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 25pt 10pt;
+    text-align: center;
+
+    &__spiceItem {
+      margin: 10pt 30pt;
+
+      &__item {
+        font-size: 12pt;
+        margin: 0 0px 0 0;
+      }
+      &__qty {
+        font-size: 30pt;
+        margin: 0 6px 0 0;
+      }
+      &__unit {
+        font-size: 12pt;
+        margin: 0;
+      }
+    }
+  }
+}
+
+.spiceCalc__copyrightNotice {
+  font-size: 10pt;
+  font-style: italic;
+  text-align: center;
+}

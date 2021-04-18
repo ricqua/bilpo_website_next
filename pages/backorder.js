@@ -13,35 +13,35 @@ const Biltong = () => {
       </Head>
       <main className="backorder">
         <img
-          src="/bilpoLogos/Bilpo Logo Hv4 (Full-white).svg"
+          src="/bilpoLogos/Bilpo Logo Hv4 (Full-black).svg"
           alt="Bilpo logo"
           className="backorder__logo"
         />
         <h2 className="backorder__title">Backorder Form</h2>
-        <p className="backorder__description">
+        {/* <p className="backorder__description">
           Thank you for your interest. We are currently out of stock but will
           still accept orders and promise to deliver as soon as the next batch
           is ready. Please provide your contact details below.
-        </p>
+        </p> */}
         <form className="backorderForm">
-          <div className="backorderForm__inputBox">
+          <div className="inputBox_effect1">
             <input type="text" required />
             <span>Name</span>
           </div>
-          <div className="backorderForm__inputBox">
+          <div className="inputBox_effect1">
             <input type="text" required />
             <span>Email</span>
           </div>
-          <div className="backorderForm__inputBox">
+          <div className="inputBox_effect1">
             <input type="text" required />
             <span>Phone</span>
           </div>
-          <div className="backorderForm__inputBox">
+          <div className="inputBox_effect1">
             <input type="text" required />
             <span>Delivery Address</span>
           </div>
-          <div className="backorderForm__inputBox">
-            <input type="text" required />
+          <div className="inputBox_effect1">
+            <textarea type="text" required />
             <span>Order details</span>
           </div>
           <button className="button__lightPrimary">Submit</button>
