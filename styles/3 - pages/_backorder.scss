@@ -5,7 +5,7 @@
   &__logo {
     margin: 2rem auto;
     // margin: 4rem;
-    max-height: 8rem;
+    width: 150px;
   }
 
   &__title {
@@ -13,7 +13,7 @@
     margin: 0 auto;
     // margin-top: 2rem;
     max-width: 400px;
-    padding: 1rem 2.8rem;
+    // padding: 1rem 2.8rem;
     // text-align: left;
   }
   &__description {
@@ -23,14 +23,17 @@
     padding: 0.5rem 2.8rem;
     text-align: center;
   }
+  &__form {
+    position: relative;
+    padding: 1rem 2.8rem;
+    width: 100%;
+    margin: 2rem auto;
+    textarea {
+      height: 10rem;
+    }
+  }
 
   &__copyrightNotice {
     color: black;
   }
-}
-
-.backorderForm {
-  position: relative;
-  padding: 1rem 2.8rem;
-  width: 100%;
 }

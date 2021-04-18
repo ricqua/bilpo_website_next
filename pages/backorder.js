@@ -23,7 +23,7 @@ const Biltong = () => {
           still accept orders and promise to deliver as soon as the next batch
           is ready. Please provide your contact details below.
         </p> */}
-        <form className="backorderForm">
+        <form className="backorder__form">
           <div className="inputBox_effect1">
             <input type="text" required />
             <span>Name</span>

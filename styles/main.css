@@ -1119,14 +1119,13 @@ button {
 
 .backorder__logo {
   margin: 2rem auto;
-  max-height: 8rem;
+  width: 150px;
 }
 
 .backorder__title {
   color: black;
   margin: 0 auto;
   max-width: 400px;
-  padding: 1rem 2.8rem;
 }
 
 .backorder__description {
@@ -1137,14 +1136,19 @@ button {
   text-align: center;
 }
 
-.backorder__copyrightNotice {
-  color: black;
-}
-
-.backorderForm {
+.backorder__form {
   position: relative;
   padding: 1rem 2.8rem;
   width: 100%;
+  margin: 2rem auto;
+}
+
+.backorder__form textarea {
+  height: 10rem;
+}
+
+.backorder__copyrightNotice {
+  color: black;
 }
 
 .spiceCalc {
