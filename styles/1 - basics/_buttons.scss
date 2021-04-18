@@ -44,3 +44,25 @@
     transition: transform ease-in-out 250ms;
   }
 }
+
+.button__lightPrimary {
+  background: hsl(0, 100%, 50%);
+  color: white;
+  border: none;
+  width: 5rem;
+  height: 2.2rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.2rem;
+  cursor: pointer;
+  transition: transform ease-in-out 250ms;
+  margin: 0;
+
+  span {
+    margin-left: 1rem;
+  }
+
+  &:hover {
+    transform: scale(1.05, 1.05);
+    transition: transform ease-in-out 250ms;
+  }
+}

@@ -2,6 +2,8 @@ import React from "react";
 import Image from "next/image";
 import Head from "next/head";
 
+import ContactComponent from "../components/ContactComponent";
+
 import ProductCard from "../components/ProductCard";
 import { biltongBags } from "../data/productData";
 
@@ -25,6 +27,7 @@ const Biltong = () => {
             );
           })}
         </div>
+        <ContactComponent />
       </main>
     </React.Fragment>
   );

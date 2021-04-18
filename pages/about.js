@@ -2,6 +2,8 @@ import Head from "next/head";
 import React from "react";
 import Image from "next/image";
 
+import ContactComponent from "../components/ContactComponent";
+
 const About = () => {
   return (
     <React.Fragment>
@@ -119,6 +121,7 @@ const About = () => {
             />
           </div>
         </section>
+        <ContactComponent />
       </main>
     </React.Fragment>
   );

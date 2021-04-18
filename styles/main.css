@@ -90,6 +90,35 @@ main {
   transition: transform ease-in-out 250ms, -webkit-transform ease-in-out 250ms;
 }
 
+.button__lightPrimary {
+  background: red;
+  color: white;
+  border: none;
+  width: 5rem;
+  height: 2.2rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.2rem;
+  cursor: pointer;
+  -webkit-transition: -webkit-transform ease-in-out 250ms;
+  transition: -webkit-transform ease-in-out 250ms;
+  transition: transform ease-in-out 250ms;
+  transition: transform ease-in-out 250ms, -webkit-transform ease-in-out 250ms;
+  margin: 0;
+}
+
+.button__lightPrimary span {
+  margin-left: 1rem;
+}
+
+.button__lightPrimary:hover {
+  -webkit-transform: scale(1.05, 1.05);
+          transform: scale(1.05, 1.05);
+  -webkit-transition: -webkit-transform ease-in-out 250ms;
+  transition: -webkit-transform ease-in-out 250ms;
+  transition: transform ease-in-out 250ms;
+  transition: transform ease-in-out 250ms, -webkit-transform ease-in-out 250ms;
+}
+
 :root {
   --clr-light-text: white;
   --clr-medium-text: rgb(87, 87, 87);
@@ -592,14 +621,10 @@ button {
     transition: -webkit-transform ease-in-out 250ms, -webkit-filter ease-in-out 250ms;
     transition: transform ease-in-out 250ms, filter ease-in-out 250ms;
     transition: transform ease-in-out 250ms, filter ease-in-out 250ms, -webkit-transform ease-in-out 250ms, -webkit-filter ease-in-out 250ms;
-    -webkit-filter: grayscale(1);
-            filter: grayscale(1);
   }
   .GiftsetCard:hover {
     -webkit-transform: scale(1.05, 1.05);
             transform: scale(1.05, 1.05);
-    -webkit-filter: grayscale(0);
-            filter: grayscale(0);
     -webkit-transition: -webkit-transform ease-in-out 250ms, -webkit-filter ease-in-out 250ms;
     transition: -webkit-transform ease-in-out 250ms, -webkit-filter ease-in-out 250ms;
     transition: transform ease-in-out 250ms, filter ease-in-out 250ms;
@@ -1022,5 +1047,98 @@ button {
     margin-left: auto;
     margin-right: 1rem;
   }
+}
+
+.backorder {
+  min-height: 100vh;
+  width: 100vw;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#09203f), to(#537895));
+  background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
+}
+
+.backorder__logo {
+  margin: 2rem auto;
+  max-width: 40%;
+}
+
+.backorder__title {
+  color: white;
+  margin: auto;
+  max-width: 400px;
+  padding: 0.5rem 2.8rem;
+}
+
+.backorder__description {
+  color: white;
+  margin: auto;
+  max-width: 400px;
+  padding: 0.5rem 2.8rem;
+  text-align: center;
+}
+
+.backorder__copyrightNotice {
+  color: white;
+}
+
+.backorderForm {
+  position: relative;
+  padding: 3rem 2.8rem;
+  width: 100%;
+}
+
+.backorderForm__inputBox {
+  position: relative;
+  width: 100%;
+  height: 2.8rem;
+  margin-bottom: 35px;
+}
+
+.backorderForm__inputBox:last-child {
+  margin-bottom: 0px;
+}
+
+.backorderForm__inputBox input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border: 1px solid #838181;
+  background: white;
+  padding: 10px;
+  margin: 0;
+  border-radius: 4px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  outline: none;
+}
+
+.backorderForm__inputBox input:focus {
+  border: 1px solid #1f79ad;
+}
+
+.backorderForm__inputBox input:focus ~ span,
+.backorderForm__inputBox input:valid ~ span {
+  -webkit-transform: translateX(-10px) translateY(-32px);
+          transform: translateX(-10px) translateY(-32px);
+  font-size: 0.75rem;
+  color: white;
+}
+
+.backorderForm__inputBox span {
+  position: absolute;
+  top: -2px;
+  left: 1px;
+  padding: 10px;
+  z-index: 1;
+  display: inline-block;
+  pointer-events: none;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  color: #999999;
+}
+
+.backorderForm button {
+  margin: auto;
+  margin-bottom: 2rem;
 }
 /*# sourceMappingURL=main.css.map */

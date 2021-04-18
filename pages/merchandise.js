@@ -2,6 +2,8 @@ import React from "react";
 import Image from "next/image";
 import Head from "next/head";
 
+import ContactComponent from "../components/ContactComponent";
+
 import ProductCard from "../components/ProductCard";
 import { merch } from "../data/productData";
 
@@ -25,6 +27,7 @@ const Merchandise = () => {
             );
           })}
         </div>
+        <ContactComponent />
       </main>
     </React.Fragment>
   );
