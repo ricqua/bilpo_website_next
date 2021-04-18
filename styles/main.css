@@ -244,7 +244,6 @@ button {
   top: 0px;
   left: 0px;
   padding: 1rem;
-  z-index: 1;
   display: inline-block;
   pointer-events: none;
   -webkit-transition: 0.5s;
@@ -697,6 +696,47 @@ button {
     width: 60%;
     margin-left: 1.6rem;
   }
+}
+
+.modal {
+  background: white;
+  position: fixed;
+  top: 0rem;
+  bottom: 0rem;
+  left: 0rem;
+  right: 0rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.modal:focus {
+  outline: none;
+}
+
+.modal img {
+  max-width: 100px;
+  margin: 2rem;
+}
+
+.modal p {
+  max-width: 450px;
+}
+
+.modal button {
+  margin: 1rem auto;
+  width: 150px;
 }
 
 .home section {

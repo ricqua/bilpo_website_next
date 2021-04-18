@@ -1,0 +1,39 @@
+.modal {
+  background: hsl(0, 0%, 100%);
+  //   filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
+  //   outline: 2px solid green;
+  position: fixed;
+  top: 0rem;
+  bottom: 0rem;
+  left: 0rem;
+  right: 0rem;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  &:focus {
+    outline: none;
+  }
+
+  img {
+    max-width: 100px;
+    margin: 2rem;
+  }
+
+  p {
+    max-width: 450px;
+  }
+
+  button {
+    margin: 1rem auto;
+    width: 150px;
+    // background: green;
+  }
+}
+
+@media (min-width: 768px) {
+  .modal {
+  }
+}
