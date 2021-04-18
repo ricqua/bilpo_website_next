@@ -46,9 +46,9 @@ const Biltong = () => {
           </div>
           <button className="button__lightPrimary">Submit</button>
         </form>
-        <p className="copyrightNotice backorder__copyrightNotice ">
+        {/* <p className="copyrightNotice backorder__copyrightNotice ">
           Copyright @ Bilpo 2021
-        </p>
+        </p> */}
       </main>
     </React.Fragment>
   );
