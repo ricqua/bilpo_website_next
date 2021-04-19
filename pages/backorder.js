@@ -29,7 +29,7 @@ const backorder = () => {
         }
       );
 
-    console.log(e.target.name.value);
+    // console.log(e.target.name.value);
     const backorderList = db.ref("backorderList");
     const newBackorderList = backorderList.push();
     newBackorderList
@@ -114,3 +114,14 @@ const backorder = () => {
 };
 
 export default backorder;
+
+// export async function getServerSideProps() {
+//   console.log(process.env.NEXT_PUBLIC_FIREBASE_PUBLIC_API_KEY);
+//   console.log(process.env.NEXT_PUBLIC_FIREBASE_AUTHDOMAIN);
+
+//   return {
+//     props: {
+//       hello: "world",
+//     },
+//   };
+// }
