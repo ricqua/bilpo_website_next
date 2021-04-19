@@ -49,11 +49,11 @@ function MyApp({ Component, pageProps }) {
           property="og:description"
           content="빌포 - 천천히 맛의 깊이를 더한 저온건조 페퍼 스테이크"
         />
-        {/* <meta
+        <meta
           id="meta_og_image"
           property="og:image"
           content="/OG_Images/Bilpo_og_facebook(1200x630px).png"
-        /> */}
+        />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta name="keywords" content="" />

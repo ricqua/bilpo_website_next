@@ -3,10 +3,9 @@ import Head from "next/head";
 import emailjs from "emailjs-com";
 import Modal from "react-modal";
 
-// import firebase from "firebase/app";
-// import initFirebase from "../components/firebase";
-// initFirebase();
-// const db = firebase.database();
+import { firebase } from "../components/firebase";
+
+const db = firebase.database();
 
 const backorder = () => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
@@ -29,25 +28,27 @@ const backorder = () => {
           console.log(error.text);
         }
       );
+
+    console.log(e.target.name.value);
+    const backorderList = db.ref("backorderList");
+    const newBackorderList = backorderList.push();
+    newBackorderList
+      .set({
+        id: new Date().toLocaleString(),
+        name: e.target.name.value,
+        email: e.target.email.value,
+        phone: e.target.phone.value,
+        address: e.target.address.value,
+        details: e.target.details.value,
+      })
+      .then(() => {
+        // alert("Succsessful");
+      })
+      .catch((error) => {
+        alert(error.message);
+      });
     e.target.reset();
     setModalIsOpen(true);
-
-    // const backorderList = db.ref("backorderList");
-    // const newBackorderList = backorderList.push();
-    // newBackorderList
-    //   .set({
-    //     name: isBackorder.name,
-    //     email: isBackorder.email,
-    //     phone: isBackorder.phone,
-    //     address: isBackorder.address,
-    //     details: isBackorder.details,
-    //   })
-    //   .then(() => {
-    //     alert("Succsessful");
-    //   })
-    //   .catch((error) => {
-    //     alert(error.message);
-    //   });
   };
 
   return (

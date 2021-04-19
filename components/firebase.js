@@ -9,10 +9,14 @@ const firebaseConfig = {
   projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
 };
 
-export default function initFirebase() {
+function initFirebase() {
   if (!firebase.apps.length) {
     firebase.initializeApp(firebaseConfig);
   } else {
     firebase.app(); // if already initialized, use that one
   }
 }
+
+initFirebase();
+
+export { firebase };
