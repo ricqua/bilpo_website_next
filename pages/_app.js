@@ -9,11 +9,15 @@ import Footer from "../components/Footer";
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
   const showHeader =
-    router.pathname === "/backorder" || router.pathname === "/spiceCalc"
+    router.pathname === "/backorder" ||
+    router.pathname === "/spiceCalc" ||
+    router.pathname === "/backorderHistory"
       ? false
       : true;
   const showFooter =
-    router.pathname === "/backorder" || router.pathname === "/spiceCalc"
+    router.pathname === "/backorder" ||
+    router.pathname === "/spiceCalc" ||
+    router.pathname === "/backorderHistory"
       ? false
       : true;
   return (

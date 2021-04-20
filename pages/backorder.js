@@ -22,10 +22,10 @@ const backorder = () => {
       )
       .then(
         (result) => {
-          console.log(result.text);
+          console.log("email status:", result.text);
         },
         (error) => {
-          console.log(error.text);
+          console.log("email status:", error.text);
         }
       );
 
@@ -42,10 +42,10 @@ const backorder = () => {
         details: e.target.details.value,
       })
       .then(() => {
-        // alert("Succsessful");
+        console.log("Firebase status: OK");
       })
       .catch((error) => {
-        alert(error.message);
+        console.log("Firebase status:", error.message);
       });
     e.target.reset();
     setModalIsOpen(true);

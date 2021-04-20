@@ -126,6 +126,10 @@ main {
   --clr-dark-bg: #1c1c1e;
 }
 
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 h1 {
   font-size: 40pt;
   font-weight: 100;
