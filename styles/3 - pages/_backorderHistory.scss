@@ -1,9 +1,45 @@
 .backorderHistory {
+  width: 100vw;
+  min-height: 100vh;
+  // margin: auto;
+  // background: palegoldenrod;
+  // margin: 1rem;
   //   background: green;
+  h1 {
+    margin: 1rem auto;
+    margin-top: 4rem;
+  }
+  button {
+    margin: 0;
+    background: lightgrey;
+    position: fixed;
+    // margin: 1rem;
+    // width: 50%;
+  }
   &__list {
-    max-width: 800px;
-    margin: 0.6rem auto;
+    // margin: 1rem auto;
+    // gap: 1rem;
+    // max-width: 800px;
+    // margin: 0.6rem auto;
     // list-style-type: decimal;
     // color: red;
+    // background: red;
+    // display: flex;
+    // flex-flow: row wrap;
+    // justify-content: center;
+    width: 100%;
+  }
+}
+
+.backorderItem {
+  // margin: 1rem;
+  width: 100%;
+  // min-width: 300px;
+  border-top: 1px solid black;
+  padding: 1rem 5rem;
+  display: flex;
+
+  div {
+    width: 50%;
   }
 }

@@ -1195,9 +1195,37 @@ button {
   color: black;
 }
 
+.backorderHistory {
+  width: 100vw;
+  min-height: 100vh;
+}
+
+.backorderHistory h1 {
+  margin: 1rem auto;
+  margin-top: 4rem;
+}
+
+.backorderHistory button {
+  margin: 0;
+  background: lightgrey;
+  position: fixed;
+}
+
 .backorderHistory__list {
-  max-width: 800px;
-  margin: 0.6rem auto;
+  width: 100%;
+}
+
+.backorderItem {
+  width: 100%;
+  border-top: 1px solid black;
+  padding: 1rem 5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.backorderItem div {
+  width: 50%;
 }
 
 .spiceCalc {

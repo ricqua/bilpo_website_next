@@ -14,7 +14,7 @@ export default function backorderHistory() {
       const snapshot = await dataRef.get();
       snapshot.forEach((doc) => {
         var order = doc.data();
-        console.log(doc.data());
+        // console.log(doc.data());
 
         setData((prevState) => [...prevState, doc.data()]);
       });
@@ -24,23 +24,44 @@ export default function backorderHistory() {
 
   return (
     <React.Fragment>
-      {/* <button onClick={readData}>Read Data</button> */}
-      <button onClick={() => window.location.reload()}>Refresh</button>
-
-      {!isData
-        ? null
-        : isData.map((order) => {
-            return (
-              <div key={order.email} className="backorderHistory">
-                <ul className="backorderHistory__list">
-                  <li>
-                    {order.date}, {order.name}, {order.email}, {order.phone},
-                    {order.address}, {order.details}
-                  </li>
-                </ul>
-              </div>
-            );
-          })}
+      <main className="backorderHistory">
+        {/* <button onClick={readData}>Read Data</button> */}
+        <button onClick={() => window.location.reload()}>Refresh</button>
+        <h1>Backorder History</h1>
+        <section className="backorderHistory__list">
+          {!isData
+            ? null
+            : isData.map((order) => {
+                return (
+                  <div key={order.email}>
+                    <BackorderItem order={order} />
+                  </div>
+                );
+              })}
+        </section>
+      </main>
     </React.Fragment>
   );
 }
+
+const BackorderItem = (props) => {
+  const order = props.order;
+  // console.log(order);
+  return (
+    <React.Fragment>
+      <div className="backorderItem">
+        <div>
+          <h3>{order.name}</h3>
+          <p>{order.date} </p>
+          <p>{order.email}</p>
+          <p>{order.phone}</p>
+          <p>{order.address}</p>
+        </div>
+        <div>
+          {/* <strong>Order details:</strong> */}
+          <p>{order.details}</p>
+        </div>
+      </div>
+    </React.Fragment>
+  );
+};
