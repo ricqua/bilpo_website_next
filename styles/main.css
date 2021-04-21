@@ -1205,10 +1205,19 @@ button {
   margin-top: 4rem;
 }
 
-.backorderHistory button {
+.backorderHistory button:nth-child(1) {
   margin: 0;
   background: lightgrey;
   position: fixed;
+  left: 0;
+  width: 80%;
+}
+
+.backorderHistory button:nth-child(2) {
+  background: lightgrey;
+  position: fixed;
+  right: 0;
+  width: 20%;
 }
 
 .backorderHistory__list {

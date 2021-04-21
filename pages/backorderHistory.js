@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import Link from "next/link";
+
 import firebase from "firebase/app";
 import "firebase/firestore";
 import initFirebase from "../firebase/initFirebase";
@@ -25,8 +27,10 @@ export default function backorderHistory() {
   return (
     <React.Fragment>
       <main className="backorderHistory">
-        {/* <button onClick={readData}>Read Data</button> */}
         <button onClick={() => window.location.reload()}>Refresh</button>
+        <Link href="/backorder">
+          <button>Backorder Form</button>
+        </Link>
         <h1>Backorder History</h1>
         <section className="backorderHistory__list">
           {!isData
