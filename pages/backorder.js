@@ -3,15 +3,42 @@ import Head from "next/head";
 import emailjs from "emailjs-com";
 import Modal from "react-modal";
 
-import { firebase } from "../components/firebase";
+// import { firebase } from "../firebase/initFirebase";
+// const db = firebase.database();
 
-const db = firebase.database();
+import firebase from "firebase/app";
+import "firebase/firestore";
+import initFirebase from "../firebase/initFirebase";
+
+initFirebase();
 
 const backorder = () => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
 
+  const sendData = (props) => {
+    try {
+      firebase
+        .firestore()
+        .collection("Backorders")
+        .doc(props.name.value)
+        .set({
+          date: new Date().toLocaleString(),
+          name: props.name.value,
+          email: props.email.value,
+          phone: props.phone.value,
+          address: props.address.value,
+          details: props.details.value,
+        })
+        .then(console.log("Sent to Firestore"));
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    const payload = e.target;
 
     emailjs
       .sendForm(
@@ -29,24 +56,26 @@ const backorder = () => {
         }
       );
 
+    sendData(payload);
+
     // console.log(e.target.name.value);
-    const backorderList = db.ref("backorderList");
-    const newBackorderList = backorderList.push();
-    newBackorderList
-      .set({
-        id: new Date().toLocaleString(),
-        name: e.target.name.value,
-        email: e.target.email.value,
-        phone: e.target.phone.value,
-        address: e.target.address.value,
-        details: e.target.details.value,
-      })
-      .then(() => {
-        console.log("Firebase status: OK");
-      })
-      .catch((error) => {
-        console.log("Firebase status:", error.message);
-      });
+    // const backorderList = db.ref("backorderList");
+    // const newBackorderList = backorderList.push();
+    // newBackorderList
+    //   .set({
+    //     id: new Date().toLocaleString(),
+    //     name: e.target.name.value,
+    //     email: e.target.email.value,
+    //     phone: e.target.phone.value,
+    //     address: e.target.address.value,
+    //     details: e.target.details.value,
+    //   })
+    //   .then(() => {
+    //     console.log("Firebase status: OK");
+    //   })
+    //   .catch((error) => {
+    //     console.log("Firebase status:", error.message);
+    //   });
     e.target.reset();
     setModalIsOpen(true);
   };

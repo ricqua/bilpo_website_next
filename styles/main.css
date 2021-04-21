@@ -1195,6 +1195,11 @@ button {
   color: black;
 }
 
+.backorderHistory__list {
+  max-width: 800px;
+  margin: 0.6rem auto;
+}
+
 .spiceCalc {
   margin: 0;
   padding: 0;

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { originalBiltong } from "../data/recipeData.js";
 
-const spiceCalc = () => {
+const spicecalc = () => {
   const [meatInput, setMeatInput] = useState(0);
   const [spices, setSpices] = useState(originalBiltong);
 
@@ -63,4 +63,4 @@ const spiceCalc = () => {
   );
 };
 
-export default spiceCalc;
+export default spicecalc;

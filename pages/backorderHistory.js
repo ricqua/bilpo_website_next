@@ -1,41 +1,46 @@
-import React from "react";
-import { firebase } from "../components/firebase";
+import React, { useState, useEffect } from "react";
+import firebase from "firebase/app";
+import "firebase/firestore";
+import initFirebase from "../firebase/initFirebase";
 
-const db = firebase.database();
+initFirebase();
 
-function backorderHistory() {
-  var newData = {};
-  //   var backorderHistoryData = [];
+export default function backorderHistory() {
+  const [isData, setData] = useState([]);
 
-  const ref = db.ref("backorderList");
-  ref.on("value", gotData, errData); //on is always checking.  once is only once
+  useEffect(() => {
+    async function readData() {
+      const dataRef = firebase.firestore().collection("Backorders");
+      const snapshot = await dataRef.get();
+      snapshot.forEach((doc) => {
+        var order = doc.data();
+        console.log(doc.data());
 
-  function gotData(data) {
-    newData = Object.values(data.val());
-
-    // console.log(newData[0]);
-  }
-
-  function errData(err) {
-    console.log("error");
-    console.log(err);
-  }
+        setData((prevState) => [...prevState, doc.data()]);
+      });
+    }
+    readData();
+  }, []);
 
   return (
     <React.Fragment>
-      <main>
-        <div>
-          <h1>Backorder History</h1>
-          {/* {newData[0].name} */}
+      {/* <button onClick={readData}>Read Data</button> */}
+      <button onClick={() => window.location.reload()}>Refresh</button>
 
-          {/* {newData[2].name.length >= 1 ? "good" : null} */}
-          {/* {newData.map((order) => {
-            return <p>help</p>;
-          })} */}
-        </div>
-      </main>
+      {!isData
+        ? null
+        : isData.map((order) => {
+            return (
+              <div key={order.email} className="backorderHistory">
+                <ul className="backorderHistory__list">
+                  <li>
+                    {order.date}, {order.name}, {order.email}, {order.phone},
+                    {order.address}, {order.details}
+                  </li>
+                </ul>
+              </div>
+            );
+          })}
     </React.Fragment>
   );
 }
-
-export default backorderHistory;
