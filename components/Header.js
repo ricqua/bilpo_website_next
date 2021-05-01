@@ -1,7 +1,19 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Link from "next/link";
+import { useUser } from "../firebase/auth/useUser";
 
 const Header = () => {
+  const { user, logout } = useUser();
+
+  useEffect(() => {
+    document.addEventListener("click", (e) => {
+      if (e.target.matches("label")) {
+        const navBar = document.getElementById("navToggleInput");
+        navBar.checked = false;
+      }
+    });
+  }, []);
+
   return (
     <React.Fragment>
       <div className="header">
@@ -52,6 +64,24 @@ const Header = () => {
                 <label>고객센터</label>
               </Link>
             </li>
+            {user ? (
+              <div>
+                <Link className="link" href="./dashboard">
+                  <li>Dashboard</li>
+                </Link>
+                <li
+                  onClick={() => {
+                    logout();
+                  }}
+                >
+                  Log Out
+                </li>
+              </div>
+            ) : (
+              <Link className="link" href="./auth">
+                <li>Wholesale</li>
+              </Link>
+            )}
           </ul>
         </nav>
       </div>

@@ -1,10 +1,16 @@
 import Head from "next/head";
 import React from "react";
 import Image from "next/image";
+import LayoutPublic from "../components/LayoutPublic";
 
 const Home = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.alert("giveaway entered");
+  };
+
   return (
-    <React.Fragment>
+    <LayoutPublic>
       <Head>
         <title>Bilpo - Home</title>
       </Head>
@@ -33,10 +39,17 @@ const Home = () => {
                 빌포팀이 고객님께 선물하는 빌통! 경품응모하고 무료 빌통 2봉을
                 받아가세요. 추첨발표는 마감일 다음에 발표됩니다.
               </p>
-              <form action="">
-                <input type="text" required placeholder="이름" />
-                <input type="text" required placeholder="이메일" />
-                <button className="button__dark">Submit</button>
+              <form className="backorder__form" onSubmit={handleSubmit}>
+                <div className="inputBox_effect1">
+                  <input type="text" required name="name" />
+                  <span>Name</span>
+                </div>
+                <div className="inputBox_effect1">
+                  <input type="text" required name="email" />
+                  <span>Email</span>
+                </div>
+
+                <button className="button__lightPrimary">Enter Giveaway</button>
               </form>
             </div>
           </div>
@@ -49,7 +62,7 @@ const Home = () => {
           <div>Shipping section</div>
         </section>
       </main>
-    </React.Fragment>
+    </LayoutPublic>
   );
 };
 

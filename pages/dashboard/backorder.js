@@ -8,7 +8,7 @@ import Modal from "react-modal";
 
 import firebase from "firebase/app";
 import "firebase/firestore";
-import initFirebase from "../firebase/initFirebase";
+import initFirebase from "../../firebase/initFirebase";
 
 initFirebase();
 

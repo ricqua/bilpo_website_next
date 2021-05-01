@@ -3,11 +3,11 @@ import Link from "next/link";
 
 import firebase from "firebase/app";
 import "firebase/firestore";
-import initFirebase from "../firebase/initFirebase";
+import initFirebase from "../../firebase/initFirebase";
 
 initFirebase();
 
-export default function backorderHistory() {
+export default function backorderLog() {
   const [isData, setData] = useState([]);
 
   useEffect(() => {
@@ -35,13 +35,15 @@ export default function backorderHistory() {
         <section className="backorderHistory__list">
           {!isData
             ? null
-            : isData.map((order) => {
-                return (
-                  <div key={order.email}>
-                    <BackorderItem order={order} />
-                  </div>
-                );
-              })}
+            : isData
+                .sort((a, b) => a.name - b.name)
+                .map((order) => {
+                  return (
+                    <div key={order.email}>
+                      <BackorderItem order={order} />
+                    </div>
+                  );
+                })}
         </section>
       </main>
     </React.Fragment>

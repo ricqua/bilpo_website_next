@@ -2,14 +2,14 @@ import React from "react";
 import Image from "next/image";
 import Head from "next/head";
 
-import ContactComponent from "../components/ContactComponent";
+import LayoutPublic from "../components/LayoutPublic";
 
 import ProductCard from "../components/ProductCard";
 import { merch } from "../data/productData";
 
 const Merchandise = () => {
   return (
-    <React.Fragment>
+    <LayoutPublic>
       <Head>
         <title>Bilpo - Merchandise</title>
       </Head>
@@ -27,9 +27,8 @@ const Merchandise = () => {
             );
           })}
         </div>
-        <ContactComponent />
       </main>
-    </React.Fragment>
+    </LayoutPublic>
   );
 };
 

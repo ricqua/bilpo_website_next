@@ -1,8 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Head from "next/head";
-
-import ContactComponent from "../components/ContactComponent";
+import LayoutPublic from "../components/LayoutPublic";
 
 import GiftsetCard from "../components/GiftsetCard";
 import { giftsets } from "../data/productData";
@@ -13,7 +12,7 @@ const Giftsets = () => {
   const brewery304 = giftsets[2];
 
   return (
-    <React.Fragment>
+    <LayoutPublic>
       <Head>
         <title>Bilpo - Giftsets</title>
       </Head>
@@ -92,9 +91,8 @@ const Giftsets = () => {
             <GiftsetCard data={bilpo.products[1]} loading="eager" />
           </div>
         </section>
-        <ContactComponent />
       </main>
-    </React.Fragment>
+    </LayoutPublic>
   );
 };
 

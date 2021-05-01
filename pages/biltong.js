@@ -1,15 +1,14 @@
 import React from "react";
 import Image from "next/image";
 import Head from "next/head";
-
-import ContactComponent from "../components/ContactComponent";
+import LayoutPublic from "../components/LayoutPublic";
 
 import ProductCard from "../components/ProductCard";
 import { biltongBags } from "../data/productData";
 
 const Biltong = () => {
   return (
-    <React.Fragment>
+    <LayoutPublic>
       <Head>
         <title>Bilpo - Biltong</title>
       </Head>
@@ -27,9 +26,8 @@ const Biltong = () => {
             );
           })}
         </div>
-        <ContactComponent />
       </main>
-    </React.Fragment>
+    </LayoutPublic>
   );
 };
 

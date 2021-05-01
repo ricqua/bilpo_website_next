@@ -50,6 +50,7 @@
     justify-content: center;
     margin: 25pt 10pt;
     text-align: center;
+    height: 100%;
 
     &__spiceItem {
       margin: 10pt 30pt;
@@ -68,9 +69,19 @@
       }
     }
   }
+  &__est {
+    margin: 1rem;
+    li {
+      list-style-type: none;
+      margin: 0.5rem 3rem;
+    }
+  }
 }
 
 .spiceCalc__copyrightNotice {
+  // position: sticky;
+  // bottom: 0;
+  margin-top: auto;
   font-size: 10pt;
   font-style: italic;
   text-align: center;

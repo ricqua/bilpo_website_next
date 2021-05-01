@@ -53,13 +53,13 @@
     max-width: 100%;
     display: flex;
     flex-flow: row nowrap;
-    transition: transform ease-in-out 250ms, filter ease-in-out 250ms;
+    // transition: transform ease-in-out 250ms, filter ease-in-out 250ms;
     // filter: grayscale(1);
 
     &:hover {
-      transform: scale(1.05, 1.05);
+      // transform: scale(1.05, 1.05);
       // filter: grayscale(0);
-      transition: transform ease-in-out 250ms, filter ease-in-out 250ms;
+      // transition: transform ease-in-out 250ms, filter ease-in-out 250ms;
       // transition: filter ease-in-out 250ms;
     }
 

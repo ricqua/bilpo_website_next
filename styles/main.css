@@ -102,7 +102,6 @@ main {
   transition: -webkit-transform ease-in-out 250ms;
   transition: transform ease-in-out 250ms;
   transition: transform ease-in-out 250ms, -webkit-transform ease-in-out 250ms;
-  margin: 0;
 }
 
 .button__lightPrimary span {
@@ -256,16 +255,8 @@ button {
   font-size: 1rem;
 }
 
-button {
-  margin: auto;
-  margin-bottom: 2rem;
-  width: 100%;
-  height: 3rem;
-}
-
 .footerSection {
   width: 100%;
-  border-top: 1px solid darkgray;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -371,12 +362,11 @@ button {
 .header {
   background: white;
   height: 75px;
-  position: fixed;
+  position: -webkit-sticky;
+  position: sticky;
   width: 100%;
   z-index: 999;
   top: 0;
-  -webkit-filter: drop-shadow(0px 0px 5px grey);
-          filter: drop-shadow(0px 0px 5px grey);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -683,18 +673,6 @@ button {
     -webkit-box-direction: normal;
         -ms-flex-flow: row nowrap;
             flex-flow: row nowrap;
-    -webkit-transition: -webkit-transform ease-in-out 250ms, -webkit-filter ease-in-out 250ms;
-    transition: -webkit-transform ease-in-out 250ms, -webkit-filter ease-in-out 250ms;
-    transition: transform ease-in-out 250ms, filter ease-in-out 250ms;
-    transition: transform ease-in-out 250ms, filter ease-in-out 250ms, -webkit-transform ease-in-out 250ms, -webkit-filter ease-in-out 250ms;
-  }
-  .GiftsetCard:hover {
-    -webkit-transform: scale(1.05, 1.05);
-            transform: scale(1.05, 1.05);
-    -webkit-transition: -webkit-transform ease-in-out 250ms, -webkit-filter ease-in-out 250ms;
-    transition: -webkit-transform ease-in-out 250ms, -webkit-filter ease-in-out 250ms;
-    transition: transform ease-in-out 250ms, filter ease-in-out 250ms;
-    transition: transform ease-in-out 250ms, filter ease-in-out 250ms, -webkit-transform ease-in-out 250ms, -webkit-filter ease-in-out 250ms;
   }
   .GiftsetCard section {
     width: 60%;
@@ -794,7 +772,7 @@ button {
 }
 
 .giftsets__header {
-  padding-top: 7rem;
+  padding-top: 3rem;
   padding-bottom: 3rem;
   text-align: center;
   margin: 0 1rem;
@@ -879,7 +857,7 @@ button {
 
 .biltong__title {
   margin: 1rem;
-  margin-top: 7rem;
+  margin-top: 3rem;
   text-align: center;
 }
 
@@ -934,7 +912,7 @@ button {
 
 .merch__title {
   margin: 1rem;
-  margin-top: 7rem;
+  margin-top: 3rem;
   text-align: center;
 }
 
@@ -1316,6 +1294,7 @@ button {
           justify-content: center;
   margin: 25pt 10pt;
   text-align: center;
+  height: 100%;
 }
 
 .spiceCalc__outputArea__spiceItem {
@@ -1337,9 +1316,80 @@ button {
   margin: 0;
 }
 
+.spiceCalc__est {
+  margin: 1rem;
+}
+
+.spiceCalc__est li {
+  list-style-type: none;
+  margin: 0.5rem 3rem;
+}
+
 .spiceCalc__copyrightNotice {
+  margin-top: auto;
   font-size: 10pt;
   font-style: italic;
   text-align: center;
+}
+
+.b2b {
+  width: 1200px;
+  margin: auto;
+}
+
+.b2b li {
+  margin: 1rem;
+}
+
+.b2b__bags {
+  margin: 1rem;
+  padding-top: 3rem;
+  border-top: 1px solid lightgrey;
+  text-align: center;
+}
+
+.b2b__bags img {
+  max-width: 350px;
+  margin: 1rem;
+}
+
+.b2b__bagsNumbers {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 1rem;
+  text-align: right;
+}
+
+.b2b__bagsNumbers div {
+  padding: 1rem;
+  width: 50%;
+}
+
+.b2b__bagsNumbers div:nth-child(2) {
+  background: lightgrey;
+}
+
+.b2b__sliced {
+  margin: 1rem;
+  border: 1px solid black;
+  text-align: center;
+}
+
+.b2b__sliced img {
+  max-width: 350px;
+  margin: 1rem;
+}
+
+.b2b__slicedNumbers {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 1rem;
+}
+
+.b2b__slicedNumbers div {
+  border: 1px solid black;
+  width: 50%;
 }
 /*# sourceMappingURL=main.css.map */

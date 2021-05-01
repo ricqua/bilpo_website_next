@@ -1,12 +1,11 @@
 import Head from "next/head";
 import React from "react";
 import Image from "next/image";
-
-import ContactComponent from "../components/ContactComponent";
+import LayoutPublic from "../components/LayoutPublic";
 
 const About = () => {
   return (
-    <React.Fragment>
+    <LayoutPublic>
       <Head>
         <title>Bilpo - About</title>
       </Head>
@@ -121,9 +120,8 @@ const About = () => {
             />
           </div>
         </section>
-        <ContactComponent />
       </main>
-    </React.Fragment>
+    </LayoutPublic>
   );
 };
 
