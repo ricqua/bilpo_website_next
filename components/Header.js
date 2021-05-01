@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
 import Link from "next/link";
-import { useUser } from "../firebase/auth/useUser";
+// import { useUser } from "../firebase/auth/useUser";
 
 const Header = () => {
-  const { user, logout } = useUser();
+  // const { user, logout } = useUser();
 
   useEffect(() => {
     document.addEventListener("click", (e) => {
@@ -64,24 +64,20 @@ const Header = () => {
                 <label>고객센터</label>
               </Link>
             </li>
-            {user ? (
-              <div>
+            <Link className="link" href="./signin">
+              <div className="header__signin">Dashboard</div>
+            </Link>
+            {/* <div>
+              {user ? (
                 <Link className="link" href="./dashboard">
-                  <li>Dashboard</li>
+                  <div className="header__signin">Dashboard</div>
                 </Link>
-                <li
-                  onClick={() => {
-                    logout();
-                  }}
-                >
-                  Log Out
-                </li>
-              </div>
-            ) : (
-              <Link className="link" href="./auth">
-                <li>Wholesale</li>
-              </Link>
-            )}
+              ) : (
+                <Link className="link" href="./auth">
+                  <div className="header__signin">Wholesale</div>
+                </Link>
+              )}
+            </div> */}
           </ul>
         </nav>
       </div>

@@ -356,6 +356,7 @@ button {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     margin: auto;
+    margin-top: auto;
   }
 }
 
@@ -407,6 +408,7 @@ button {
 .header nav li {
   list-style: none;
   margin: 2em;
+  cursor: pointer;
 }
 
 .header nav label {
@@ -417,6 +419,7 @@ button {
   opacity: 0;
   -webkit-transition: opacity 150ms ease-in-out;
   transition: opacity 150ms ease-in-out;
+  cursor: pointer;
 }
 
 .header__navToggleInput {
@@ -473,7 +476,21 @@ button {
   top: 0.5rem;
 }
 
-@media screen and (min-width: 1000px) {
+.header__signin {
+  background: #8a0000;
+  color: white;
+  border-radius: 10rem;
+  padding: 0.65em 1.2em;
+  cursor: pointer;
+  display: inline-block;
+  margin: 1rem 2rem 3rem;
+}
+
+.header__signin:hover {
+  background: #b30000;
+}
+
+@media screen and (min-width: 1100px) {
   .header {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -543,6 +560,9 @@ button {
   .header nav label:hover::after {
     -webkit-transform: scale(1, 1);
             transform: scale(1, 1);
+  }
+  .header__signin {
+    margin: 0rem;
   }
 }
 
@@ -719,6 +739,11 @@ button {
 .modal button {
   margin: 1rem auto;
   width: 150px;
+}
+
+.firebaseAuth {
+  margin: 2rem;
+  height: 100%;
 }
 
 .home section {
@@ -1179,21 +1204,24 @@ button {
 }
 
 .backorderHistory h1 {
+  text-align: center;
   margin: 1rem auto;
   margin-top: 4rem;
 }
 
-.backorderHistory button:nth-child(1) {
+.backorderHistory button {
   margin: 0;
-  background: lightgrey;
+  padding: 0.7rem;
   position: fixed;
+  background: lightgrey;
+}
+
+.backorderHistory button:nth-child(1) {
   left: 0;
   width: 80%;
 }
 
 .backorderHistory button:nth-child(2) {
-  background: lightgrey;
-  position: fixed;
   right: 0;
   width: 20%;
 }
@@ -1391,5 +1419,120 @@ button {
 .b2b__slicedNumbers div {
   border: 1px solid black;
   width: 50%;
+}
+
+.authPage {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  width: 100vw;
+  font-size: 1rem;
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  background: -webkit-gradient(linear, left top, right top, from(#485563), to(#29323c));
+  background: linear-gradient(to right, #485563, #29323c);
+  text-align: center;
+}
+
+.authPage > img {
+  width: 150px;
+  margin: 5rem auto;
+}
+
+.authPage a {
+  text-decoration: none;
+  color: white;
+}
+
+.authPage p {
+  max-width: 650px;
+  margin: 1rem;
+}
+
+.dashboard {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  width: 100vw;
+  font-size: 1rem;
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  background: -webkit-gradient(linear, left top, right top, from(#485563), to(#29323c));
+  background: linear-gradient(to right, #485563, #29323c);
+  text-align: center;
+}
+
+.dashboard h2 {
+  margin: 2rem;
+}
+
+.dashboard__tools {
+  width: 100%;
+  border-radius: 1rem;
+  margin: 3rem auto;
+}
+
+.dashboard__tools p {
+  margin: 1rem;
+  padding: 0.25em;
+  background: white;
+  color: black;
+  list-style: none;
+  cursor: pointer;
+}
+
+.dashboard__tools p:hover {
+  background: #dedede;
+}
+
+.dashboard__tools__backorder {
+  margin: 1rem;
+  margin-top: 3rem;
+  border: 1px solid white;
+  padding: 1rem;
+}
+
+.dashboard__tools__backorder div {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.dashboard__tools__backorder div p {
+  width: 50%;
+}
+
+@media (min-width: 768px) {
+  .dashboard__tools {
+    max-width: 600px;
+  }
 }
 /*# sourceMappingURL=main.css.map */

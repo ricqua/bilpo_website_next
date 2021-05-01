@@ -28,10 +28,10 @@ export default function backorderLog() {
     <React.Fragment>
       <main className="backorderHistory">
         <button onClick={() => window.location.reload()}>Refresh</button>
-        <Link href="/backorder">
-          <button>Backorder Form</button>
+        <Link href="/dashboard">
+          <button>Dashboard</button>
         </Link>
-        <h1>Backorder History</h1>
+        <h1>Backorder Log</h1>
         <section className="backorderHistory__list">
           {!isData
             ? null
