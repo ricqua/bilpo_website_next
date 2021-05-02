@@ -8,18 +8,18 @@ function index() {
 
   return (
     <React.Fragment>
-      <Header />
+      {/* <Header /> */}
       <div className="dashboard">
         <h1>Dashboard</h1>
         {user ? <h2>Welcome back, {user.name}</h2> : null}
         {user ? <p>UserID: {user.email}</p> : null}
         <div className="dashboard__tools">
-          <h2>Admin tools:</h2>
-          <Link href="./dashboard/b2b">
-            <p>Wholesale order form</p>
-          </Link>
+          {/* <h2>Admin tools:</h2> */}
           <Link href="./dashboard/spicecalc">
             <p>Spice calculator</p>
+          </Link>
+          <Link href="./dashboard/b2b">
+            <p>RFQ</p>
           </Link>
           <div className="dashboard__tools__backorder">
             <strong>Backorder tools:</strong>
@@ -33,15 +33,18 @@ function index() {
             </div>
           </div>
         </div>
+        <Link href="./">
+          <p>Back to website</p>
+        </Link>
 
-        <button
-          className="button__lightPrimary"
+        <p
+          // className="button__lightPrimary"
           onClick={() => {
             logout();
           }}
         >
           Log Out
-        </button>
+        </p>
       </div>
     </React.Fragment>
   );

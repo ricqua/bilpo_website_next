@@ -6,8 +6,8 @@ export const biltongBags = [
       "Out bottle openers are made from amazing wood with a steel insert ensuring long lasting quality.  A emblam is laser engraved eto ensure a long lasting qulity image.",
     img: "/biltong/biltongBag_1bag.jpg",
     alt: "photo of Bilpo biltong bag",
-    price: "",
-    sale: "₩9,800",
+    priceOnline: "₩11,000",
+    pricePromotion: "",
     naver: "https://smartstore.naver.com/bilpo/products/5105201791",
     coupang:
       "https://www.coupang.com/vp/products/5076930986?itemId=6881678443&vendorItemId=74174262901&q=biltong&itemsCount=36&searchId=488bd561b9084ce5bfd6a22eb1a857ab&rank=1&isAddedCart=",
@@ -20,8 +20,8 @@ export const biltongBags = [
       "Out bottle openers are made from amazing wood with a steel insert ensuring long lasting quality.  A emblam is laser engraved eto ensure a long lasting qulity image.",
     img: "/biltong/biltongBag_5bag.jpg",
     alt: "photo of Bilpo biltong bag",
-    price: "₩49,000",
-    sale: "₩46,500",
+    priceOnline: "₩55,000",
+    pricePromotion: "48,00",
     naver: "https://smartstore.naver.com/bilpo/products/5105188060",
     coupang:
       "https://www.coupang.com/vp/products/5091623438?itemId=6923565061&vendorItemId=74216084595&q=biltong&itemsCount=36&searchId=488bd561b9084ce5bfd6a22eb1a857ab&rank=2&isAddedCart=",
@@ -34,8 +34,8 @@ export const biltongBags = [
       "Out bottle openers are made from amazing wood with a steel insert ensuring long lasting quality.  A emblam is laser engraved eto ensure a long lasting qulity image.",
     img: "/biltong/biltongBag_8bag.jpg",
     alt: "photo of Bilpo biltong bag",
-    price: "₩78,400",
-    sale: "₩72,500",
+    priceOnline: "₩88,000",
+    pricePromotion: "75,00",
     naver: "https://smartstore.naver.com/bilpo/products/5105187287",
     coupang:
       "https://www.coupang.com/vp/products/5091623443?itemId=6923565078&vendorItemId=74216084611&q=biltong&itemsCount=36&searchId=488bd561b9084ce5bfd6a22eb1a857ab&rank=15&isAddedCart=",

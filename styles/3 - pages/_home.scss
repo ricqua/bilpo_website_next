@@ -8,9 +8,17 @@
   }
 
   &__giveawaySection {
-    background: var(--clr-light-bg);
+    // background: var(--clr-light-bg);
     width: 100%;
     text-align: center;
+
+    &__info {
+      max-width: 500px;
+      margin: auto;
+    }
+    form {
+      padding: 0;
+    }
 
     > div {
       margin: 1rem;
@@ -50,8 +58,6 @@
       }
 
       &__info {
-        width: 40%;
-        margin: auto;
       }
     }
   }

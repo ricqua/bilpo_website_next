@@ -1,12 +1,42 @@
 import Head from "next/head";
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import LayoutPublic from "../components/LayoutPublic";
+import Modal from "react-modal";
+
+import "firebase/firestore";
+import firebase from "firebase/app";
+import initFirebase from "../firebase/initFirebase";
+
+initFirebase();
 
 const Home = () => {
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+
+  const sendData = (props) => {
+    try {
+      firebase
+        .firestore()
+        .collection("Giveaway")
+        .doc(props.name.value)
+        .set({
+          date: new Date().toLocaleString(),
+          name: props.name.value,
+          email: props.email.value,
+        })
+        .then(console.log("Sent to Firestore"));
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.alert("giveaway entered");
+    const payload = e.target;
+    sendData(payload);
+    e.target.reset();
+    // console.alert("giveaway entered");
+    setModalIsOpen(true);
   };
 
   return (
@@ -20,8 +50,31 @@ const Home = () => {
         </section>
 
         <section className="home__giveawaySection">
+          <Modal
+            isOpen={modalIsOpen}
+            onRequestClose={() => setModalIsOpen(false)}
+            ariaHideApp={false}
+            className="modal"
+          >
+            <img src="/tick.svg" alt="tick icon" />
+            <strong>Success!!!</strong>
+            <p>
+              Thank you for entering the giveaway. Winner will be contacted
+              directly using the email provided and an announcement will be
+              posted to Instagram.
+            </p>
+            <button
+              onClick={() => setModalIsOpen(false)}
+              className="button_light--black"
+            >
+              <p>
+                Continue <span>❯</span>
+              </p>
+            </button>
+          </Modal>
+
           <div>
-            <div className="home__giveawaySection__img">
+            {/* <div className="home__giveawaySection__img">
               <Image
                 src="/giveawayImages/307A0400 edit01.png"
                 alt=""
@@ -29,7 +82,7 @@ const Home = () => {
                 height={800}
                 loading="lazy"
               />
-            </div>
+            </div> */}
             <div className="home__giveawaySection__info">
               <h2>Giveaway</h2>
               <p>- 무료 빌통 응모하기 -</p>

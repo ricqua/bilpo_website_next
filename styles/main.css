@@ -752,9 +752,17 @@ button {
 }
 
 .home__giveawaySection {
-  background: var(--clr-light-bg);
   width: 100%;
   text-align: center;
+}
+
+.home__giveawaySection__info {
+  max-width: 500px;
+  margin: auto;
+}
+
+.home__giveawaySection form {
+  padding: 0;
 }
 
 .home__giveawaySection > div {
@@ -782,10 +790,6 @@ button {
             align-items: center;
   }
   .home__giveawaySection__img {
-    width: 40%;
-    margin: auto;
-  }
-  .home__giveawaySection__info {
     width: 40%;
     margin: auto;
   }

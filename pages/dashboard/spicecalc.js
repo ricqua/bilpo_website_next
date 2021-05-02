@@ -21,7 +21,7 @@ const spicecalc = () => {
         <form className="spiceCalc__form">
           <lable>Amount of wet meat?</lable>
           <input
-            type="text"
+            type="number"
             id="meatInput"
             onChange={(e) => {
               setMeatInput(e.target.value);
