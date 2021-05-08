@@ -28,7 +28,6 @@ function ProductCard(props) {
             <p className="ProductCard__description">{data.description}</p>
           </div>
           <div className="ProductCard__links">
-            {/* <p>Available: </p> */}
             <Link href={data.naver}>
               <img
                 src="socialIcons/NaverButtonAv1.svg"

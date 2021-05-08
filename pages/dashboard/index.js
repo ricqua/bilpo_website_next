@@ -1,20 +1,18 @@
 import React from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
-
-// import Header from "../../components/Header";
-import { useUser } from "../../firebase/auth/useUser";
+import firebase from "firebase/app";
 
 export default function index() {
-  const { user, logout } = useUser();
   const router = useRouter();
+  const userData = firebase.auth().currentUser;
 
   return (
     <React.Fragment>
       <div className="dashboard">
         <h1>Dashboard</h1>
 
-        {user ? <h2>Welcome back, {user.name}</h2> : null}
+        {userData ? <h2>Welcome back, {userData.email}</h2> : null}
         <Link href="./dashboard/account">
           <p>Account</p>
         </Link>
@@ -44,10 +42,12 @@ export default function index() {
 
         <p
           // className="button__lightPrimary"
-          onClick={() => {
-            router.push("/login");
-            logout();
-          }}
+          onClick={() =>
+            firebase
+              .auth()
+              .signOut()
+              .then(() => router.push("/login"))
+          }
         >
           Log Out
         </p>

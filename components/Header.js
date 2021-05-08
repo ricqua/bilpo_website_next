@@ -1,9 +1,12 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 // import { useUser } from "../firebase/auth/useUser";
+import firebase from "firebase/app";
 
 const Header = () => {
   // const { user, logout } = useUser();
+  const auth = firebase.auth();
+  const [isLoggedIn, setLoggedIn] = useState(false);
 
   useEffect(() => {
     document.addEventListener("click", (e) => {
@@ -13,6 +16,8 @@ const Header = () => {
       }
     });
   }, []);
+
+  // useEffect(() => {},[])
 
   return (
     <React.Fragment>
@@ -64,20 +69,16 @@ const Header = () => {
                 <label>고객센터</label>
               </Link>
             </li>
-            <Link className="link" href="./login">
-              <div className="header__login">Dashboard</div>
-            </Link>
-            {/* <div>
-              {user ? (
-                <Link className="link" href="./dashboard">
-                  <div className="header__login">Dashboard</div>
-                </Link>
-              ) : (
-                <Link className="link" href="./auth">
-                  <div className="header__login">Wholesale</div>
-                </Link>
-              )}
-            </div> */}
+
+            {firebase.auth().currentUser ? (
+              <Link className="link" href="./dashboard">
+                <div className="header__login">Dashboard</div>
+              </Link>
+            ) : (
+              <Link className="link" href="./login">
+                <div className="header__login">Login</div>
+              </Link>
+            )}
           </ul>
         </nav>
       </div>

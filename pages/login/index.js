@@ -2,18 +2,10 @@ import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import firebase from "firebase/app";
-const auth = firebase.auth();
 
 export default function index() {
   const router = useRouter();
-  // const { user, logout } = useUser();
   const [signInError, setSignInError] = useState("");
-
-  // useEffect(() => {
-  //   auth.onAuthStateChanged((user) => {
-  //     console.log(user);
-  //   });
-  // }, []);
 
   // function Redirect({ to }) {
   //   const router = useRouter();
@@ -32,11 +24,12 @@ export default function index() {
     e.preventDefault();
     const payload = e.target;
 
-    auth
+    firebase
+      .auth()
       .signInWithEmailAndPassword(payload.email.value, payload.password.value)
       .then((cred) => {
         router.push("/dashboard");
-        console.log(cred);
+        // console.log(cred);
       })
       .catch((error) => {
         console.log("Error signing in: ", error.message);

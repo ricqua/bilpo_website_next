@@ -13,7 +13,6 @@ export default function spicecalc() {
         .then((snapshot) => {
           snapshot.docs.forEach((doc) => {
             const newEntry = doc.data();
-            console.log(newEntry);
             setSpices((oldArray) => [...oldArray, newEntry]);
           });
         });
@@ -36,7 +35,7 @@ export default function spicecalc() {
           <hr color="#b8b8b8" />
         </div>
         <form className="spiceCalc__form">
-          <lable>Amount of wet meat?</lable>
+          <label>Amount of wet meat?</label>
           <input
             type="number"
             id="meatInput"
@@ -44,7 +43,7 @@ export default function spicecalc() {
               setMeatInput(e.target.value);
             }}
           ></input>
-          <lable>kg</lable>
+          <label>kg</label>
         </form>
         {!meatInput >= 1 ? null : (
           <React.Fragment>
