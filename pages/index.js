@@ -4,12 +4,6 @@ import Image from "next/image";
 import LayoutPublic from "../components/LayoutPublic";
 import Modal from "react-modal";
 
-import "firebase/firestore";
-import firebase from "firebase/app";
-import initFirebase from "../firebase/initFirebase";
-
-initFirebase();
-
 const Home = () => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
 

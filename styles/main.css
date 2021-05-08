@@ -476,7 +476,7 @@ button {
   top: 0.5rem;
 }
 
-.header__signin {
+.header__login {
   background: #8a0000;
   color: white;
   border-radius: 10rem;
@@ -486,7 +486,7 @@ button {
   margin: 1rem 2rem 3rem;
 }
 
-.header__signin:hover {
+.header__login:hover {
   background: #b30000;
 }
 
@@ -561,7 +561,7 @@ button {
     -webkit-transform: scale(1, 1);
             transform: scale(1, 1);
   }
-  .header__signin {
+  .header__login {
     margin: 0rem;
   }
 }
@@ -1532,6 +1532,25 @@ button {
 
 .dashboard__tools__backorder div p {
   width: 50%;
+}
+
+.profileItem {
+  text-align: left;
+  width: 100%;
+}
+
+.profileItem__item {
+  display: inline-block;
+  min-width: 20ch;
+}
+
+.profileItem__value {
+  display: inline-block;
+  min-width: 20ch;
+}
+
+.profileItem__changeBtn {
+  margin: 0;
 }
 
 @media (min-width: 768px) {

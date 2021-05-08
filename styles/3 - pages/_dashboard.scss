@@ -52,6 +52,25 @@
   }
 }
 
+.profileItem {
+  text-align: left;
+  width: 100%;
+  &__item {
+    // text-align: right;
+    display: inline-block;
+    min-width: 20ch;
+    // margin-right: 1rem;
+  }
+  &__value {
+    display: inline-block;
+    min-width: 20ch;
+  }
+  &__changeBtn {
+    margin: 0;
+    // margin-right: 0%;
+  }
+}
+
 @media (min-width: 768px) {
   .dashboard {
     &__tools {

@@ -1,20 +1,25 @@
 import React from "react";
 import Link from "next/link";
-import Header from "../../components/Header";
+import { useRouter } from "next/router";
+
+// import Header from "../../components/Header";
 import { useUser } from "../../firebase/auth/useUser";
 
-function index() {
+export default function index() {
   const { user, logout } = useUser();
+  const router = useRouter();
 
   return (
     <React.Fragment>
-      {/* <Header /> */}
       <div className="dashboard">
         <h1>Dashboard</h1>
+
         {user ? <h2>Welcome back, {user.name}</h2> : null}
-        {user ? <p>UserID: {user.email}</p> : null}
+        <Link href="./dashboard/account">
+          <p>Account</p>
+        </Link>
+
         <div className="dashboard__tools">
-          {/* <h2>Admin tools:</h2> */}
           <Link href="./dashboard/spicecalc">
             <p>Spice calculator</p>
           </Link>
@@ -40,6 +45,7 @@ function index() {
         <p
           // className="button__lightPrimary"
           onClick={() => {
+            router.push("/login");
             logout();
           }}
         >
@@ -49,5 +55,3 @@ function index() {
     </React.Fragment>
   );
 }
-
-export default index;

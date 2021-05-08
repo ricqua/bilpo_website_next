@@ -1,9 +1,26 @@
-import React, { useState } from "react";
-import { originalBiltong } from "../../data/recipeData.js";
+import React, { useState, useEffect } from "react";
+import firebase from "firebase/app";
 
-const spicecalc = () => {
+export default function spicecalc() {
   const [meatInput, setMeatInput] = useState(0);
-  const [spices, setSpices] = useState(originalBiltong);
+  const [spices, setSpices] = useState([]);
+
+  useEffect(
+    () => {
+      const db = firebase.firestore();
+      db.collection("recipe_originalBiltong")
+        .get()
+        .then((snapshot) => {
+          snapshot.docs.forEach((doc) => {
+            const newEntry = doc.data();
+            console.log(newEntry);
+            setSpices((oldArray) => [...oldArray, newEntry]);
+          });
+        });
+    },
+    [],
+    2
+  );
 
   return (
     <React.Fragment>
@@ -35,7 +52,7 @@ const spicecalc = () => {
               {spices.map((spice) => {
                 return (
                   <div
-                    key={spice.id}
+                    key={spice.item}
                     className="spiceCalc__outputArea__spiceItem"
                   >
                     <label className="spiceCalc__outputArea__spiceItem__qty">
@@ -53,7 +70,6 @@ const spicecalc = () => {
                 );
               })}
             </div>
-            {/* <hr color="#b8b8b8" /> */}
             <div className="spiceCalc__est">
               <strong>Estimations:</strong>
               <ul>
@@ -61,8 +77,6 @@ const spicecalc = () => {
                 <li>Final dry weight: {(meatInput / 2.4).toFixed(2)} kg</li>
               </ul>
             </div>
-
-            {/* <hr color="#b8b8b8" /> */}
           </React.Fragment>
         )}
         <p className="copyrightNotice spiceCalc__copyrightNotice ">
@@ -71,6 +85,4 @@ const spicecalc = () => {
       </main>
     </React.Fragment>
   );
-};
-
-export default spicecalc;
+}

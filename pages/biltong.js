@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Head from "next/head";
 import LayoutPublic from "../components/LayoutPublic";
@@ -6,7 +6,22 @@ import LayoutPublic from "../components/LayoutPublic";
 import ProductCard from "../components/ProductCard";
 import { biltongBags } from "../data/productData";
 
+import firebase from "firebase/app";
+
 const Biltong = () => {
+  const [isData, setData] = useState();
+
+  useEffect(() => {
+    const db = firebase.firestore();
+    db.collection("recipe_originalBiltong")
+      .get()
+      .then((snapshot) => {
+        const data = snapshot.docs[1];
+        setData(data.data());
+        console.log(isData);
+      });
+  }, []);
+
   return (
     <LayoutPublic>
       <Head>

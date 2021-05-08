@@ -64,17 +64,17 @@ const Header = () => {
                 <label>고객센터</label>
               </Link>
             </li>
-            <Link className="link" href="./signin">
-              <div className="header__signin">Dashboard</div>
+            <Link className="link" href="./login">
+              <div className="header__login">Dashboard</div>
             </Link>
             {/* <div>
               {user ? (
                 <Link className="link" href="./dashboard">
-                  <div className="header__signin">Dashboard</div>
+                  <div className="header__login">Dashboard</div>
                 </Link>
               ) : (
                 <Link className="link" href="./auth">
-                  <div className="header__signin">Wholesale</div>
+                  <div className="header__login">Wholesale</div>
                 </Link>
               )}
             </div> */}
