@@ -1,9 +1,11 @@
 import React from "react";
 import Link from "next/link";
-import { useUser } from "../../firebase/auth/useUser";
+// import { useUser } from "../../firebase/auth/useUser";
+import firebase from "firebase/app";
 
 export default function account() {
-  const { user, logout } = useUser();
+  // const { user, logout } = useUser();
+  const userData = firebase.auth().currentUser;
 
   const ProfileItem = ({ item, value }) => {
     return (
@@ -21,9 +23,9 @@ export default function account() {
         <h1>Account</h1>
 
         <section className="dashboard__profile">
-          {user ? <h2>{user.name}</h2> : null}
-          <ProfileItem item="Email:" value={user ? user.email : null} />
-          <ProfileItem item="Account name:" value={user ? user.name : null} />
+          {userData ? <h2>{userData.email}</h2> : null}
+          <ProfileItem item="Email:" value={userData ? userData.email : null} />
+          {/* <ProfileItem item="Account name:" value={user ? user.name : null} />
           <ProfileItem item="Mobile:" value={user ? user.phone : null} />
           <ProfileItem
             item="Business address:"
@@ -32,7 +34,7 @@ export default function account() {
           <ProfileItem
             item="Shipping address:"
             value={user ? user.addressShipping : null}
-          />
+          /> */}
         </section>
         <hr width="500px" />
         <Link href="/dashboard">

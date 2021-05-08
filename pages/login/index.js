@@ -40,45 +40,54 @@ export default function index() {
   return (
     <React.Fragment>
       <div className="authPage">
-        <img
-          src="/bilpoLogos/Bilpo Logo Hv4 (Full-white).svg"
-          alt="Bilpo logo"
-        />
-        <h2>Log In</h2>
-        {/* <p>
+        <div className="authPage__wrapper">
+          <img
+            src="/bilpoLogos/Bilpo Logo Hv4 (Full-white).svg"
+            alt="Bilpo logo"
+          />
+          <h2>Log In</h2>
+          {/* <p>
           Note: This is a log in portal for Bilpo's wholesale clients and
           contractors only. If you do not have credentials or want to inquire
           about becoming a contractor or seeing our wholesale pricing then
           please contact Richard (English) or Moonsung (Korean) at
           info@bilpo.co.kr.
         </p> */}
-        <div className="firebaseAuth">
-          {/* {signInError ? <p>*Error: {signInError}</p> : null} */}
-          <form onSubmit={handleSubmit}>
-            <input type="email" name="email" required placeholder="Email" />
-            <input
-              type="password"
-              name="password"
-              required
-              placeholder="Password"
-            />
-            <button>Log In</button>
-          </form>
-          <Link href="./login/signup">
-            <button>Sign up</button>
-          </Link>
-          <Link href="./login/resetpassword">
-            <button>Forgot password</button>
-          </Link>
-          <Link href="./login/checkuser">
-            <button>Check user</button>
-          </Link>
+          <div>
+            {signInError ? (
+              <p className="authPage__errorMessage">Error: {signInError}</p>
+            ) : null}
+            <form onSubmit={handleSubmit}>
+              <input type="email" name="email" required placeholder="Email" />
+              <input
+                type="password"
+                name="password"
+                required
+                placeholder="Password"
+              />
+              <button className="button__light authPage__confirmButton">
+                Log In
+              </button>
+            </form>
+            {/* <hr /> */}
+          </div>
+          <div>
+            <Link href="./login/signup">
+              <button className="button__light">Sign up</button>
+            </Link>
+            <Link href="./login/resetpassword">
+              <button className="button__light">Forgot password</button>
+            </Link>
+            {/* <Link href="./login/checkuser">
+            <button className="button__light">Check user</button>
+          </Link> */}
+            <p>
+              <Link href="/">
+                <a>Back to website</a>
+              </Link>
+            </p>
+          </div>
         </div>
-        <p>
-          <Link href="/">
-            <a>Back to website ></a>
-          </Link>
-        </p>
       </div>
     </React.Fragment>
   );

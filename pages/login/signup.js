@@ -25,52 +25,59 @@ export default function signup() {
       })
       .catch((error) => {
         console.log("Error signing up: ", error);
+        setSignUpError(error.message);
       });
   }
 
   return (
     <React.Fragment>
       <div className="authPage">
-        <img
-          src="/bilpoLogos/Bilpo Logo Hv4 (Full-white).svg"
-          alt="Bilpo logo"
-        />
-        <h2>Sign Up</h2>
-        {/* <p>
+        <div className="authPage__wrapper">
+          <img
+            src="/bilpoLogos/Bilpo Logo Hv4 (Full-white).svg"
+            alt="Bilpo logo"
+          />
+          <h2>Sign Up</h2>
+          {/* <p>
           Note: This is a log in portal for Bilpo's wholesale clients and
           contractors only. If you do not have credentials or want to inquire
           about becoming a contractor or seeing our wholesale pricing then
           please contact Richard (English) or Moonsung (Korean) at
           info@bilpo.co.kr.
         </p> */}
-        <div className="firebaseAuth">
-          <form onSubmit={handleSubmit}>
-            {isSignUpError >= 0 ? <p>{isSignUpError}</p> : null}
-            <input type="email" name="email" required placeholder="Email" />
-            <input
-              type="password"
-              name="password"
-              required
-              placeholder="Password"
-            />
-            {/* <input
+          <div>
+            <form onSubmit={handleSubmit}>
+              {isSignUpError ? <p>Error: {isSignUpError}</p> : null}
+              <input type="email" name="email" required placeholder="Email" />
+              <input
+                type="password"
+                name="password"
+                required
+                placeholder="Password"
+              />
+              {/* <input
             type="password"
             name="passwordCheck"
             required
             placeholder="Confirm password"
           /> */}
-            <button>Create account</button>
-          </form>
+              <button className="button__light authPage__confirmButton">
+                Create account
+              </button>
+            </form>
+          </div>
+          <div>
+            <label>Already have an account? </label>
+            <Link href="/login">
+              <a>Log in</a>
+            </Link>
+            <p>
+              <Link href="/">
+                <a>Back to website</a>
+              </Link>
+            </p>
+          </div>
         </div>
-
-        <label>Already have an account? </label>
-        <Link href="/login">
-          <button>Log in</button>
-        </Link>
-
-        <Link href="/">
-          <a>Back to website ></a>
-        </Link>
       </div>
     </React.Fragment>
   );
