@@ -2,27 +2,25 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 
 import firebase from "firebase/app";
-import "firebase/firestore";
-import initFirebase from "../../firebase/initFirebase";
-
-initFirebase();
 
 export default function backorderLog() {
   const [isData, setData] = useState([]);
 
-  useEffect(() => {
-    async function readData() {
-      const dataRef = firebase.firestore().collection("Backorders");
-      const snapshot = await dataRef.get();
-      snapshot.forEach((doc) => {
-        var order = doc.data();
-        // console.log(doc.data());
-
-        setData((prevState) => [...prevState, doc.data()]);
-      });
-    }
-    readData();
-  }, []);
+  useEffect(
+    () => {
+      const db = firebase.firestore();
+      db.collection("Backorders")
+        .get()
+        .then((snapshot) => {
+          snapshot.docs.forEach((doc) => {
+            const newEntry = doc.data();
+            setData((oldArray) => [...oldArray, newEntry]);
+          });
+        });
+    },
+    [],
+    2
+  );
 
   return (
     <React.Fragment>
@@ -62,11 +60,9 @@ const BackorderItem = (props) => {
           <p>{order.email}</p>
           <p>{order.phone}</p>
           <p>{order.address}</p>
-        </div>
-        <div>
-          {/* <strong>Order details:</strong> */}
           <p>{order.details}</p>
         </div>
+        {/* <div><strong>Order details:</strong></div> */}
       </div>
     </React.Fragment>
   );

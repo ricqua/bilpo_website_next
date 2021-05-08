@@ -1,11 +1,22 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
-// import { useUser } from "../../firebase/auth/useUser";
 import firebase from "firebase/app";
 
 export default function account() {
-  // const { user, logout } = useUser();
-  const userData = firebase.auth().currentUser;
+  const [userData, setUserData] = useState();
+
+  useEffect(() => {
+    async function fetchUserData() {
+      const payload = await firebase.auth().currentUser;
+      setUserData(payload);
+    }
+    fetchUserData();
+  }, []);
+
+  const fetchUserData = () => {
+    setUserData(firebase.auth().currentUser);
+    // console.log(userData);
+  };
 
   const ProfileItem = ({ item, value }) => {
     return (
@@ -40,6 +51,7 @@ export default function account() {
         <Link href="/dashboard">
           <p>Dashboard</p>
         </Link>
+        <button onClick={fetchUserData}>Fetch user data</button>
       </div>
     </React.Fragment>
   );
