@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import firebase from "firebase/app";
+import Link from "next/link";
 
 export default function spicecalc() {
   const [meatInput, setMeatInput] = useState(0);
@@ -25,10 +26,12 @@ export default function spicecalc() {
     <React.Fragment>
       <main className="spiceCalc">
         <div className="spiceCalc__header">
-          <img
-            src="/bilpoLogos/Bilpo Logo Hv4 (Full-white).svg"
-            alt="Bilpo logo"
-          />
+          <Link href="/dashboard">
+            <img
+              src="/bilpoLogos/Bilpo Logo Hv4 (Full-white).svg"
+              alt="Bilpo logo"
+            />
+          </Link>
 
           <hr color="#b8b8b8" />
           <p>Biltong Spice Calculator</p>

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Head from "next/head";
 import emailjs from "emailjs-com";
 import Modal from "react-modal";
+import Link from "next/link";
 import { useRouter } from "next/router";
 
 import firebase from "firebase/app";
@@ -60,11 +61,13 @@ const backorder = () => {
         <title>Bilpo - Backorder</title>
       </Head>
       <main className="backorder">
-        <img
-          src="/bilpoLogos/Bilpo Logo Hv4 (Full-black).svg"
-          alt="Bilpo logo"
-          className="backorder__logo"
-        />
+        <Link href="/dashboard">
+          <img
+            src="/bilpoLogos/Bilpo Logo Hv4 (Full-black).svg"
+            alt="Bilpo logo"
+            className="backorder__logo"
+          />
+        </Link>
         <h2 className="backorder__title">Backorder Form</h2>
 
         <form className="backorder__form" onSubmit={handleSubmit}>
