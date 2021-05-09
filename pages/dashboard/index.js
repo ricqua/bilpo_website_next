@@ -21,7 +21,7 @@ export default function index() {
       <div className="dashboard">
         <h1>Dashboard</h1>
         {/* {userData ? <h2>Welcome back, {userData.email}</h2> : null} */}
-        {isContext ? <h2>Welcome back, {isContext.userData.email}</h2> : null}
+        <h2>Welcome back, {isContext.email}</h2>
 
         <Link href="./dashboard/account">
           <p>Account</p>

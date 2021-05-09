@@ -5,7 +5,6 @@ import { UserContext } from "../_app";
 
 export default function account() {
   const { isContext, setContext } = useContext(UserContext);
-  const user = isContext.userData;
 
   const ProfileItem = ({ item, value }) => {
     return (
