@@ -211,7 +211,8 @@ button {
 }
 
 .inputBox_effect1 input,
-.inputBox_effect1 textarea {
+.inputBox_effect1 textarea,
+.inputBox_effect1 input:required {
   top: 0;
   left: 0;
   width: 100%;
@@ -226,14 +227,17 @@ button {
 }
 
 .inputBox_effect1 input:focus,
-.inputBox_effect1 textarea:focus {
+.inputBox_effect1 textarea:focus,
+.inputBox_effect1 input:required:focus {
   border: 2px solid #1f79ad;
 }
 
 .inputBox_effect1 input:focus ~ span,
 .inputBox_effect1 input:valid ~ span,
 .inputBox_effect1 textarea:focus ~ span,
-.inputBox_effect1 textarea:valid ~ span {
+.inputBox_effect1 textarea:valid ~ span,
+.inputBox_effect1 input:required:focus ~ span,
+.inputBox_effect1 input:required:valid ~ span {
   -webkit-transform: translateY(-1rem) translateX(0.75rem);
           transform: translateY(-1rem) translateX(0.75rem);
   font-size: 1rem;
@@ -1563,15 +1567,19 @@ button {
 .profileItem__item {
   display: inline-block;
   min-width: 20ch;
+  color: grey;
 }
 
 .profileItem__value {
   display: inline-block;
   min-width: 20ch;
+  font-weight: 100;
 }
 
 .profileItem__changeBtn {
   margin: 0;
+  padding: 0.3em 0.8em;
+  margin: 0.25em;
 }
 
 @media (min-width: 768px) {

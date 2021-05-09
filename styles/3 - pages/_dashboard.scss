@@ -60,13 +60,17 @@
     display: inline-block;
     min-width: 20ch;
     // margin-right: 1rem;
+    color: grey;
   }
   &__value {
     display: inline-block;
     min-width: 20ch;
+    font-weight: 100;
   }
   &__changeBtn {
     margin: 0;
+    padding: 0.3em 0.8em;
+    margin: 0.25em;
     // margin-right: 0%;
   }
 }

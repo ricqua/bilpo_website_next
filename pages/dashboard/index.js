@@ -1,12 +1,14 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import firebase from "firebase/app";
+import { UserContext } from "../_app";
 
 export default function index() {
   const router = useRouter();
-  // const [isUser, setUser] = useState("help");
-  const userData = firebase.auth().currentUser;
+  const { isContext, setContext } = useContext(UserContext);
+
+  // const userData = firebase.auth().currentUser;
 
   // useEffect(() => {
   //   setUser(() => {
@@ -18,7 +20,8 @@ export default function index() {
     <React.Fragment>
       <div className="dashboard">
         <h1>Dashboard</h1>
-        {userData ? <h2>Welcome back, {userData.email}</h2> : null}
+        {/* {userData ? <h2>Welcome back, {userData.email}</h2> : null} */}
+        {isContext ? <h2>Welcome back, {isContext.userData.email}</h2> : null}
 
         <Link href="./dashboard/account">
           <p>Account</p>

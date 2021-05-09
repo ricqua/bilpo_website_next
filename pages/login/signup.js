@@ -3,6 +3,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import firebase from "firebase/app";
 const auth = firebase.auth();
+const db = firebase.firestore();
 
 export default function signup() {
   const [isSignUpError, setSignUpError] = useState("");
@@ -21,7 +22,16 @@ export default function signup() {
       )
       .then((cred) => {
         console.log(cred);
-        router.push("/login");
+        db.collection("Users")
+          .doc(cred.user.uid)
+          .set({
+            companyName: payload.companyName.value,
+            phone: payload.phone.value,
+            contactPerson: payload.contactPerson.value,
+          })
+          .then(() => {
+            router.push("/login");
+          });
       })
       .catch((error) => {
         console.log("Error signing up: ", error);
@@ -48,7 +58,22 @@ export default function signup() {
           <div>
             <form onSubmit={handleSubmit}>
               {isSignUpError ? <p>Error: {isSignUpError}</p> : null}
+              <input
+                type="text"
+                name="companyName"
+                required
+                placeholder="Company name"
+              />
+              <input
+                type="text"
+                name="contactPerson"
+                required
+                placeholder="Contact persons name"
+              />
+
               <input type="email" name="email" required placeholder="Email" />
+              <input type="text" name="phone" required placeholder="Phone" />
+
               <input
                 type="password"
                 name="password"

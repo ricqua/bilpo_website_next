@@ -6,21 +6,23 @@ import firebase from "firebase/app";
 export default function backorderLog() {
   const [isData, setData] = useState([]);
 
-  useEffect(
-    () => {
-      const db = firebase.firestore();
-      db.collection("Backorders")
-        .get()
-        .then((snapshot) => {
+  useEffect(() => {
+    const db = firebase.firestore();
+    db.collection("Backorders")
+      // .get()
+      .onSnapshot(
+        (snapshot) => {
+          setData([]);
           snapshot.docs.forEach((doc) => {
             const newEntry = doc.data();
             setData((oldArray) => [...oldArray, newEntry]);
           });
-        });
-    },
-    [],
-    2
-  );
+        },
+        (error) => {
+          console.log(error.message);
+        }
+      );
+  }, []);
 
   return (
     <React.Fragment>
@@ -37,7 +39,7 @@ export default function backorderLog() {
                 .sort((a, b) => a.name - b.name)
                 .map((order) => {
                   return (
-                    <div key={order.email}>
+                    <div key={order.date}>
                       <BackorderItem order={order} />
                     </div>
                   );
