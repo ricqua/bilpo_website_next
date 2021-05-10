@@ -21,29 +21,71 @@ export default function index() {
       <div className="dashboard">
         <h1>Dashboard</h1>
         {/* {userData ? <h2>Welcome back, {userData.email}</h2> : null} */}
-        <h2>Welcome back, {isContext.email}</h2>
 
-        <Link href="./dashboard/account">
-          <p>Account</p>
-        </Link>
+        <h2>Welcome back, {isContext.companyName}</h2>
+
         <div className="dashboard__tools">
-          <Link href="./dashboard/spicecalc">
-            <p>Spice calculator</p>
-          </Link>
-          <Link href="./dashboard/b2b">
-            <p>RFQ</p>
-          </Link>
-          <div className="dashboard__tools__backorder">
-            <strong>Backorder tools:</strong>
-            <div>
-              <Link href="./dashboard/backorder">
-                <p>Form</p>
-              </Link>
-              <Link href="./dashboard/backorderLog">
-                <p>Log</p>
-              </Link>
+          <Link href="./dashboard/account">
+            <div className="dashboard__tools__tool">
+              <img
+                src="dashboard/accountIcon.svg"
+                alt="account icon"
+                className="dashboardToolIcon"
+              />
+              <label>Account</label>
             </div>
-          </div>
+          </Link>
+
+          {isContext.spicecalc === true ? (
+            <Link href="./dashboard/spicecalc">
+              <div className="dashboard__tools__tool">
+                <img
+                  src="dashboard/ingredients.svg"
+                  alt="spiceCalc icon"
+                  className="dashboardToolIcon"
+                />
+                <label>Spice calculator</label>
+              </div>
+            </Link>
+          ) : null}
+          <Link href="./dashboard/b2b">
+            <div className="dashboard__tools__tool">
+              <img
+                src="dashboard/wholesale.svg"
+                alt="rfq icon"
+                className="dashboardToolIcon"
+              />
+              <label>RFQ</label>
+            </div>
+          </Link>
+          {isContext.bilpoteam === true ? (
+            // <div className="dashboard__tools__backorder">
+            // <strong>Backorder tools:</strong>
+            // <div>
+            <Link href="./dashboard/backorder">
+              <div className="dashboard__tools__tool">
+                <img
+                  src="dashboard/backorderForm.svg"
+                  alt="backorder form"
+                  className="dashboardToolIcon"
+                />
+                <label>Backorder form</label>
+              </div>
+            </Link>
+          ) : null}
+          {isContext.bilpoteam === true ? (
+            <Link href="./dashboard/backorderLog">
+              <div className="dashboard__tools__tool">
+                <img
+                  src="dashboard/reportIcon.svg"
+                  alt="backorder log"
+                  className="dashboardToolIcon"
+                />
+                <label>Backorder log</label>
+              </div>
+            </Link>
+          ) : // </div>
+          null}
         </div>
         <Link href="./">
           <p>Back to website</p>

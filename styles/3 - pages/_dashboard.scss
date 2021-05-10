@@ -12,7 +12,7 @@
   background: linear-gradient(to right, #485563, #29323c);
   text-align: center;
   h2 {
-    margin: 2rem;
+    // margin: 2rem;
   }
 
   &__tools {
@@ -20,6 +20,9 @@
     // border: 1px solid white;
     border-radius: 1rem;
     margin: 3rem auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
 
     p {
       margin: 1rem;
@@ -33,6 +36,33 @@
         background: hsl(0, 0%, 87%);
       }
     }
+    &__tool {
+      // background: hsl(0, 0%, 92%);
+      border: 3px solid white;
+      padding: 1rem;
+      margin: 1rem;
+      display: flex;
+      flex-flow: column wrap;
+      align-items: center;
+      min-width: 150px;
+      max-width: 250px;
+      border-radius: 25px;
+      // filter: drop-shadow(0, 0, 25, black);
+
+      label {
+        margin-top: 0.75rem;
+        // margin: auto;
+
+        // color: black;
+        font-weight: bold;
+      }
+      &:hover {
+        cursor: pointer;
+        // outline: 5px solid white;
+        background: rgba(255, 255, 255, 0.185);
+      }
+    }
+
     &__backorder {
       margin: 1rem;
       margin-top: 3rem;
@@ -73,6 +103,13 @@
     margin: 0.25em;
     // margin-right: 0%;
   }
+}
+
+.accountIcon {
+  max-width: 50px;
+}
+.dashboardToolIcon {
+  max-width: 80px;
 }
 
 @media (min-width: 768px) {

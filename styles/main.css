@@ -1511,14 +1511,19 @@ button {
   text-align: center;
 }
 
-.dashboard h2 {
-  margin: 2rem;
-}
-
 .dashboard__tools {
   width: 100%;
   border-radius: 1rem;
   margin: 3rem auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 .dashboard__tools p {
@@ -1532,6 +1537,35 @@ button {
 
 .dashboard__tools p:hover {
   background: #dedede;
+}
+
+.dashboard__tools__tool {
+  border: 3px solid white;
+  padding: 1rem;
+  margin: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-width: 150px;
+  max-width: 250px;
+  border-radius: 25px;
+}
+
+.dashboard__tools__tool label {
+  margin-top: 0.75rem;
+  font-weight: bold;
+}
+
+.dashboard__tools__tool:hover {
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.185);
 }
 
 .dashboard__tools__backorder {
@@ -1580,6 +1614,14 @@ button {
   margin: 0;
   padding: 0.3em 0.8em;
   margin: 0.25em;
+}
+
+.accountIcon {
+  max-width: 50px;
+}
+
+.dashboardToolIcon {
+  max-width: 80px;
 }
 
 @media (min-width: 768px) {

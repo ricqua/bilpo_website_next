@@ -16,7 +16,7 @@ const Home = () => {
         .set({
           date: new Date().toLocaleString(),
           name: props.name.value,
-          email: props.email.value,
+          phone: props.phone.value,
         })
         .then(console.log("Sent to Firestore"));
     } catch (error) {
@@ -92,8 +92,8 @@ const Home = () => {
                   <span>Name</span>
                 </div>
                 <div className="inputBox_effect1">
-                  <input type="text" required name="email" />
-                  <span>Email</span>
+                  <input type="text" required name="phone" />
+                  <span>Phone</span>
                 </div>
 
                 <button className="button__lightPrimary">Enter Giveaway</button>
