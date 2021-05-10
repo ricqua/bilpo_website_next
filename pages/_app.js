@@ -39,7 +39,7 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <UserContext.Provider value={contextProviderValue}>
-      <Component {...pageProps} />;
+      <Component {...pageProps} />
     </UserContext.Provider>
   );
 }

@@ -1501,6 +1501,7 @@ button {
           align-items: center;
   margin: 0;
   padding: 0;
+  padding-bottom: 2rem;
   min-height: 100vh;
   width: 100vw;
   font-size: 1rem;
