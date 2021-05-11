@@ -6,12 +6,60 @@ import { UserContext } from "../_app";
 export default function account() {
   const { isContext, setContext } = useContext(UserContext);
 
-  const ProfileItem = ({ item, value }) => {
+  function handleResetPassword(e) {
+    e.preventDefault();
+    const payload = isContext.email;
+    firebase
+      .auth()
+      .sendPasswordResetEmail(payload)
+      .then(() => {
+        console.log(`Reset password email sent to: ${payload}`);
+        alert(
+          `Email sent to ${payload}.  Follow the email instructions to reset your password.`
+        );
+      })
+      .catch((error) => {
+        console.log("Error resetting password:", error);
+        setResetPasswordError(error.message);
+        alert(
+          `Email sent to ${payload}.  Follow the email instructions to reset your password.`
+        );
+      });
+  }
+
+  function handleModifyField(e) {
+    e.preventDefault();
+    const id = e.target.id;
+    let value = e.target.value.value;
+    if (!e.target.value.value) {
+      value = "_";
+    }
+    // const preValue = isContext[id]
+    console.log(`Changing ${id} from ${isContext[id]} to ${value}`);
+    firebase
+      .firestore()
+      .collection("Users")
+      .doc(isContext.uid)
+      .set({
+        ...isContext,
+        [id]: value,
+      })
+      .then(() => {
+        alert(`Changed ${id} from ${isContext[id]} to ${value}`);
+      })
+      .then(() => {
+        window.location.reload();
+      });
+  }
+
+  const ProfileItem = ({ title, value, id }) => {
     return (
       <div className="profileItem">
-        <p className="profileItem__item">{item}</p>
-        <p className="profileItem__value">{value}</p>
-        <button className="profileItem__changeBtn ">Change</button>
+        <form onSubmit={handleModifyField} id={id}>
+          <label>{title}</label>
+          <input defaultValue={value} name="value" />
+          <button>Modify</button>
+        </form>
       </div>
     );
   };
@@ -22,24 +70,34 @@ export default function account() {
         <h1>Account</h1>
 
         <section className="dashboard__account">
-          <ProfileItem item="Company name: " value={isContext.companyName} />
-          <ProfileItem item="Email: " value={isContext.email} />
-          <ProfileItem item="Mobile: " value={isContext.phone} />
           <ProfileItem
-            item="Contact person: "
+            title="Company name: "
+            id="companyName"
+            value={isContext.companyName}
+          />
+          <ProfileItem
+            title="Contact person: "
             value={isContext.contactPerson}
+            id="contactPerson"
           />
+          <ProfileItem title="Email: " value={isContext.email} id="email" />
+          <ProfileItem title="Mobile: " value={isContext.phone} id="phone" />
           <ProfileItem
-            item="Company address: "
+            title="Company address: "
             value={isContext.companyAddress}
+            id="companyAddress"
           />
           <ProfileItem
-            item="Delivery address: "
+            title="Delivery address: "
             value={isContext.deliveryAddress}
+            id="deliveryAddress"
           />
+          <button className="button__light" onClick={handleResetPassword}>
+            Reset password
+          </button>
           {/* <ProfileItem item="UserID: " value={isContext.uid} /> */}
 
-          <pre>{JSON.stringify(isContext, null, 1)}</pre>
+          {/* <pre>{JSON.stringify(isContext, null, 1)}</pre> */}
         </section>
         {/* <hr width="500px" /> */}
         <Link href="/dashboard">

@@ -1512,6 +1512,10 @@ button {
   text-align: center;
 }
 
+.dashboard__account {
+  width: 100%;
+}
+
 .dashboard__tools {
   width: 100%;
   border-radius: 1rem;
@@ -1598,25 +1602,39 @@ button {
 
 .profileItem {
   text-align: left;
+  margin: 1rem;
+}
+
+.profileItem form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.profileItem form label {
+  margin: 0.5rem 1rem 0.5rem 0;
+  color: grey;
   width: 100%;
 }
 
-.profileItem__item {
-  display: inline-block;
-  min-width: 20ch;
-  color: grey;
-}
-
-.profileItem__value {
-  display: inline-block;
-  min-width: 20ch;
-  font-weight: 100;
-}
-
-.profileItem__changeBtn {
+.profileItem form input {
   margin: 0;
-  padding: 0.3em 0.8em;
-  margin: 0.25em;
+  font-weight: 100;
+  width: 80%;
+}
+
+.profileItem form button {
+  width: 20%;
+  margin: 0;
+  padding: 1.2em 0.6em;
+  display: inline-block;
 }
 
 .accountIcon {
