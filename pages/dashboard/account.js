@@ -58,7 +58,11 @@ export default function account() {
         <form onSubmit={handleModifyField} id={id}>
           <label>{title}</label>
           <input defaultValue={value} name="value" />
-          <button>Modify</button>
+          {id === "email" ? (
+            <button disabled>Modify</button>
+          ) : (
+            <button>Modify</button>
+          )}
         </form>
       </div>
     );
