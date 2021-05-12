@@ -850,9 +850,28 @@ button {
           justify-content: center;
 }
 
+.biltongVsJerky div {
+  padding: 1rem;
+  width: 100%;
+}
+
 .biltongVsJerky img {
+  width: 100%;
+}
+
+.biltongVsJerky div:nth-child(2) {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
   margin: 1rem;
-  width: 350px;
+}
+
+.biltongVsJerky iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
 }
 
 @media (min-width: 768px) {
