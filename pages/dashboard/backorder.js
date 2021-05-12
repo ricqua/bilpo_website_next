@@ -51,7 +51,7 @@ const backorder = () => {
       );
 
     sendData(payload);
-    e.target.reset();
+    // e.target.reset();
     setModalIsOpen(true);
   };
 

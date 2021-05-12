@@ -1140,7 +1140,7 @@ button {
 }
 
 .contact {
-  background: var(--clr-light-bg);
+  background: white;
   width: 100%;
 }
 

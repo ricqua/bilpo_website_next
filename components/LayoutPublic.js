@@ -2,7 +2,7 @@ import React from "react";
 import Head from "next/head";
 import Header from "./Header";
 import Footer from "./Footer";
-// import ContactComponent from "../components/ContactComponent";
+import ContactComponent from "../components/ContactComponent";
 
 function LayoutPublic({ children }) {
   return (
@@ -88,7 +88,7 @@ function LayoutPublic({ children }) {
       <div className="LayoutPublic">
         <Header />
         <main>{children}</main>
-        {/* <ContactComponent /> */}
+        <ContactComponent />
         <Footer />
       </div>
     </React.Fragment>

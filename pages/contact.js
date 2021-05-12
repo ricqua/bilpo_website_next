@@ -14,9 +14,21 @@ function contact() {
         </div>
         <div className="contact__form">
           <form action="submit">
-            <input type="text" placeholder="Name" />
-            <input type="text" placeholder="Email" />
-            <textarea type="text" placeholder="Message" />
+            {/* <input type="text" placeholder="Name" /> */}
+            <div className="inputBox_effect1">
+              <input type="text" required name="Name" />
+              <span>Name</span>
+            </div>
+            {/* <input type="text" placeholder="Email" /> */}
+            <div className="inputBox_effect1">
+              <input type="text" required name="phone" />
+              <span>Phone</span>
+            </div>
+            <div className="inputBox_effect1">
+              <textarea type="text" required name="message" />
+              <span>Message</span>
+            </div>
+            {/* <textarea type="text" placeholder="Message" /> */}
             <button>
               <p>
                 Submit <span>❯</span>
