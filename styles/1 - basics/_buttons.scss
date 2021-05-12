@@ -46,15 +46,14 @@
 }
 
 .button__lightPrimary {
-  background: hsl(0, 100%, 30%);
+  background: black;
   color: white;
   border: none;
-  // width: 5rem;
-  // height: 3rem;
+
   padding: 1rem 2rem;
   border-radius: 0.2rem;
   cursor: pointer;
-  transition: transform ease-in-out 250ms;
+  // transition: transform ease-in-out 250ms;
   // margin: 0;
 
   span {
@@ -62,7 +61,8 @@
   }
 
   &:hover {
-    transform: scale(1.05, 1.05);
-    transition: transform ease-in-out 250ms;
+    background: rgb(39, 39, 39);
+    // transform: scale(1.05, 1.05);
+    // transition: transform ease-in-out 250ms;
   }
 }

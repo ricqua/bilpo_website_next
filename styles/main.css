@@ -92,16 +92,12 @@ main {
 }
 
 .button__lightPrimary {
-  background: #990000;
+  background: black;
   color: white;
   border: none;
   padding: 1rem 2rem;
   border-radius: 0.2rem;
   cursor: pointer;
-  -webkit-transition: -webkit-transform ease-in-out 250ms;
-  transition: -webkit-transform ease-in-out 250ms;
-  transition: transform ease-in-out 250ms;
-  transition: transform ease-in-out 250ms, -webkit-transform ease-in-out 250ms;
 }
 
 .button__lightPrimary span {
@@ -109,12 +105,7 @@ main {
 }
 
 .button__lightPrimary:hover {
-  -webkit-transform: scale(1.05, 1.05);
-          transform: scale(1.05, 1.05);
-  -webkit-transition: -webkit-transform ease-in-out 250ms;
-  transition: -webkit-transform ease-in-out 250ms;
-  transition: transform ease-in-out 250ms;
-  transition: transform ease-in-out 250ms, -webkit-transform ease-in-out 250ms;
+  background: #272727;
 }
 
 :root {
@@ -706,7 +697,9 @@ button {
 }
 
 .modal {
-  background: white;
+  display: none;
+  z-index: 1;
+  background: rgba(100, 100, 100, 0.308);
   position: fixed;
   top: 0rem;
   bottom: 0rem;
@@ -728,6 +721,24 @@ button {
   text-align: center;
 }
 
+.modal div {
+  background: white;
+  padding: 1rem;
+  margin: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.4));
+          filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.4));
+}
+
 .modal:focus {
   outline: none;
 }
@@ -737,8 +748,13 @@ button {
   margin: 2rem;
 }
 
+.modal strong {
+  font-size: 1.6rem;
+}
+
 .modal p {
   max-width: 450px;
+  margin: 0.5rem;
 }
 
 .modal button {
@@ -751,32 +767,121 @@ button {
   height: 100%;
 }
 
+.home__heroSection {
+  height: 100vh;
+  background-image: url("../public/homeImages/heroSectionBackground.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.home__heroSection img {
+  max-height: 30%;
+  margin: 0 1rem 10rem 1rem;
+}
+
 .home section {
   outline: 1px solid red;
   min-height: 10rem;
 }
 
-.home__giveawaySection {
+.giveaway {
   width: 100%;
   text-align: center;
+  min-height: 350px;
+  padding: 3rem 0 0rem 0;
+  background-image: url("../public/giveawayImages/whiteMarbleBackground.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.home__giveawaySection__info {
-  max-width: 500px;
-  margin: auto;
+.giveaway__imageDiv {
+  margin: 1.6rem 4rem 1.6rem 2rem;
 }
 
-.home__giveawaySection form {
-  padding: 0;
-}
-
-.home__giveawaySection > div {
+.giveaway form {
   margin: 1rem;
 }
 
-.home__giveawaySection__img {
-  max-width: 480px;
-  margin: 3rem auto 2rem auto;
+.giveaway form p {
+  margin: 0.6rem 0;
+}
+
+.biltongVsJerky {
+  background-image: url("../public/homeImages/woodBackground.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.biltongVsJerky img {
+  margin: 1rem;
+  width: 350px;
+}
+
+@media (min-width: 768px) {
+  .giveaway__imageDiv {
+    width: 500px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+  }
+  .giveaway form {
+    width: 500px;
+    margin: 0;
+  }
+}
+
+@media (min-width: 1400px) {
+  .giveaway__imageDiv {
+    width: 40%;
+    margin-bottom: 4rem;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+  }
+  .giveaway form {
+    width: 50%;
+    margin: 0;
+  }
 }
 
 @media (min-width: 768px) {

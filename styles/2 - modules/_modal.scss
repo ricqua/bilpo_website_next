@@ -1,7 +1,7 @@
 .modal {
-  background: hsl(0, 0%, 100%);
-  //   filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
-  //   outline: 2px solid green;
+  display: none;
+  z-index: 1;
+  background: rgba(100, 100, 100, 0.308);
   position: fixed;
   top: 0rem;
   bottom: 0rem;
@@ -13,6 +13,17 @@
   align-items: center;
   text-align: center;
 
+  div {
+    background: white;
+    padding: 1rem;
+    margin: 1rem;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.4));
+    // border-radius: 50px;
+  }
+
   &:focus {
     outline: none;
   }
@@ -22,8 +33,13 @@
     margin: 2rem;
   }
 
+  strong {
+    font-size: 1.6rem;
+  }
+
   p {
     max-width: 450px;
+    margin: 0.5rem;
   }
 
   button {
