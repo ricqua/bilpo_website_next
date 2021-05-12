@@ -1,8 +1,10 @@
 .about {
   background: var(--clr-light-bg);
-  &__splash {
-    height: 450px;
+  width: 100%;
 
+  &__splash {
+    height: 350px;
+    width: 100%;
     background-image: url("../public/aboutImages/Cape-Town-Table-Mountain.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -14,59 +16,111 @@
       justify-content: center;
       height: 100%;
       align-items: center;
+      margin: 0;
     }
   }
 
-  &__info {
-    max-width: 800px;
-    margin: auto;
+  section {
+    margin: 0;
     text-align: center;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    // border: 1px solid black;
+
+    div {
+      margin: 0;
+      display: flex;
+      flex-flow: column nowrap;
+      align-items: center;
+      justify-content: center;
+    }
 
     h2 {
-      margin-top: 2rem;
-      line-height: 4rem;
+      margin-top: 1.6rem;
     }
 
     p {
       line-height: 2rem;
       margin: 2rem 1rem;
+      max-width: 850px;
+    }
+  }
+
+  &__bil-po {
+    div:nth-child(2) {
+      min-height: 350px;
+      margin: auto;
+      background-image: url("../public/aboutImages/307A0318.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+  }
+
+  &__history {
+    div:nth-child(2) {
+      height: 350px;
+      // width: 100%;
+      margin: auto;
+      background-image: url("../public/aboutImages/about biltong 4 (1800px).png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: left;
+    }
+  }
+
+  &__VsJerky {
+    div:nth-child(2) {
+      height: 350px;
+      margin: auto;
+      background-image: url("../public/aboutImages/20210314_145454.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: bottom;
+    }
+  }
+  &__owners {
+    div:nth-child(2) {
+      height: 350px;
+      margin: auto;
+      background-image: url("../public/aboutImages/about biltong 3 (1800px).png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      margin-bottom: 3rem;
+    }
+  }
+
+  &__imageDiv {
+    width: 100%;
+    position: relative;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .about {
+    &__imageDiv {
+      max-width: 850px;
     }
   }
 }
 
-.main {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-.section {
-  /* background: green; */
-  width: 850px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.section h2 {
-  margin-top: 2em;
-}
-
-.section p {
-  margin: 1.25em 1em;
-}
-
-.section br {
-  margin: 1em;
-}
-
-.section img {
-  margin-top: 1em;
-  width: 100%;
-}
-
-@media screen and (min-width: 1000px) {
-  .aboutSplash_Section {
-    height: 640px;
+@media screen and (min-width: 1600px) {
+  .about {
+    display: flex;
+    flex-flow: row wrap;
+    // max-width: 1820px;
+    justify-content: space-around;
+    align-items: flex-start;
+    section {
+      min-height: 5px;
+      margin: 0 auto;
+    }
+    &__imageDiv {
+      width: 100%;
+      margin: 0;
+      // position: relative;
+    }
   }
 }

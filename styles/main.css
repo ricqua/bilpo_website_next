@@ -218,6 +218,7 @@ button {
   width: 100%;
   border: 2px solid #838181;
   background: white;
+  color: black;
   margin: 0;
   border-radius: 4px;
   -webkit-box-sizing: border-box;
@@ -996,10 +997,12 @@ button {
 
 .about {
   background: var(--clr-light-bg);
+  width: 100%;
 }
 
 .about__splash {
-  height: 450px;
+  height: 350px;
+  width: 100%;
   background-image: url("../public/aboutImages/Cape-Town-Table-Mountain.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -1018,69 +1021,121 @@ button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin: 0;
 }
 
-.about__info {
-  max-width: 800px;
-  margin: auto;
+.about section {
+  margin: 0;
   text-align: center;
-}
-
-.about__info h2 {
-  margin-top: 2rem;
-  line-height: 4rem;
-}
-
-.about__info p {
-  line-height: 2rem;
-  margin: 2rem 1rem;
-}
-
-.main {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.section {
-  /* background: green; */
-  width: 850px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.about section div {
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-.section h2 {
-  margin-top: 2em;
+.about section h2 {
+  margin-top: 1.6rem;
 }
 
-.section p {
-  margin: 1.25em 1em;
+.about section p {
+  line-height: 2rem;
+  margin: 2rem 1rem;
+  max-width: 850px;
 }
 
-.section br {
-  margin: 1em;
+.about__bil-po div:nth-child(2) {
+  min-height: 350px;
+  margin: auto;
+  background-image: url("../public/aboutImages/307A0318.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
-.section img {
-  margin-top: 1em;
+.about__history div:nth-child(2) {
+  height: 350px;
+  margin: auto;
+  background-image: url("../public/aboutImages/about biltong 4 (1800px).png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left;
+}
+
+.about__VsJerky div:nth-child(2) {
+  height: 350px;
+  margin: auto;
+  background-image: url("../public/aboutImages/20210314_145454.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+}
+
+.about__owners div:nth-child(2) {
+  height: 350px;
+  margin: auto;
+  background-image: url("../public/aboutImages/about biltong 3 (1800px).png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 3rem;
+}
+
+.about__imageDiv {
   width: 100%;
+  position: relative;
 }
 
-@media screen and (min-width: 1000px) {
-  .aboutSplash_Section {
-    height: 640px;
+@media screen and (min-width: 768px) {
+  .about__imageDiv {
+    max-width: 850px;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .about {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .about section {
+    min-height: 5px;
+    margin: 0 auto;
+  }
+  .about__imageDiv {
+    width: 100%;
+    margin: 0;
   }
 }
 
@@ -1625,6 +1680,7 @@ button {
 }
 
 .profileItem form input {
+  color: black;
   margin: 0;
   font-weight: 100;
   width: 80%;

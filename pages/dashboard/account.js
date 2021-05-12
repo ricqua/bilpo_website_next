@@ -74,6 +74,7 @@ export default function account() {
         <h1>Account</h1>
 
         <section className="dashboard__account">
+          <ProfileItem title="Email: " value={isContext.email} id="email" />
           <ProfileItem
             title="Company name: "
             id="companyName"
@@ -84,7 +85,6 @@ export default function account() {
             value={isContext.contactPerson}
             id="contactPerson"
           />
-          <ProfileItem title="Email: " value={isContext.email} id="email" />
           <ProfileItem title="Mobile: " value={isContext.phone} id="phone" />
           <ProfileItem
             title="Company address: "

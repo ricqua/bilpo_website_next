@@ -10,11 +10,12 @@ const About = () => {
         <title>Bilpo - About</title>
       </Head>
       <main className="about">
-        <section className="about__splash">
+        <div className="about__splash">
           <h1>회사소개</h1>
-        </section>
+        </div>
 
-        <section className="about__info">
+        {/* <section className="about__info"> */}
+        <section className="about__bil-po">
           <div>
             <h2>Bil (빌) / po(포)</h2>
             <p>
@@ -23,15 +24,19 @@ const About = () => {
               뜻으로 (흔히 미국에서는 절키 Jerky ) 알려져 있어요. 빌통과 육포의
               글자를 따서 문화를 함께 상징하는 육포회사 ‘빌포’가 탄생했어요.
             </p>
-
-            <Image
+          </div>
+          <div className="about__imageDiv">
+            {/* <Image
               src={"/aboutImages/about biltong 2 (1800px).png"}
               alt="knife cutting biltong"
+              className="about__image"
               width={1800}
               height={600}
               loading="eager"
-            />
+            /> */}
           </div>
+        </section>
+        <section className="about__history">
           <div>
             <h2>빌통의 역사 </h2>
             <p>
@@ -57,16 +62,20 @@ const About = () => {
               하였죠. 와인농업이 발달하여 특히 와인과 페어링이 완벽한 빌통은
               머스트 해브(must-have) 스낵으로 자리 잡았어요.
             </p>
-
-            <Image
+          </div>
+          <div className="about__imageDiv">
+            {/* <Image
               src={"/aboutImages/about biltong 4 (1800px).png"}
               alt="drawing of original settlers with thier wagons."
               width={1800}
               height={600}
-              loading="lazy"
-            />
+              // layout="fill"
+              loading="eager"
+            /> */}
           </div>
+        </section>
 
+        <section className="about__VsJerky">
           <div>
             <h2>육포보다 뛰어난 빌통</h2>
             <p>
@@ -90,15 +99,19 @@ const About = () => {
               바싹 구운 (웰던) 종류가 있다는 의미예요. 오리지널 맛 칠리 맛 등등
               여러가지 맛도 생산가능하죠.
             </p>
-            <Image
+          </div>
+          <div className="about__imageDiv">
+            {/* <Image
               src={"/aboutImages/about biltong 1 (1800px).png"}
               alt="Photo of Biltong"
               width={1800}
               height={600}
               loading="lazy"
-            />
+            /> */}
           </div>
+        </section>
 
+        <section className="about__owners">
           <div>
             <h2>스토리</h2>
             <p>
@@ -110,14 +123,15 @@ const About = () => {
               친구들은 계속 빌통을 만들어 달라고 부탁하였고, 그렇게 ‘빌포’
               회사가 탄생하였어요!
             </p>
-
-            <Image
+          </div>
+          <div className="about__imageDiv">
+            {/* <Image
               src={"/aboutImages/about biltong 3 (1800px).png"}
               alt="Photo of Moonsung and Richard.  The founders of Bilpo"
               width={1800}
               height={600}
               loading="lazy"
-            />
+            /> */}
           </div>
         </section>
       </main>
