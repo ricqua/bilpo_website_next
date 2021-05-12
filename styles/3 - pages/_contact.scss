@@ -2,6 +2,9 @@
   background: white;
   // background: var(--clr-light-bg);
   width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
 
   &__info {
     &__headerLine {
@@ -22,6 +25,14 @@
       max-width: 500px;
       margin: auto;
       padding: 1rem;
+    }
+  }
+  form {
+    padding: 1rem;
+    width: 100%;
+
+    input {
+      width: 100%;
     }
   }
 }

@@ -9,7 +9,7 @@ function contact() {
           <p>
             If you’re interested in our services, have any questions or want to
             share feedback, please send us a message using this contact form or
-            email us on info@siamlocalize.com
+            email us on info@bilpo.co.kr
           </p>
         </div>
         <div className="contact__form">

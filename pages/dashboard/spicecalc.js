@@ -48,9 +48,16 @@ export default function spicecalc() {
           ></input>
           <label>kg</label>
         </form>
+        <section className="spiceCalc__est">
+          <strong>Estimations:</strong>
+          <ul>
+            <li># of 60g bags: {meatInput * 6.5}</li>
+            <li>Final dry weight: {(meatInput / 2.4).toFixed(2)} kg</li>
+          </ul>
+        </section>
         {!meatInput >= 1 ? null : (
           <React.Fragment>
-            <div className="spiceCalc__outputArea">
+            <section className="spiceCalc__outputArea">
               {spices.map((spice) => {
                 return (
                   <div
@@ -71,14 +78,7 @@ export default function spicecalc() {
                   </div>
                 );
               })}
-            </div>
-            <div className="spiceCalc__est">
-              <strong>Estimations:</strong>
-              <ul>
-                <li># of 60g bags: {meatInput * 6.5}</li>
-                <li>Final dry weight: {(meatInput / 2.4).toFixed(2)} kg</li>
-              </ul>
-            </div>
+            </section>
           </React.Fragment>
         )}
         <p className="copyrightNotice spiceCalc__copyrightNotice ">
