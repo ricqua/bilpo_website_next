@@ -101,7 +101,7 @@ export default function account() {
           </button>
           {/* <ProfileItem item="UserID: " value={isContext.uid} /> */}
 
-          {/* <pre>{JSON.stringify(isContext, null, 1)}</pre> */}
+          <pre>{JSON.stringify(isContext, null, 1)}</pre>
         </section>
         {/* <hr width="500px" /> */}
         <Link href="/dashboard">

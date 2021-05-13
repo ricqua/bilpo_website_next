@@ -358,7 +358,7 @@ button {
 
 .header {
   background: white;
-  height: 75px;
+  height: 55px;
   position: -webkit-sticky;
   position: sticky;
   width: 100%;
@@ -491,6 +491,7 @@ button {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    height: 75px;
     background: white;
     -webkit-box-align: center;
         -ms-flex-align: center;
@@ -888,7 +889,6 @@ button {
 .biltongVsJerky div div {
   position: relative;
   width: 100%;
-  outline: 1px solid green;
   padding-bottom: 56.25%;
 }
 
@@ -937,12 +937,6 @@ button {
     all: unset;
     width: 100%;
     height: 100%;
-  }
-}
-
-@media (min-width: 1400px) {
-  .biltongVsJerky {
-    background: red;
   }
 }
 
@@ -1588,65 +1582,68 @@ button {
   text-align: center;
 }
 
-.b2b {
-  width: 1200px;
-  margin: auto;
-}
-
-.b2b li {
-  margin: 1rem;
-}
-
-.b2b__bags {
-  margin: 1rem;
-  padding-top: 3rem;
-  border-top: 1px solid lightgrey;
-  text-align: center;
-}
-
-.b2b__bags img {
-  max-width: 350px;
-  margin: 1rem;
-}
-
-.b2b__bagsNumbers {
+.rfq header {
+  text-align: left;
+  padding: 1rem;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 1px solid darkgray;
+}
+
+.rfq header img {
+  width: 150px;
   margin: 1rem;
+}
+
+.rfq header h1 {
+  text-align: center;
+}
+
+.rfq header p {
+  text-align: center;
+}
+
+.rfq__BagsWholesale section {
+  width: 100%;
+}
+
+.rfq__BagsWholesale img {
+  width: 100%;
+}
+
+.rfq__BagsWholesale--title {
+  margin: 1rem;
+  text-align: left;
+}
+
+.rfq__BagsWholesale--description {
+  margin: 1rem;
+}
+
+.rfq__BagsWholesale--retail {
+  background: #cccccc;
+  padding: 1rem;
+}
+
+.rfq__BagsWholesale--wholesale {
+  padding: 1rem;
+}
+
+.rfq__BagsWholesale--wholesale p {
   text-align: right;
 }
 
-.b2b__bagsNumbers div {
-  padding: 1rem;
-  width: 50%;
-}
-
-.b2b__bagsNumbers div:nth-child(2) {
-  background: lightgrey;
-}
-
-.b2b__sliced {
-  margin: 1rem;
-  border: 1px solid black;
-  text-align: center;
-}
-
-.b2b__sliced img {
-  max-width: 350px;
-  margin: 1rem;
-}
-
-.b2b__slicedNumbers {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin: 1rem;
-}
-
-.b2b__slicedNumbers div {
-  border: 1px solid black;
-  width: 50%;
+.rfq__BagsWholesale--wholesale label {
+  margin-left: 2rem;
 }
 
 .authPage {
