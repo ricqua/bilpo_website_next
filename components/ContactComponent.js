@@ -75,10 +75,8 @@ const ContactComponent = () => {
             <textarea type="text" required name="message" />
             <span>Message</span>
           </div>
-          <button>
-            <p>
-              Submit <span>❯</span>
-            </p>
+          <button className="button__lightPrimary">
+            Submit <span>❯</span>
           </button>
         </form>
         {/* </div> */}

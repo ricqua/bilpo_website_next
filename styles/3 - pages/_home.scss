@@ -21,6 +21,26 @@
   }
 }
 
+@media (min-width: 768px) {
+  // .home {
+  //   &__giveawaySection {
+  //     > div {
+  //       display: flex;
+  //       flex-flow: row nowrap;
+  //       justify-content: space-around;
+  //       align-items: center;
+  //     }
+  //     &__img {
+  //       width: 40%;
+  //       margin: auto;
+  //     }
+
+  //     &__info {
+  //     }
+  //   }
+  // }
+}
+
 .giveaway {
   width: 100%;
   text-align: center;
@@ -53,6 +73,34 @@
   }
 }
 
+@media (min-width: 768px) {
+  .giveaway {
+    &__imageDiv {
+      width: 500px;
+      flex-flow: row nowrap;
+    }
+    form {
+      width: 500px;
+      margin: 0;
+    }
+  }
+}
+
+@media (min-width: 1400px) {
+  .giveaway {
+    &__imageDiv {
+      max-width: 650px;
+      margin-bottom: 4rem;
+      margin-right: 10rem;
+      flex-flow: row nowrap;
+    }
+    form {
+      width: 50%;
+      margin: 0;
+    }
+  }
+}
+
 .biltongVsJerky {
   background-image: url("../public/homeImages/woodBackground.jpg");
   background-repeat: no-repeat;
@@ -63,88 +111,60 @@
   justify-content: center;
 
   div {
-    padding: 1rem;
+    padding: 3rem;
     width: 100%;
-    // outline: 1px solid red;
+    // outline: 2px solid red;
+    div {
+      position: relative;
+      width: 100%;
+      outline: 1px solid green;
+      padding-bottom: 56.25%;
+    }
   }
   img {
-    // margin: 1rem;
     width: 100%;
   }
 
-  div:nth-child(2) {
-    position: relative;
-    width: 100%;
-    padding-bottom: 56.25%;
-    margin: 1rem;
-    // background: red;
-    // border: 1px solid red;
-  }
   iframe {
     position: absolute;
     width: 100%;
     height: 100%;
     left: 0;
     top: 0;
-    // border: 0;
   }
 }
 
 @media (min-width: 768px) {
-  .giveaway {
-    &__imageDiv {
-      width: 500px;
-      // min-width: 350px;
-      flex-flow: row nowrap;
-      // outline: 1px solid black;
+  .biltongVsJerky {
+    flex-flow: row nowrap;
+    max-height: 600px;
+    div {
+      width: 50vw;
+      // outline: 1px solid red;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      div {
+        all: unset;
+        position: relative;
+        width: 560px;
+        height: 315px;
+      }
     }
-    form {
-      // min-width: 350px;
-      // max-width: 400px;
-      width: 500px;
-      // outline: 1px solid black;
-      margin: 0;
+    img {
+      max-width: 500px;
+    }
+
+    iframe {
+      all: unset;
+      width: 100%;
+      height: 100%;
     }
   }
 }
 
 @media (min-width: 1400px) {
-  .giveaway {
-    // width: 80vw;
-    &__imageDiv {
-      width: 40%;
-      margin-bottom: 4rem;
-      // min-width: 350px;
-      flex-flow: row nowrap;
-      // outline: 1px solid black;
-    }
-    form {
-      // min-width: 350px;
-      // max-width: 400px;
-      width: 50%;
-      // outline: 1px solid black;
-      margin: 0;
-    }
-  }
-}
-
-@media (min-width: 768px) {
-  .home {
-    &__giveawaySection {
-      > div {
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: space-around;
-        align-items: center;
-        // max-width: 40%;
-      }
-      &__img {
-        width: 40%;
-        margin: auto;
-      }
-
-      &__info {
-      }
-    }
+  .biltongVsJerky {
+    background: red;
   }
 }

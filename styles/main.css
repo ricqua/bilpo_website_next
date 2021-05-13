@@ -833,6 +833,36 @@ button {
   margin: 0.6rem 0;
 }
 
+@media (min-width: 768px) {
+  .giveaway__imageDiv {
+    width: 500px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+  }
+  .giveaway form {
+    width: 500px;
+    margin: 0;
+  }
+}
+
+@media (min-width: 1400px) {
+  .giveaway__imageDiv {
+    max-width: 650px;
+    margin-bottom: 4rem;
+    margin-right: 10rem;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+  }
+  .giveaway form {
+    width: 50%;
+    margin: 0;
+  }
+}
+
 .biltongVsJerky {
   background-image: url("../public/homeImages/woodBackground.jpg");
   background-repeat: no-repeat;
@@ -851,19 +881,19 @@ button {
 }
 
 .biltongVsJerky div {
-  padding: 1rem;
+  padding: 3rem;
   width: 100%;
+}
+
+.biltongVsJerky div div {
+  position: relative;
+  width: 100%;
+  outline: 1px solid green;
+  padding-bottom: 56.25%;
 }
 
 .biltongVsJerky img {
   width: 100%;
-}
-
-.biltongVsJerky div:nth-child(2) {
-  position: relative;
-  width: 100%;
-  padding-bottom: 56.25%;
-  margin: 1rem;
 }
 
 .biltongVsJerky iframe {
@@ -875,52 +905,44 @@ button {
 }
 
 @media (min-width: 768px) {
-  .giveaway__imageDiv {
-    width: 500px;
+  .biltongVsJerky {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-flow: row nowrap;
             flex-flow: row nowrap;
+    max-height: 600px;
   }
-  .giveaway form {
-    width: 500px;
-    margin: 0;
-  }
-}
-
-@media (min-width: 1400px) {
-  .giveaway__imageDiv {
-    width: 40%;
-    margin-bottom: 4rem;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: row nowrap;
-            flex-flow: row nowrap;
-  }
-  .giveaway form {
-    width: 50%;
-    margin: 0;
-  }
-}
-
-@media (min-width: 768px) {
-  .home__giveawaySection > div {
+  .biltongVsJerky div {
+    width: 50vw;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: row nowrap;
-            flex-flow: row nowrap;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
   }
-  .home__giveawaySection__img {
-    width: 40%;
-    margin: auto;
+  .biltongVsJerky div div {
+    all: unset;
+    position: relative;
+    width: 560px;
+    height: 315px;
+  }
+  .biltongVsJerky img {
+    max-width: 500px;
+  }
+  .biltongVsJerky iframe {
+    all: unset;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media (min-width: 1400px) {
+  .biltongVsJerky {
+    background: red;
   }
 }
 

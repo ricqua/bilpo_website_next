@@ -52,8 +52,8 @@ const Home = () => {
             <Image
               src="/giveawayImages/307A0400 edit01.png"
               alt="marble background"
-              width={1200}
-              height={800}
+              width={958}
+              height={768}
               loading="eager"
             />
           </div>
@@ -89,9 +89,12 @@ const Home = () => {
               <span>Phone</span>
             </div>
 
-            <button className="button__lightPrimary">Enter Giveaway</button>
+            <button className="button__lightPrimary">
+              Enter Giveaway <span>❯</span>
+            </button>
           </form>
         </section>
+
         <section className="biltongVsJerky">
           <div>
             <img
@@ -100,20 +103,22 @@ const Home = () => {
             />
           </div>
           <div>
-            <iframe
-              // width="560"
-              // height="315"
-              src="https://www.youtube.com/embed/ieOMtTYUAmA"
-              title="YouTube video player"
-              frameBorder="0"
-              background="none"
-              // allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullScreen
-            />
+            <div>
+              <iframe
+                // width="560"
+                // height="315"
+                src="https://www.youtube.com/embed/ieOMtTYUAmA"
+                title="YouTube video player"
+                frameBorder="0"
+                background="none"
+                // allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullScreen
+              />
+            </div>
           </div>
         </section>
 
-        <section className="home__biltongVsJerkySection">
+        <section>
           <div>Instagram section</div>
         </section>
         <section className="home__shippingSection">
