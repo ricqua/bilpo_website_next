@@ -1,21 +1,18 @@
-import React, { useState, useContext } from "react";
-// import { UserContext } from "../_app";
+import React, { useState, useEffect, useContext } from "react";
+import { UserContext } from "../_app";
+import Link from "next/link";
 
 export default function b2b() {
-  // const { isContext, setContext } = useContext(UserContext);
+  const { isContext, setContext } = useContext(UserContext);
   const [isPricing, setPricing] = useState({
     bags: { cost: 7500, min: 15, shipping: 3600 },
-    sliced: { cost: 115000, min: 2, shipping: 3600 },
+    sliced: { cost: 115000, min: 2, shipping: 5000 },
   });
   const [isOrder, setOrder] = useState({
-    bags: { qty: "", total: "" },
-    sliced: { qty: "", total: "" },
+    bags: { qty: "", shipping: "", total: "" },
+    sliced: { qty: "", shipping: "", total: "" },
   });
 
-  // const [isOrder, setOrder] = useState({
-  //   bags: { cost: 7500, order: "", min: 15, shipping: 3600, total: "" },
-  //   sliced: { cost: 115000, order: "", min: 2, shipping: 3600, total: "" },
-  // });
   const handleUpdateOrder = (e) => {
     e.preventDefault();
     setOrder((prev) => ({
@@ -23,6 +20,37 @@ export default function b2b() {
       [e.target.name]: { ...prev[e.target.name], qty: e.target.value },
     }));
   };
+
+  useEffect(() => {
+    if (isOrder.bags.qty > 0) {
+      setOrder((prev) => ({
+        ...prev,
+        bags: {
+          ...prev.bags,
+          shipping: isPricing.bags.shipping,
+          total:
+            isOrder.bags.qty * isPricing.bags.cost + isPricing.bags.shipping,
+        },
+      }));
+    }
+
+    if (isOrder.sliced.qty > 0) {
+      setOrder((prev) => ({
+        ...prev,
+        sliced: {
+          ...prev.sliced,
+          shipping: isPricing.sliced.shipping,
+          total:
+            isOrder.sliced.qty * isPricing.sliced.cost +
+            isPricing.sliced.shipping,
+        },
+      }));
+    }
+  }, [isOrder.bags.qty, isOrder.sliced.qty]);
+
+  function handlePlaceOrder() {
+    alert("Order placed");
+  }
 
   return (
     <main className="rfq">
@@ -61,23 +89,18 @@ export default function b2b() {
                 type="number"
                 required
                 name="bags"
-                value={
-                  isOrder.bags.order <= isOrder.bags.min
-                    ? isOrder.bags.order
-                    : isOrder.bags.order
-                }
                 onChange={handleUpdateOrder}
               />
               <span>How many 60g bags?</span>
             </div>
 
-            {isOrder.bags.order < isOrder.bags.min ? (
+            {isOrder.bags.qty < isPricing.bags.min ? (
               <p className="rfq__underMinQty">
-                Minimum order quantity: {isOrder.bags.min} bags
+                Minimum order quantity: {isPricing.bags.min} bags
               </p>
             ) : (
               <p className="rfq__overMinQty">
-                Minimum order quantity: {isOrder.bags.min} bags
+                Minimum order quantity: {isPricing.bags.min} bags
               </p>
             )}
 
@@ -85,7 +108,7 @@ export default function b2b() {
               COG's:
               <label>
                 {(
-                  Math.round(isOrder.bags.cost / 1.1) * isOrder.bags.order
+                  Math.round(isPricing.bags.cost / 1.1) * isOrder.bags.qty
                 ).toLocaleString()}
                 ₩
               </label>
@@ -94,16 +117,16 @@ export default function b2b() {
               VAT (10%):
               <label>
                 {Math.round(
-                  isOrder.bags.cost * isOrder.bags.order -
-                    (isOrder.bags.order * isOrder.bags.cost) / 1.1
+                  isPricing.bags.cost * isOrder.bags.qty -
+                    (isOrder.bags.qty * isPricing.bags.cost) / 1.1
                 ).toLocaleString()}
                 ₩
               </label>
             </p>
             <p>
               Shipping:
-              {isOrder.bags.order ? (
-                <label>{isOrder.bags.shipping.toLocaleString()}₩</label>
+              {isOrder.bags.qty ? (
+                <label>{isPricing.bags.shipping.toLocaleString()}₩</label>
               ) : (
                 <label>0₩</label>
               )}
@@ -111,9 +134,10 @@ export default function b2b() {
             <p>
               Total:
               <label>
-                {(isOrder.bags.order * isOrder.bags.cost)
-                  // isOrder.bags.shipping
-                  .toLocaleString()}
+                {(
+                  isOrder.bags.qty * isPricing.bags.cost +
+                  isOrder.bags.shipping
+                ).toLocaleString()}
                 ₩
               </label>
             </p>
@@ -143,23 +167,18 @@ export default function b2b() {
                 type="number"
                 required
                 name="sliced"
-                value={
-                  isOrder.sliced.order <= isOrder.sliced.min
-                    ? isOrder.sliced.order
-                    : isOrder.sliced.order
-                }
                 onChange={handleUpdateOrder}
               />
-              <span>How many 1kg bags?</span>
+              <span>How many 60g bags?</span>
             </div>
 
-            {isOrder.sliced.order < isOrder.sliced.min ? (
+            {isOrder.sliced.qty < isPricing.sliced.min ? (
               <p className="rfq__underMinQty">
-                Minimum order quantity: {isOrder.sliced.min} kg's
+                Minimum order quantity: {isPricing.sliced.min} bags
               </p>
             ) : (
               <p className="rfq__overMinQty">
-                Minimum order quantity: {isOrder.sliced.min} kg's
+                Minimum order quantity: {isPricing.sliced.min} bags
               </p>
             )}
 
@@ -167,7 +186,7 @@ export default function b2b() {
               COG's:
               <label>
                 {(
-                  Math.round(isOrder.sliced.cost / 1.1) * isOrder.sliced.order
+                  Math.round(isPricing.sliced.cost / 1.1) * isOrder.sliced.qty
                 ).toLocaleString()}
                 ₩
               </label>
@@ -176,23 +195,35 @@ export default function b2b() {
               VAT (10%):
               <label>
                 {Math.round(
-                  isOrder.sliced.cost * isOrder.sliced.order -
-                    (isOrder.sliced.order * isOrder.sliced.cost) / 1.1
+                  isPricing.sliced.cost * isOrder.sliced.qty -
+                    (isOrder.sliced.qty * isPricing.sliced.cost) / 1.1
                 ).toLocaleString()}
                 ₩
               </label>
             </p>
             <p>
+              Shipping:
+              {isOrder.sliced.qty ? (
+                <label>{isPricing.sliced.shipping.toLocaleString()}₩</label>
+              ) : (
+                <label>0₩</label>
+              )}
+            </p>
+            <p>
               Total:
               <label>
-                {(isOrder.sliced.order * isOrder.sliced.cost).toLocaleString()}₩
+                {(
+                  isOrder.sliced.qty * isPricing.sliced.cost +
+                  isOrder.sliced.shipping
+                ).toLocaleString()}
+                ₩
               </label>
             </p>
           </div>
         </section>
         <section className="rfq__orderSummary">
           <h3>Order summary</h3>
-          <p>
+          <p className="rfq__orderSummary--headings">
             <label>Item</label>
             <label>Qty</label>
             {/* <label>COG's</label> */}
@@ -202,28 +233,40 @@ export default function b2b() {
           </p>
           <p>
             <label>60g bags:</label>
-            <label>{isOrder.bags.order ? isOrder.bags.order : 0}</label>
+            <label>{isOrder.bags.qty ? isOrder.bags.qty : 0}</label>
 
-            {isOrder.bags.order ? (
-              <label>
-                {(isOrder.bags.order * isOrder.bags.cost).toLocaleString()}₩
-              </label>
+            {isOrder.bags.qty ? (
+              <label>{isOrder.bags.total.toLocaleString()}₩</label>
             ) : (
               <label>0</label>
             )}
           </p>
           <p>
             <label>Sliced:</label>
-            <label>{isOrder.sliced.order ? isOrder.sliced.order : 0}</label>
+            <label>{isOrder.sliced.qty ? isOrder.sliced.qty : 0}</label>
 
-            {isOrder.sliced.order ? (
-              <label>
-                {(isOrder.sliced.order * isOrder.sliced.cost).toLocaleString()}₩
-              </label>
+            {isOrder.sliced.qty ? (
+              <label>{isOrder.sliced.total.toLocaleString()}₩</label>
             ) : (
               <label>0</label>
             )}
           </p>
+          <p className="rfq__orderSummary--total">
+            <label>Total:</label>
+            {(isOrder.bags.total + isOrder.sliced.total).toLocaleString()}₩
+          </p>
+          <div className="rfq__deliveryDetails">
+            <p>Contact: {isContext.contactPerson}</p>
+            <p>Mobile: {isContext.phone}</p>
+            <p>Mobile: {isContext.email}</p>
+            <p>Address: {isContext.deliveryAddress}</p>
+            <Link href="/dashboard/account">
+              <a>Modify delivery details</a>
+            </Link>
+          </div>
+          <button className="button__lightPrimary" onClick={handlePlaceOrder}>
+            Place Order
+          </button>
         </section>
       </section>
     </main>

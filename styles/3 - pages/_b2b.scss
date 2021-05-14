@@ -68,8 +68,10 @@
   }
 
   &__orderSummary {
-    border-top: 1px dashed black;
-    padding: 1rem;
+    border-top: 4px dashed black;
+    margin-top: 2rem;
+    padding: 1rem 1rem 1rem 1rem;
+
     p {
       // padding: 0 1rem;
       display: flex;
@@ -79,50 +81,25 @@
     label {
       text-align: center;
     }
+    button {
+      margin: 2rem auto;
+      width: 100%;
+    }
+    &--total {
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+    h3 {
+      margin: 1rem 0;
+    }
+    &--headings {
+      border-bottom: 1px solid black;
+    }
+  }
+
+  &__deliveryDetails {
+    padding: 1rem;
+    background: lightgray;
+    margin: 3rem 0 1rem 0;
   }
 }
-
-// &__bags {
-//   margin: 1rem;
-//   padding-top: 3rem;
-//   border-top: 1px solid lightgrey;
-//   text-align: center;
-
-//   img {
-//     max-width: 350px;
-//     margin: 1rem;
-//   }
-//   &Numbers {
-//     display: flex;
-//     margin: 1rem;
-//     text-align: right;
-
-//     div {
-//       padding: 1rem;
-//       // border: 1px solid black;
-//       width: 50%;
-//     }
-//     div:nth-child(2) {
-//       background: lightgrey;
-//     }
-//   }
-// }
-// &__sliced {
-//   margin: 1rem;
-//   border: 1px solid black;
-//   text-align: center;
-
-//   img {
-//     max-width: 350px;
-//     margin: 1rem;
-//   }
-//   &Numbers {
-//     display: flex;
-//     margin: 1rem;
-
-//     div {
-//       border: 1px solid black;
-//       width: 50%;
-//     }
-//   }
-// }

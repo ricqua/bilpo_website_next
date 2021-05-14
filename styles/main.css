@@ -1655,8 +1655,9 @@ button {
 }
 
 .rfq__orderSummary {
-  border-top: 1px dashed black;
-  padding: 1rem;
+  border-top: 4px dashed black;
+  margin-top: 2rem;
+  padding: 1rem 1rem 1rem 1rem;
 }
 
 .rfq__orderSummary p {
@@ -1674,6 +1675,30 @@ button {
 
 .rfq__orderSummary label {
   text-align: center;
+}
+
+.rfq__orderSummary button {
+  margin: 2rem auto;
+  width: 100%;
+}
+
+.rfq__orderSummary--total {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.rfq__orderSummary h3 {
+  margin: 1rem 0;
+}
+
+.rfq__orderSummary--headings {
+  border-bottom: 1px solid black;
+}
+
+.rfq__deliveryDetails {
+  padding: 1rem;
+  background: lightgray;
+  margin: 3rem 0 1rem 0;
 }
 
 .authPage {
