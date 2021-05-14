@@ -1596,7 +1596,6 @@ button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border-bottom: 1px solid darkgray;
 }
 
 .rfq header img {
@@ -1612,12 +1611,21 @@ button {
   text-align: center;
 }
 
+.rfq__underMinQty {
+  color: grey;
+}
+
+.rfq__overMinQty {
+  color: green;
+}
+
 .rfq__BagsWholesale section {
   width: 100%;
 }
 
 .rfq__BagsWholesale img {
   width: 100%;
+  margin-top: 2rem;
 }
 
 .rfq__BagsWholesale--title {
@@ -1644,6 +1652,28 @@ button {
 
 .rfq__BagsWholesale--wholesale label {
   margin-left: 2rem;
+}
+
+.rfq__orderSummary {
+  border-top: 1px dashed black;
+  padding: 1rem;
+}
+
+.rfq__orderSummary p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.rfq__orderSummary label {
+  text-align: center;
 }
 
 .authPage {
