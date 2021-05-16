@@ -1582,6 +1582,17 @@ button {
   text-align: center;
 }
 
+.rfq__dashboardButton {
+  position: -webkit-sticky;
+  position: sticky;
+  left: 1rem;
+  top: 1rem;
+  z-index: 1;
+  margin: 0;
+  width: 120px;
+  padding: 0.6rem;
+}
+
 .rfq header {
   text-align: left;
   padding: 1rem;

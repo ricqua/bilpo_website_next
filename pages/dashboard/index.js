@@ -55,7 +55,7 @@ export default function index() {
                 alt="rfq icon"
                 className="dashboardToolIcon"
               />
-              <label>RFQ</label>
+              <label>Wholesale Orders</label>
             </div>
           </Link>
           {isContext.bilpoteam === true ? (

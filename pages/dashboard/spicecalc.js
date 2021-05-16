@@ -6,21 +6,22 @@ export default function spicecalc() {
   const [meatInput, setMeatInput] = useState(0);
   const [spices, setSpices] = useState([]);
 
-  useEffect(
-    () => {
-      const db = firebase.firestore();
-      db.collection("recipe_originalBiltong")
-        .get()
-        .then((snapshot) => {
-          snapshot.docs.forEach((doc) => {
-            const newEntry = doc.data();
-            setSpices((oldArray) => [...oldArray, newEntry]);
-          });
+  useEffect(() => {
+    const db = firebase.firestore();
+    db.collection("recipe_originalBiltong")
+      .get()
+      .then((snapshot) => {
+        snapshot.docs.forEach((doc) => {
+          const newEntry = doc.data();
+          setSpices((oldArray) => [...oldArray, newEntry]);
         });
-    },
-    [],
-    2
-  );
+      });
+  }, []);
+
+  function handleSetMeatInput(e) {
+    e.preventDefault();
+    setMeatInput(e.target.value);
+  }
 
   return (
     <React.Fragment>
@@ -37,17 +38,15 @@ export default function spicecalc() {
           <p>Biltong Spice Calculator</p>
           <hr color="#b8b8b8" />
         </div>
-        <form className="spiceCalc__form">
+        <div className="spiceCalc__form">
           <label>Amount of wet meat?</label>
           <input
             type="number"
             id="meatInput"
-            onChange={(e) => {
-              setMeatInput(e.target.value);
-            }}
+            onChange={handleSetMeatInput}
           ></input>
           <label>kg</label>
-        </form>
+        </div>
         <section className="spiceCalc__est">
           <strong>Estimations:</strong>
           <ul>

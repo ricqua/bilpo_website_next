@@ -6,7 +6,7 @@ export default function b2b() {
   const { isContext, setContext } = useContext(UserContext);
   const [isPricing, setPricing] = useState({
     bags: { cost: 7500, min: 15, shipping: 3600 },
-    sliced: { cost: 115000, min: 2, shipping: 5000 },
+    sliced: { cost: 95000, min: 2, shipping: 5000 },
   });
   const [isOrder, setOrder] = useState({
     bags: { qty: "", shipping: "", total: "" },
@@ -32,6 +32,15 @@ export default function b2b() {
             isOrder.bags.qty * isPricing.bags.cost + isPricing.bags.shipping,
         },
       }));
+    } else {
+      setOrder((prev) => ({
+        ...prev,
+        bags: {
+          ...prev.bags,
+          shipping: 0,
+          total: 0,
+        },
+      }));
     }
 
     if (isOrder.sliced.qty > 0) {
@@ -45,20 +54,32 @@ export default function b2b() {
             isPricing.sliced.shipping,
         },
       }));
+    } else {
+      setOrder((prev) => ({
+        ...prev,
+        sliced: {
+          ...prev.bags,
+          shipping: 0,
+          total: 0,
+        },
+      }));
     }
   }, [isOrder.bags.qty, isOrder.sliced.qty]);
 
   function handlePlaceOrder() {
-    alert("Order placed");
+    alert("This is just a test");
   }
 
   return (
     <main className="rfq">
+      {/* <button className="rfq__dashboardButton">Dashboard</button> */}
       <header>
-        <img
-          src="/bilpoLogos/Bilpo Logo Hv4 (Full-black).svg"
-          alt="Bilpo logo"
-        />
+        <Link href="/dashboard">
+          <img
+            src="/bilpoLogos/Bilpo Logo Hv4 (Full-black).svg"
+            alt="Bilpo logo"
+          />
+        </Link>
         <h1>Wholesale order app</h1>
         <p>
           If you have any questions, please contact us directly on our website's
@@ -169,16 +190,16 @@ export default function b2b() {
                 name="sliced"
                 onChange={handleUpdateOrder}
               />
-              <span>How many 60g bags?</span>
+              <span>How many 1kg bags?</span>
             </div>
 
             {isOrder.sliced.qty < isPricing.sliced.min ? (
               <p className="rfq__underMinQty">
-                Minimum order quantity: {isPricing.sliced.min} bags
+                Minimum order quantity: {isPricing.sliced.min} kg
               </p>
             ) : (
               <p className="rfq__overMinQty">
-                Minimum order quantity: {isPricing.sliced.min} bags
+                Minimum order quantity: {isPricing.sliced.min} kg
               </p>
             )}
 
@@ -233,7 +254,7 @@ export default function b2b() {
           </p>
           <p>
             <label>60g bags:</label>
-            <label>{isOrder.bags.qty ? isOrder.bags.qty : 0}</label>
+            <label>{isOrder.bags.qty ? isOrder.bags.qty : 0} bags</label>
 
             {isOrder.bags.qty ? (
               <label>{isOrder.bags.total.toLocaleString()}₩</label>
@@ -243,7 +264,7 @@ export default function b2b() {
           </p>
           <p>
             <label>Sliced:</label>
-            <label>{isOrder.sliced.qty ? isOrder.sliced.qty : 0}</label>
+            <label>{isOrder.sliced.qty ? isOrder.sliced.qty : 0} kg's</label>
 
             {isOrder.sliced.qty ? (
               <label>{isOrder.sliced.total.toLocaleString()}₩</label>
@@ -258,7 +279,7 @@ export default function b2b() {
           <div className="rfq__deliveryDetails">
             <p>Contact: {isContext.contactPerson}</p>
             <p>Mobile: {isContext.phone}</p>
-            <p>Mobile: {isContext.email}</p>
+            <p>Email: {isContext.email}</p>
             <p>Address: {isContext.deliveryAddress}</p>
             <Link href="/dashboard/account">
               <a>Modify delivery details</a>
