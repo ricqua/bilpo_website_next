@@ -184,12 +184,6 @@ textArea {
   height: 15rem;
 }
 
-button {
-  margin: auto;
-  margin-bottom: 4rem;
-  margin-top: 0.5rem;
-}
-
 .inputBox_effect1 {
   position: relative;
   width: 100%;
@@ -585,18 +579,18 @@ button {
   margin-bottom: 2rem;
 }
 
-.ProductCard__price {
-  color: grey;
+.ProductCard__priceOnline {
   text-decoration: line-through;
-  font-size: 0.8rem;
   text-align: right;
+  color: grey;
   display: inline-block;
 }
 
-.ProductCard__sale {
+.ProductCard__pricePromotion {
+  margin: 0.5rem 1rem 0.5rem 0;
+  font-weight: bold;
   display: inline-block;
   text-align: right;
-  margin: 0.5rem 1rem 0.5rem 0;
 }
 
 .ProductCard__links {
@@ -608,6 +602,10 @@ button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.ProductCard__links label {
+  margin: 0 1rem 0 0;
 }
 
 .ProductCard__links img {
@@ -769,7 +767,7 @@ button {
 }
 
 .home__heroSection {
-  height: 100vh;
+  height: 95vh;
   background-image: url("../public/homeImages/heroSectionBackground.png");
   background-repeat: no-repeat;
   background-size: cover;
@@ -793,15 +791,9 @@ button {
   margin: 0 1rem 10rem 1rem;
 }
 
-.home section {
-  outline: 1px solid red;
-  min-height: 10rem;
-}
-
 .giveaway {
   width: 100%;
   text-align: center;
-  min-height: 350px;
   padding: 3rem 0 0rem 0;
   background-image: url("../public/giveawayImages/whiteMarbleBackground.jpg");
   background-repeat: no-repeat;
@@ -834,9 +826,13 @@ button {
   margin: 0.6rem 0;
 }
 
+.giveaway form button {
+  margin-bottom: 5rem;
+}
+
 @media (min-width: 768px) {
   .giveaway__imageDiv {
-    width: 500px;
+    min-width: 500px;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-flow: row nowrap;
@@ -846,9 +842,17 @@ button {
     width: 500px;
     margin: 0;
   }
+  .giveaway form button {
+    width: 200px;
+    margin: auto;
+    margin-bottom: 5rem;
+  }
 }
 
-@media (min-width: 1400px) {
+@media (min-width: 768px) {
+  .giveaway {
+    min-height: 800px;
+  }
   .giveaway__imageDiv {
     max-width: 650px;
     margin-bottom: 4rem;
@@ -859,8 +863,13 @@ button {
             flex-flow: row nowrap;
   }
   .giveaway form {
-    width: 50%;
     margin: 0;
+  }
+  .giveaway form p {
+    margin: 1rem;
+  }
+  .giveaway form button {
+    margin: auto;
   }
 }
 
@@ -882,7 +891,7 @@ button {
 }
 
 .biltongVsJerky div {
-  padding: 3rem;
+  padding: 1rem;
   width: 100%;
 }
 
@@ -932,11 +941,68 @@ button {
   }
   .biltongVsJerky img {
     max-width: 500px;
+    margin: 3rem;
   }
   .biltongVsJerky iframe {
     all: unset;
     width: 100%;
     height: 100%;
+  }
+}
+
+.shipping {
+  background: #e1e1e1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+}
+
+.shipping img {
+  width: 60vw;
+  max-width: 300px;
+  margin: 3rem auto 0 auto;
+}
+
+.shipping div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 3rem auto 5rem auto;
+}
+
+.shipping div h2 {
+  color: #fd2121;
+}
+
+@media (min-width: 768px) {
+  .shipping {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .shipping img {
+    margin: 3rem;
+  }
+  .shipping div {
+    margin: 3rem;
   }
 }
 
@@ -1025,8 +1091,29 @@ button {
   }
 }
 
-.biltong {
-  background: var(--clr-light-bg);
+.biltong__heroSection {
+  height: 65vh;
+  background-image: url("../public/biltong/307A0480.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.biltong__heroSection img {
+  max-height: 30%;
+  margin: 0 1rem 10rem 1rem;
 }
 
 .biltong__title {
@@ -1037,23 +1124,27 @@ button {
 
 .biltong__description {
   text-align: center;
-  margin-bottom: 3rem;
+  margin: auto;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  max-width: 500px;
 }
 
 .biltong__cards {
   margin: auto;
-  margin-bottom: 5rem;
 }
 
 .biltong__card {
-  margin: 1rem;
-  max-width: 400px;
+  margin-bottom: 3rem;
+  width: 100vw;
+  max-width: 500px;
   background: white;
-  -webkit-filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.2));
-          filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.2));
 }
 
 @media (min-width: 768px) {
+  .biltong__heroSection {
+    display: none;
+  }
   .biltong__cards {
     width: 100%;
     display: -webkit-box;
@@ -1270,8 +1361,8 @@ button {
             align-items: flex-start;
   }
   .about section {
-    min-height: 5px;
     margin: 0 auto;
+    padding: 1rem;
   }
   .about__imageDiv {
     width: 100%;
@@ -1322,6 +1413,13 @@ button {
 
 .contact form input {
   width: 100%;
+}
+
+@media (min-width: 768px) {
+  form button {
+    width: 200px;
+    margin: auto;
+  }
 }
 
 @media (min-width: 1279px) {
@@ -1795,8 +1893,16 @@ button {
   text-align: center;
 }
 
-.dashboard__account {
-  width: 100%;
+.dashboard__backToWebsiteButton {
+  margin: 1rem;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.dashboard__signOutButton {
+  margin: 1rem;
+  border-radius: 6px;
+  font-size: 1rem;
 }
 
 .dashboard__tools {
@@ -1883,6 +1989,36 @@ button {
   width: 50%;
 }
 
+.accountIcon {
+  max-width: 50px;
+}
+
+.dashboardToolIcon {
+  max-width: 80px;
+}
+
+@media (min-width: 768px) {
+  .dashboard__tools {
+    max-width: 600px;
+  }
+}
+
+.account {
+  width: 100%;
+}
+
+.account__resetButton {
+  margin: 1rem;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.account__dashboardButton {
+  margin: 1rem;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
 .profileItem {
   text-align: left;
   margin: 1rem;
@@ -1916,22 +2052,7 @@ button {
 
 .profileItem form button {
   width: 20%;
-  margin: 0;
   padding: 1.2em 0.6em;
   display: inline-block;
-}
-
-.accountIcon {
-  max-width: 50px;
-}
-
-.dashboardToolIcon {
-  max-width: 80px;
-}
-
-@media (min-width: 768px) {
-  .dashboard__tools {
-    max-width: 600px;
-  }
 }
 /*# sourceMappingURL=main.css.map */

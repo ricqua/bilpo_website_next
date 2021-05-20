@@ -87,20 +87,24 @@ export default function index() {
           ) : // </div>
           null}
         </div>
-        <Link href="./">
-          <p>Back to website</p>
-        </Link>
-        <p
-          // className="button__lightPrimary"
-          onClick={() =>
-            firebase
-              .auth()
-              .signOut()
-              .then(() => router.push("/login"))
-          }
-        >
-          Log Out
-        </p>
+        <div>
+          <Link href="./">
+            <button className="button__light dashboard__backToWebsiteButton">
+              Back to website
+            </button>
+          </Link>
+          <button
+            className="button__light dashboard__signOutButton"
+            onClick={() =>
+              firebase
+                .auth()
+                .signOut()
+                .then(() => router.push("/login"))
+            }
+          >
+            Log Out
+          </button>
+        </div>
       </div>
     </React.Fragment>
   );

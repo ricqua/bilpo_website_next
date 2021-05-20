@@ -54,18 +54,18 @@ const ContactComponent = () => {
       <section id="contactSection" className="contact">
         <div className="contact__info">
           <div className="contact__info__headerLine" />
-          <h2>Contact Us</h2>
+          <h2>메세지 남기기</h2>
           <p>
-            If you’re interested in our services, have any questions or want to
-            share feedback, please send us a message using this contact form or
-            email us on info@bilpo.co.kr
+            고객님들의 의견을 소중하게 생각합니다. 문의사항이나 피드백을
+            남겨주세요. 대량주문 및 기업체 선물세트 주문도 받고있습니다.
           </p>
+          <p>페이스북, 인스타그램, 카카오톡, 이메일 연락도 환영합니다!</p>
         </div>
         {/* <div className="contact__form"> */}
         <form onSubmit={handleSubmit}>
           <div className="inputBox_effect1">
             <input type="text" required name="name" />
-            <span>Name</span>
+            <span>이름</span>
           </div>
           <div className="inputBox_effect1">
             <input type="text" required name="phone" />
@@ -73,10 +73,10 @@ const ContactComponent = () => {
           </div>
           <div className="inputBox_effect1">
             <textarea type="text" required name="message" />
-            <span>Message</span>
+            <span>내용</span>
           </div>
           <button className="button__lightPrimary">
-            Submit <span>❯</span>
+            작성 <span>❯</span>
           </button>
         </form>
         {/* </div> */}

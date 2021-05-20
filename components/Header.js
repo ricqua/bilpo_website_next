@@ -65,7 +65,7 @@ const Header = () => {
               </Link>
             </li>
             <li>
-              <Link className="link" href="#contactSection">
+              <Link className="link" href="/contact">
                 <label>고객센터</label>
               </Link>
             </li>

@@ -15,27 +15,7 @@ const About = () => {
         </div>
 
         {/* <section className="about__info"> */}
-        <section className="about__bil-po">
-          <div>
-            <h2>Bil (빌) / po(포)</h2>
-            <p>
-              빌통: 빌통이라는 단어는 네덜란드의 빌 (엉덩이) 와 통 (조각 혹은
-              혀)라는 단어에서 유래되었어요. 육포: 육포는 한국말로 건육 이라는
-              뜻으로 (흔히 미국에서는 절키 Jerky ) 알려져 있어요. 빌통과 육포의
-              글자를 따서 문화를 함께 상징하는 육포회사 ‘빌포’가 탄생했어요.
-            </p>
-          </div>
-          <div className="about__imageDiv">
-            {/* <Image
-              src={"/aboutImages/about biltong 2 (1800px).png"}
-              alt="knife cutting biltong"
-              className="about__image"
-              width={1800}
-              height={600}
-              loading="eager"
-            /> */}
-          </div>
-        </section>
+
         <section className="about__history">
           <div>
             <h2>빌통의 역사 </h2>
@@ -107,6 +87,28 @@ const About = () => {
               width={1800}
               height={600}
               loading="lazy"
+            /> */}
+          </div>
+        </section>
+
+        <section className="about__bil-po">
+          <div>
+            <h2>Bil (빌) / po(포)</h2>
+            <p>
+              빌통: 빌통이라는 단어는 네덜란드의 빌 (엉덩이) 와 통 (조각 혹은
+              혀)라는 단어에서 유래되었어요. 육포: 육포는 한국말로 건육 이라는
+              뜻으로 (흔히 미국에서는 절키 Jerky ) 알려져 있어요. 빌통과 육포의
+              글자를 따서 문화를 함께 상징하는 육포회사 ‘빌포’가 탄생했어요.
+            </p>
+          </div>
+          <div className="about__imageDiv">
+            {/* <Image
+              src={"/aboutImages/about biltong 2 (1800px).png"}
+              alt="knife cutting biltong"
+              className="about__image"
+              width={1800}
+              height={600}
+              loading="eager"
             /> */}
           </div>
         </section>

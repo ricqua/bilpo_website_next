@@ -1,0 +1,46 @@
+.account {
+  width: 100%;
+
+  &__resetButton {
+    // outline: 1px solid red;
+    margin: 1rem;
+    border-radius: 6px;
+    font-size: 1rem;
+  }
+
+  &__dashboardButton {
+    margin: 1rem;
+    border-radius: 6px;
+    font-size: 1rem;
+  }
+}
+
+.profileItem {
+  text-align: left;
+  margin: 1rem;
+
+  form {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    label {
+      margin: 0.5rem 1rem 0.5rem 0;
+      color: white;
+      width: 100%;
+    }
+    input {
+      // width: 50%;
+      color: black;
+      margin: 0;
+      font-weight: 100;
+      width: 80%;
+    }
+    button {
+      width: 20%;
+      // margin: 1rem;
+      padding: 1.2em 0.6em;
+      display: inline-block;
+      // width: 20%;
+    }
+  }
+}

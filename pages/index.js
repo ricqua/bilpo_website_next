@@ -4,6 +4,7 @@ import Image from "next/image";
 import LayoutPublic from "../components/LayoutPublic";
 import Modal from "../components/Modal";
 import firebase from "firebase/app";
+import InstagramEmbed from "react-instagram-embed";
 
 const Home = () => {
   const [showModal, setShowModal] = useState(false);
@@ -82,7 +83,7 @@ const Home = () => {
             </p>
             <div className="inputBox_effect1">
               <input type="text" required name="name" />
-              <span>Name</span>
+              <span>이름</span>
             </div>
             <div className="inputBox_effect1">
               <input type="text" required name="phone" />
@@ -90,7 +91,7 @@ const Home = () => {
             </div>
 
             <button className="button__lightPrimary">
-              Enter Giveaway <span>❯</span>
+              경품응모하기 <span>❯</span>
             </button>
           </form>
         </section>
@@ -118,11 +119,32 @@ const Home = () => {
           </div>
         </section>
 
-        <section>
-          <div>Instagram section</div>
-        </section>
-        <section className="home__shippingSection">
-          <div>Shipping section</div>
+        {/* <section>
+          <div>
+            Instagram section
+            <InstagramEmbed
+              url="https://www.instagram.com/p/CPE3XO3MfIv/"
+              // IGQVJWREhBVmdTZAU5rdS1DdzRlWXQ0MEYtOE9FX0ZAVUEt3TjcxZAEJkUDc5YWwxS2xQTFdaelR5RldxQkFaeDVfVWFYUS1teFhzWHEzTUhIeVc3WU00Vl9tQlgxSVJSWnNoa0hPVW5sM2dhbHE1amZAxUgZDZD
+              clientAccessToken="2196d9b99306fd3e5b6767566b114a13"
+              maxWidth={320}
+              hideCaption={false}
+              containerTagName="div"
+              protocol=""
+              injectScript
+              onLoading={() => {}}
+              onSuccess={() => {}}
+              onAfterRender={() => {}}
+              onFailure={() => {}}
+            />
+          </div>
+        </section> */}
+
+        <section className="shipping">
+          <img src="/homeImages/shippingImage.png" alt="shipping image" />
+          <div>
+            <h2>무료배송</h2>
+            <p>5봉/ 8봉 묶음상품 주문시</p>
+          </div>
         </section>
       </main>
     </LayoutPublic>

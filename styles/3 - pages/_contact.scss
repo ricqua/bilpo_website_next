@@ -37,6 +37,15 @@
   }
 }
 
+@media (min-width: 768px) {
+  form {
+    button {
+      width: 200px;
+      margin: auto;
+    }
+  }
+}
+
 @media (min-width: 1279px) {
   .contactSection_wrapper {
     width: 100%;

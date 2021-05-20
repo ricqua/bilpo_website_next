@@ -16,9 +16,15 @@
   h2 {
     // margin: 2rem;
   }
-
-  &__account {
-    width: 100%;
+  &__backToWebsiteButton {
+    margin: 1rem;
+    border-radius: 6px;
+    font-size: 1rem;
+  }
+  &__signOutButton {
+    margin: 1rem;
+    border-radius: 6px;
+    font-size: 1rem;
   }
 
   &__tools {
@@ -85,36 +91,6 @@
           width: 50%;
         }
       }
-    }
-  }
-}
-
-.profileItem {
-  text-align: left;
-  margin: 1rem;
-
-  form {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    label {
-      margin: 0.5rem 1rem 0.5rem 0;
-      color: white;
-      width: 100%;
-    }
-    input {
-      // width: 50%;
-      color: black;
-      margin: 0;
-      font-weight: 100;
-      width: 80%;
-    }
-    button {
-      width: 20%;
-      margin: 0;
-      padding: 1.2em 0.6em;
-      display: inline-block;
-      // width: 20%;
     }
   }
 }

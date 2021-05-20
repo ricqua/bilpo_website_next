@@ -20,18 +20,20 @@
     margin-bottom: 2rem;
   }
 
-  &__price {
-    color: grey;
+  &__priceOnline {
     text-decoration: line-through;
-    font-size: 0.8rem;
+    // font-size: 0.8rem;
     text-align: right;
+    color: grey;
     display: inline-block;
   }
 
-  &__sale {
+  &__pricePromotion {
+    // color: red;
+    margin: 0.5rem 1rem 0.5rem 0;
+    font-weight: bold;
     display: inline-block;
     text-align: right;
-    margin: 0.5rem 1rem 0.5rem 0;
   }
 
   &__links {
@@ -39,6 +41,9 @@
     margin: auto;
     display: flex;
     align-items: center;
+    label {
+      margin: 0 1rem 0 0;
+    }
 
     img {
       border-radius: 10px;

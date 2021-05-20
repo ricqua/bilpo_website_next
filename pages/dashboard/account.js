@@ -73,7 +73,7 @@ export default function account() {
       <div className="dashboard">
         <h1>Account</h1>
 
-        <section className="dashboard__account">
+        <section className="account">
           <ProfileItem title="Email: " value={isContext.email} id="email" />
           <ProfileItem
             title="Company name: "
@@ -96,17 +96,30 @@ export default function account() {
             value={isContext.deliveryAddress}
             id="deliveryAddress"
           />
-          <button className="button__light" onClick={handleResetPassword}>
-            Reset password
-          </button>
+          <ProfileItem
+            title="Business License number: "
+            value={isContext.businessLicense}
+            id="businessLicense"
+          />
+
           {/* <ProfileItem item="UserID: " value={isContext.uid} /> */}
 
           {/* <pre>{JSON.stringify(isContext, null, 1)}</pre> */}
         </section>
         {/* <hr width="500px" /> */}
-        <Link href="/dashboard">
-          <button className="button__light">Dashboard</button>
-        </Link>
+        <div>
+          <button
+            className="button__light account__resetButton"
+            onClick={handleResetPassword}
+          >
+            Reset password
+          </button>
+          <Link href="/dashboard">
+            <button className="button__light account__dashboardButton">
+              Dashboard
+            </button>
+          </Link>
+        </div>
       </div>
     </React.Fragment>
   );

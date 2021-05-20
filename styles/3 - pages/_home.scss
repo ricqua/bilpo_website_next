@@ -1,6 +1,6 @@
 .home {
   &__heroSection {
-    height: 100vh;
+    height: 95vh;
     background-image: url("../public/homeImages/heroSectionBackground.png");
     background-repeat: no-repeat;
     background-size: cover;
@@ -15,10 +15,10 @@
     }
   }
 
-  section {
-    outline: 1px solid red;
-    min-height: 10rem;
-  }
+  // section {
+  //   outline: 1px solid red;
+  //   min-height: 10rem;
+  // }
 }
 
 @media (min-width: 768px) {
@@ -44,7 +44,7 @@
 .giveaway {
   width: 100%;
   text-align: center;
-  min-height: 350px;
+  // min-height: 600px;
   // margin: 2rem 1rem;
   padding: 3rem 0 0rem 0;
   background-image: url("../public/giveawayImages/whiteMarbleBackground.jpg");
@@ -70,24 +70,34 @@
     p {
       margin: 0.6rem 0;
     }
+    button {
+      margin-bottom: 5rem;
+    }
   }
 }
 
 @media (min-width: 768px) {
   .giveaway {
     &__imageDiv {
-      width: 500px;
+      min-width: 500px;
       flex-flow: row nowrap;
     }
     form {
       width: 500px;
       margin: 0;
+
+      button {
+        width: 200px;
+        margin: auto;
+        margin-bottom: 5rem;
+      }
     }
   }
 }
 
-@media (min-width: 1400px) {
+@media (min-width: 768px) {
   .giveaway {
+    min-height: 800px;
     &__imageDiv {
       max-width: 650px;
       margin-bottom: 4rem;
@@ -95,8 +105,17 @@
       flex-flow: row nowrap;
     }
     form {
-      width: 50%;
+      // width: 50%;
       margin: 0;
+      h2 {
+        // margin: 2rem;
+      }
+      p {
+        margin: 1rem;
+      }
+      button {
+        margin: auto;
+      }
     }
   }
 }
@@ -111,7 +130,7 @@
   justify-content: center;
 
   div {
-    padding: 3rem;
+    padding: 1rem;
     width: 100%;
     // outline: 2px solid red;
     div {
@@ -153,6 +172,7 @@
     }
     img {
       max-width: 500px;
+      margin: 3rem;
     }
 
     iframe {
@@ -166,5 +186,43 @@
 @media (min-width: 1400px) {
   .biltongVsJerky {
     // background: red;
+  }
+}
+
+.shipping {
+  background: #e1e1e1;
+  display: flex;
+  flex-flow: column wrap;
+  img {
+    width: 60vw;
+    max-width: 300px;
+    margin: 3rem auto 0 auto;
+  }
+
+  div {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    margin: 3rem auto 5rem auto;
+    h2 {
+      color: rgb(253, 33, 33);
+    }
+    p {
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .shipping {
+    flex-flow: row wrap;
+    justify-content: center;
+    // justify-content: center;
+    img {
+      margin: 3rem;
+    }
+    div {
+      margin: 3rem;
+    }
   }
 }
