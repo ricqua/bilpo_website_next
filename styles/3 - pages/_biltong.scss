@@ -36,12 +36,20 @@
 
   &__card {
     // margin: 1rem;
-    margin-bottom: 3rem;
+    // margin-bottom: 3rem;
     width: 100vw;
     max-width: 500px;
     // max-width: 400px;
     background: white;
-    // filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.2));
+    filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.2));
+  }
+}
+
+@media (min-width: 500px) {
+  .biltong {
+    &__card {
+      margin-bottom: 3rem;
+    }
   }
 }
 
@@ -50,7 +58,9 @@
     &__heroSection {
       display: none;
     }
-
+    &__description {
+      max-width: 70%;
+    }
     &__cards {
       width: 100%;
       display: flex;
@@ -60,19 +70,22 @@
     }
 
     &__card {
-      max-width: 350px;
+      // max-width: 350px;
     }
   }
 }
 
 @media (min-width: 1279px) {
   .biltong {
-    &__cards {
-      width: 1280px;
+    &__description {
+      max-width: 800px;
     }
 
+    &__cards {
+      max-width: 1600;
+    }
     &__card {
-      max-width: 380px;
+      margin: 1rem;
     }
   }
 }

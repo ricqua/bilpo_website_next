@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import Head from "next/head";
 
 import firebase from "firebase/app";
 
@@ -26,6 +27,9 @@ export default function backorderLog() {
 
   return (
     <React.Fragment>
+      <Head>
+        <title>Bilpo - Backorder Log</title>
+      </Head>
       <main className="backorderHistory">
         <button onClick={() => window.location.reload()}>Refresh</button>
         <Link href="/dashboard">

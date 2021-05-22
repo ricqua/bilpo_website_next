@@ -3,6 +3,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import firebase from "firebase/app";
 import { UserContext } from "../_app";
+import Head from "next/head";
 
 export default function index() {
   const router = useRouter();
@@ -18,6 +19,9 @@ export default function index() {
 
   return (
     <React.Fragment>
+      <Head>
+        <title>Bilpo - Dashboard</title>
+      </Head>
       <div className="dashboard">
         <h1>Dashboard</h1>
         {/* {userData ? <h2>Welcome back, {userData.email}</h2> : null} */}

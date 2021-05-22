@@ -5,6 +5,7 @@ import LayoutPublic from "../components/LayoutPublic";
 
 import ProductCard from "../components/ProductCard";
 import { biltongBags } from "../data/productData";
+import { merch } from "../data/productData";
 
 const Biltong = () => {
   return (

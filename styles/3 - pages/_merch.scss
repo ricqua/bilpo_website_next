@@ -1,5 +1,21 @@
 .merch {
-  background: var(--clr-light-bg);
+  // background: var(--clr-light-bg);
+
+  &__heroSection {
+    height: 65vh;
+    background-image: url("../public/biltong/307A0480.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-content: center;
+    img {
+      max-height: 30%;
+      margin: 0 1rem 10rem 1rem;
+    }
+  }
 
   &__title {
     margin: 1rem;
@@ -8,18 +24,24 @@
   }
   &__description {
     text-align: center;
-    margin-bottom: 3rem;
+    margin: auto;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    max-width: 500px;
   }
   &__cards {
     margin: auto;
-    margin-bottom: 5rem;
+    // margin-bottom: 5rem;
   }
 
   &__card {
-    margin: 1rem;
-    max-width: 400px;
+    // margin: 1rem;
+    margin-bottom: 3rem;
+    width: 100vw;
+    max-width: 500px;
+    // max-width: 400px;
     background: white;
-    filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.2));
+    // filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.2));
   }
 }
 

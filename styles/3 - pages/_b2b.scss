@@ -30,11 +30,17 @@
     }
   }
   &__underMinQty {
-    color: grey;
+    color: red;
+    font-weight: bold;
   }
 
   &__overMinQty {
     color: green;
+  }
+
+  &__costPerBag {
+    color: rgb(167, 167, 167);
+    font-style: italic;
   }
 
   &__BagsWholesale {
@@ -63,6 +69,8 @@
     &--retail {
       background: hsl(0, 0%, 80%);
       padding: 1rem;
+      margin: 1rem;
+      text-align: center;
     }
 
     &--wholesale {

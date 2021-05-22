@@ -2,6 +2,7 @@ import React, { useState, useEffect, useContext } from "react";
 import Link from "next/link";
 import firebase from "firebase/app";
 import { UserContext } from "../_app";
+import Head from "next/head";
 
 export default function account() {
   const { isContext, setContext } = useContext(UserContext);
@@ -70,6 +71,9 @@ export default function account() {
 
   return (
     <React.Fragment>
+      <Head>
+        <title>Bilpo - Account</title>
+      </Head>
       <div className="dashboard">
         <h1>Account</h1>
 

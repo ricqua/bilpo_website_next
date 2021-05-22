@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import emailjs from "emailjs-com";
 import firebase from "firebase/app";
+import Modal from "../components/Modal";
 
 const ContactComponent = () => {
+  const [showModal, setShowModal] = useState(false);
+
   function sendDataToFirestore(payload) {
     try {
       firebase
@@ -45,8 +48,7 @@ const ContactComponent = () => {
     sendDataToFirestore(payload);
     sendEmail(payload);
     e.target.reset();
-    // setModalIsOpen(true);
-    alert("message sent");
+    setShowModal(true);
   };
 
   return (
@@ -81,6 +83,17 @@ const ContactComponent = () => {
         </form>
         {/* </div> */}
       </section>
+      {showModal ? (
+        <Modal
+          id="contactUsModal"
+          title="Message sent"
+          description="Thank you for the message.  The Bilpo team will reieve an email with your message."
+          button="Continue"
+          route=""
+          showModal={showModal}
+          setShowModal={setShowModal}
+        />
+      ) : null}
     </React.Fragment>
   );
 };

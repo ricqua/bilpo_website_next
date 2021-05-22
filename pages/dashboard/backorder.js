@@ -58,7 +58,7 @@ const backorder = () => {
   return (
     <React.Fragment>
       <Head>
-        <title>Bilpo - Backorder</title>
+        <title>Bilpo - Backorder form</title>
       </Head>
       <main className="backorder">
         <Link href="/dashboard">

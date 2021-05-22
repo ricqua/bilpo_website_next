@@ -580,17 +580,17 @@ textArea {
 }
 
 .ProductCard__priceOnline {
-  text-decoration: line-through;
   text-align: right;
   color: grey;
   display: inline-block;
+  margin-right: 1rem;
 }
 
 .ProductCard__pricePromotion {
-  margin: 0.5rem 1rem 0.5rem 0;
   font-weight: bold;
   display: inline-block;
   text-align: right;
+  margin: 0.5rem 0;
 }
 
 .ProductCard__links {
@@ -602,6 +602,8 @@ textArea {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  border-radius: 5px;
+  padding: 0.5rem 0;
 }
 
 .ProductCard__links label {
@@ -1135,15 +1137,25 @@ textArea {
 }
 
 .biltong__card {
-  margin-bottom: 3rem;
   width: 100vw;
   max-width: 500px;
   background: white;
+  -webkit-filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.2));
+          filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.2));
+}
+
+@media (min-width: 500px) {
+  .biltong__card {
+    margin-bottom: 3rem;
+  }
 }
 
 @media (min-width: 768px) {
   .biltong__heroSection {
     display: none;
+  }
+  .biltong__description {
+    max-width: 70%;
   }
   .biltong__cards {
     width: 100%;
@@ -1157,22 +1169,43 @@ textArea {
     -ms-flex-pack: distribute;
         justify-content: space-around;
   }
-  .biltong__card {
-    max-width: 350px;
-  }
 }
 
 @media (min-width: 1279px) {
+  .biltong__description {
+    max-width: 800px;
+  }
   .biltong__cards {
-    width: 1280px;
+    max-width: 1600;
   }
   .biltong__card {
-    max-width: 380px;
+    margin: 1rem;
   }
 }
 
-.merch {
-  background: var(--clr-light-bg);
+.merch__heroSection {
+  height: 65vh;
+  background-image: url("../public/biltong/307A0480.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.merch__heroSection img {
+  max-height: 30%;
+  margin: 0 1rem 10rem 1rem;
 }
 
 .merch__title {
@@ -1183,20 +1216,21 @@ textArea {
 
 .merch__description {
   text-align: center;
-  margin-bottom: 3rem;
+  margin: auto;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  max-width: 500px;
 }
 
 .merch__cards {
   margin: auto;
-  margin-bottom: 5rem;
 }
 
 .merch__card {
-  margin: 1rem;
-  max-width: 400px;
+  margin-bottom: 3rem;
+  width: 100vw;
+  max-width: 500px;
   background: white;
-  -webkit-filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.2));
-          filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.2));
 }
 
 @media (min-width: 768px) {
@@ -1232,7 +1266,7 @@ textArea {
 }
 
 .about__splash {
-  height: 350px;
+  height: 65vh;
   width: 100%;
   background-image: url("../public/aboutImages/Cape-Town-Table-Mountain.jpg");
   background-repeat: no-repeat;
@@ -1721,11 +1755,17 @@ textArea {
 }
 
 .rfq__underMinQty {
-  color: grey;
+  color: red;
+  font-weight: bold;
 }
 
 .rfq__overMinQty {
   color: green;
+}
+
+.rfq__costPerBag {
+  color: #a7a7a7;
+  font-style: italic;
 }
 
 .rfq__BagsWholesale section {
@@ -1749,6 +1789,8 @@ textArea {
 .rfq__BagsWholesale--retail {
   background: #cccccc;
   padding: 1rem;
+  margin: 1rem;
+  text-align: center;
 }
 
 .rfq__BagsWholesale--wholesale {

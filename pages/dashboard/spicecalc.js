@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import firebase from "firebase/app";
 import Link from "next/link";
+import Head from "next/head";
 
 export default function spicecalc() {
   const [meatInput, setMeatInput] = useState(0);
@@ -25,6 +26,9 @@ export default function spicecalc() {
 
   return (
     <React.Fragment>
+      <Head>
+        <title>Bilpo - Spice Calc</title>
+      </Head>
       <main className="spiceCalc">
         <div className="spiceCalc__header">
           <Link href="/dashboard">

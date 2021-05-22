@@ -113,7 +113,7 @@ const Home = () => {
                 frameBorder="0"
                 background="none"
                 // allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullScreen
+                allowFullScreen
               />
             </div>
           </div>

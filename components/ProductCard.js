@@ -21,14 +21,18 @@ function ProductCard(props) {
           <h4 className="ProductCard__title">{data.title}</h4>
           <hr />
           <div>
+            {data.priceOnline ? (
+              <p className="ProductCard__priceOnline">{data.priceOnline}</p>
+            ) : null}
             <p className="ProductCard__pricePromotion">{data.pricePromotion}</p>
-            <p className="ProductCard__priceOnline">{data.priceOnline}</p>
           </div>
-          <div className="ProductCard__info">
-            {/* <p className="ProductCard__description">{data.description}</p> */}
-          </div>
+          {data.description ? (
+            <div className="ProductCard__info">
+              <p className="ProductCard__description">{data.description}</p>
+            </div>
+          ) : null}
           <div className="ProductCard__links">
-            <label>Online stores: </label>
+            {/* <label>Online stores: </label> */}
             <Link href={data.naver}>
               <img
                 src="socialIcons/NaverButtonAv1.svg"
