@@ -3,16 +3,23 @@ import { UserContext } from "../_app";
 import Link from "next/link";
 import Head from "next/head";
 import { biltongBags, biltongSliced } from "../../data/productData";
+import firebase from "firebase/app";
+import emailjs from "emailjs-com";
+import Modal from "../../components/Modal";
+import { useRouter } from "next/router";
 
 export default function b2b() {
+  const [showModal, setShowModal] = useState(false);
+
   const { isContext, setContext } = useContext(UserContext);
   const [isPricing, setPricing] = useState({
     bags: { cost: 6800, min: 15, shipping: 3600 },
     sliced: { cost: 95000, min: 2, shipping: 5000 },
   });
   const [isOrder, setOrder] = useState({
-    bags: { qty: "", shipping: "", total: "" },
-    sliced: { qty: "", shipping: "", total: "" },
+    bags: { qty: "0", shipping: "0", total: "0" },
+    sliced: { qty: "0", shipping: "0", total: "0" },
+    total: "0",
   });
 
   const handleUpdateOrder = (e) => {
@@ -68,8 +75,51 @@ export default function b2b() {
     }
   }, [isOrder.bags.qty, isOrder.sliced.qty]);
 
-  function handlePlaceOrder() {
-    alert("This is just a test");
+  useEffect(() => {
+    setOrder((prev) => ({
+      ...prev,
+      total: isOrder.bags.total + isOrder.sliced.total,
+    }));
+  }, [isOrder.bags.total, isOrder.sliced.total]);
+
+  function handlePlaceOrder(e) {
+    e.preventDefault();
+    //send data to firebase
+    const payload = { ...isContext, ...isOrder };
+
+    try {
+      firebase
+        .firestore()
+        .collection("WholesaleOrders")
+        .doc(Date.now().toString())
+        .set(payload)
+        .then(() => {
+          console.log("Saved order to Firebase");
+        });
+    } catch (error) {
+      console.log(error);
+    }
+
+    emailjs
+      .sendForm(
+        "service_gbnx6zl",
+        "template_br67bbm",
+        e.target,
+        "user_lJcArVfFvxowZmvIrQxgV"
+      )
+      .then(
+        (result) => {
+          console.log("email status:", result.text);
+        },
+        (error) => {
+          console.log("email status:", error.text);
+        }
+      );
+
+    //send email to OEM
+    //send email to Bilpo
+    //send email to Client
+    setShowModal(true);
   }
 
   return (
@@ -247,6 +297,7 @@ export default function b2b() {
             </p>
           </div>
         </section>
+
         <section className="rfq__orderSummary">
           <h3>Order summary</h3>
           <p className="rfq__orderSummary--headings">
@@ -279,7 +330,7 @@ export default function b2b() {
           </p>
           <p className="rfq__orderSummary--total">
             <label>Total:</label>
-            {(isOrder.bags.total + isOrder.sliced.total).toLocaleString()}₩
+            {isOrder.total.toLocaleString()}₩
           </p>
           <div className="rfq__deliveryDetails">
             <p>Contact: {isContext.contactPerson}</p>
@@ -290,10 +341,63 @@ export default function b2b() {
               <a>Modify delivery details</a>
             </Link>
           </div>
-          <button className="button__lightPrimary" onClick={handlePlaceOrder}>
-            Place Order
-          </button>
+          <form onSubmit={handlePlaceOrder}>
+            <input type="text" name="email" defaultValue={isContext.email} />
+            <input
+              type="text"
+              name="companyName"
+              defaultValue={isContext.companyName}
+            />
+            <input
+              type="text"
+              name="deliveryAddress"
+              defaultValue={isContext.deliveryAddress}
+            />
+            <input type="text" name="phone" defaultValue={isContext.phone} />
+
+            <input
+              type="text"
+              name="contactPerson"
+              defaultValue={isContext.contactPerson}
+            />
+            <input
+              type="number"
+              name="bagsQty"
+              defaultValue={isOrder.bags.qty}
+            />
+            <input
+              type="number"
+              name="bagsTotal"
+              defaultValue={isOrder.bags.total}
+            />
+            <input
+              type="number"
+              name="slicedQty"
+              defaultValue={isOrder.sliced.qty}
+            />
+            <input
+              type="number"
+              name="slicedTotal"
+              defaultValue={isOrder.sliced.total}
+            />
+            <input type="number" name="total" defaultValue={isOrder.total} />
+
+            <button type="submit" className="button__lightPrimary">
+              Place Order
+            </button>
+          </form>
         </section>
+        {showModal ? (
+          <Modal
+            id="placeOrderUsModal"
+            title="Order placed"
+            description="Thank you for the message.  Please check your email inbox to complete your order."
+            button="Continue"
+            route="/dashboard"
+            showModal={showModal}
+            setShowModal={setShowModal}
+          />
+        ) : null}
       </main>
     </React.Fragment>
   );

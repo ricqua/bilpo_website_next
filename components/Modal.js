@@ -1,4 +1,5 @@
 import React from "react";
+import { useRouter } from "next/router";
 
 export default function Modal({
   title,
@@ -11,6 +12,7 @@ export default function Modal({
   function handleCloseModal() {
     console.log("closing modal");
     setShowModal(false);
+    // useRouter().router.push(route);
   }
 
   return (

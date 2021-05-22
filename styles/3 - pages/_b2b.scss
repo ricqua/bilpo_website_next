@@ -90,6 +90,9 @@
     margin-top: 2rem;
     padding: 1rem 1rem 1rem 1rem;
 
+    input {
+      display: none;
+    }
     p {
       // padding: 0 1rem;
       display: flex;
@@ -119,5 +122,38 @@
     padding: 1rem;
     background: lightgray;
     margin: 3rem 0 1rem 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .rfq {
+    // background: red;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+
+    header {
+      margin: auto;
+      p {
+        max-width: 650px;
+      }
+    }
+    &__BagsWholesale {
+      width: 500px;
+    }
+    &__orderSummary {
+      width: 100%;
+    }
+  }
+}
+
+@media (min-width: 1279px) {
+  .rfq {
+    max-width: 1280px;
+    margin: auto;
+    &__BagsWholesale {
+      width: 45%;
+    }
   }
 }
