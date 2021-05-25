@@ -4,7 +4,8 @@ import Image from "next/image";
 import LayoutPublic from "../components/LayoutPublic";
 import Modal from "../components/Modal";
 import firebase from "firebase/app";
-import InstagramEmbed from "react-instagram-embed";
+import Link from "next/link";
+import InstagramFeed from "../components/InstagramFeed";
 
 const Home = () => {
   const [showModal, setShowModal] = useState(false);
@@ -42,10 +43,24 @@ const Home = () => {
       <main className="home">
         <section className="home__heroSection">
           <img
+            className="home__heroSection__logo"
             src="/bilpoLogos/Bilpo Logo Hv4 (Full-white).svg"
             alt="Bilpo logo"
           />
-          {/* <button>Go to Naver</button> */}
+          {/* <div className="home__heroSection__links">
+            <Link href="https://smartstore.naver.com/bilpo">
+              <img
+                src="socialIcons/NaverButtonAv1.svg"
+                alt="Link to Naver smart store"
+              />
+            </Link>
+            <Link href="https://store.coupang.com/vp/vendors/A00419049/products?vendorName=%EB%B9%8C%ED%8F%AC%ED%91%B8%EB%93%9C&productId=0&outboundShippingPlaceId=3473799&freeShipOverAmount=0">
+              <img
+                src="socialIcons/CoupangButtonAv1.svg"
+                alt="Link to Coupang store"
+              />
+            </Link>
+          </div> */}
         </section>
 
         <section className="giveaway">
@@ -76,7 +91,7 @@ const Home = () => {
             <h2>Giveaway</h2>
             <p>- 무료 빌통 응모하기 -</p>
 
-            <p>(2월 1일 ~ 2월 28일)</p>
+            <p>(5월 1일 ~ 5월 31일)</p>
             <p>
               빌포팀이 고객님께 선물하는 빌통! 경품응모하고 무료 빌통 2봉을
               받아가세요. 추첨발표는 마감일 다음에 발표됩니다.
@@ -94,6 +109,10 @@ const Home = () => {
               경품응모하기 <span>❯</span>
             </button>
           </form>
+        </section>
+
+        <section className="instagram">
+          <InstagramFeed counterStart="0" counterEnd="6" />
         </section>
 
         <section className="biltongVsJerky">
@@ -119,25 +138,10 @@ const Home = () => {
           </div>
         </section>
 
-        {/* <section>
-          <div>
-            Instagram section
-            <InstagramEmbed
-              url="https://www.instagram.com/p/CPE3XO3MfIv/"
-              // IGQVJWREhBVmdTZAU5rdS1DdzRlWXQ0MEYtOE9FX0ZAVUEt3TjcxZAEJkUDc5YWwxS2xQTFdaelR5RldxQkFaeDVfVWFYUS1teFhzWHEzTUhIeVc3WU00Vl9tQlgxSVJSWnNoa0hPVW5sM2dhbHE1amZAxUgZDZD
-              clientAccessToken="2196d9b99306fd3e5b6767566b114a13"
-              maxWidth={320}
-              hideCaption={false}
-              containerTagName="div"
-              protocol=""
-              injectScript
-              onLoading={() => {}}
-              onSuccess={() => {}}
-              onAfterRender={() => {}}
-              onFailure={() => {}}
-            />
-          </div>
-        </section> */}
+        <section className="instagram">
+          {/* <h2>Instagram</h2> */}
+          <InstagramFeed counterStart="7" counterEnd="13" />
+        </section>
 
         <section className="shipping">
           <img src="/homeImages/shippingImage.png" alt="shipping image" />
@@ -145,6 +149,10 @@ const Home = () => {
             <h2>무료배송</h2>
             <p>5봉/ 8봉 묶음상품 주문시</p>
           </div>
+        </section>
+
+        <section className="instagram">
+          <InstagramFeed counterStart="14" counterEnd="20" />
         </section>
       </main>
     </LayoutPublic>

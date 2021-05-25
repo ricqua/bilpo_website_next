@@ -9,9 +9,38 @@
     flex-flow: column wrap;
     justify-content: center;
     align-content: center;
-    img {
+    &__logo {
       max-height: 30%;
       margin: 0 1rem 10rem 1rem;
+    }
+    &__links {
+      display: flex;
+      align-items: center;
+      border-radius: 5px;
+      padding: 0.5rem 0;
+      justify-content: center;
+
+      img {
+        border-radius: 10px;
+        height: 2rem;
+        cursor: pointer;
+        margin-right: 1rem;
+        transition: transform ease-in-out 250ms;
+
+        &:hover {
+          transform: scale(1.05, 1.05);
+          transition: transform ease-in-out 250ms;
+        }
+      }
+
+      img:nth-child(2) {
+        border: 1px solid rgba(73, 73, 73, 0.5);
+        margin-right: 0;
+      }
+
+      p {
+        margin: 1rem;
+      }
     }
   }
 
@@ -121,7 +150,8 @@
 }
 
 .biltongVsJerky {
-  background-image: url("../public/homeImages/woodBackground.jpg");
+  // background-image: url("../public/homeImages/woodBackground.jpg");
+  // background-image: url("../public/giveawayImages/whiteMarbleBackground.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -190,7 +220,7 @@
 }
 
 .shipping {
-  background: #e1e1e1;
+  // background: #e1e1e1;
   display: flex;
   flex-flow: column wrap;
   img {

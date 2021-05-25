@@ -768,6 +768,94 @@ textArea {
   height: 100%;
 }
 
+.instagram h2 {
+  margin: 2rem;
+}
+
+.instagram__errorMessage {
+  text-align: center;
+  color: red;
+  font-size: 18px;
+}
+
+.instagramItems {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.instagramItem {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 calc(100% / 2);
+      flex: 0 0 calc(100% / 2);
+  padding: 0.3rem;
+  display: block;
+  position: relative;
+}
+
+.instagramImg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.instagramIcon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+      align-items: center;
+  position: absolute;
+  top: 1rem;
+  left: 0.5rem;
+  width: calc(100% - 1rem);
+  height: calc(100% - 2rem);
+  z-index: 100;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #fff;
+  padding: 2rem;
+  opacity: 0;
+}
+
+.instagramIcon:hover {
+  opacity: 1;
+  background-color: #00000061;
+}
+
+@media (min-width: 480px) {
+  .instagramItem {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 calc(100% / 1);
+            flex: 0 0 calc(100% / 1);
+    padding: 10px;
+  }
+}
+
+@media (min-width: 764px) {
+  .instagramItems {
+    padding: 0 0.5rem;
+  }
+  .instagramItem {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 calc(100% / 6);
+            flex: 0 0 calc(100% / 6);
+    padding: 1rem 0.5rem;
+  }
+}
+
 .home__heroSection {
   height: 95vh;
   background-image: url("../public/homeImages/heroSectionBackground.png");
@@ -788,9 +876,52 @@ textArea {
       align-content: center;
 }
 
-.home__heroSection img {
+.home__heroSection__logo {
   max-height: 30%;
   margin: 0 1rem 10rem 1rem;
+}
+
+.home__heroSection__links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 5px;
+  padding: 0.5rem 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.home__heroSection__links img {
+  border-radius: 10px;
+  height: 2rem;
+  cursor: pointer;
+  margin-right: 1rem;
+  -webkit-transition: -webkit-transform ease-in-out 250ms;
+  transition: -webkit-transform ease-in-out 250ms;
+  transition: transform ease-in-out 250ms;
+  transition: transform ease-in-out 250ms, -webkit-transform ease-in-out 250ms;
+}
+
+.home__heroSection__links img:hover {
+  -webkit-transform: scale(1.05, 1.05);
+          transform: scale(1.05, 1.05);
+  -webkit-transition: -webkit-transform ease-in-out 250ms;
+  transition: -webkit-transform ease-in-out 250ms;
+  transition: transform ease-in-out 250ms;
+  transition: transform ease-in-out 250ms, -webkit-transform ease-in-out 250ms;
+}
+
+.home__heroSection__links img:nth-child(2) {
+  border: 1px solid rgba(73, 73, 73, 0.5);
+  margin-right: 0;
+}
+
+.home__heroSection__links p {
+  margin: 1rem;
 }
 
 .giveaway {
@@ -876,7 +1007,6 @@ textArea {
 }
 
 .biltongVsJerky {
-  background-image: url("../public/homeImages/woodBackground.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -953,7 +1083,6 @@ textArea {
 }
 
 .shipping {
-  background: #e1e1e1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

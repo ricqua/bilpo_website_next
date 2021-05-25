@@ -21,8 +21,8 @@ const Merchandise = () => {
         <div className="merch__cards">
           {merch.map((item) => {
             return (
-              <div className="merch__card">
-                <ProductCard data={item} key={item.id} />
+              <div className="merch__card" key={item.id}>
+                <ProductCard data={item} />
               </div>
             );
           })}
