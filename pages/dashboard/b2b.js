@@ -10,77 +10,98 @@ import { useRouter } from "next/router";
 
 export default function b2b() {
   const [showModal, setShowModal] = useState(false);
-
   const { isContext, setContext } = useContext(UserContext);
   const [isPricing, setPricing] = useState({
     bags: { cost: 6800, min: 15, shipping: 3600 },
     sliced: { cost: 95000, min: 2, shipping: 5000 },
   });
   const [isOrder, setOrder] = useState({
-    bags: { qty: "0", shipping: "0", total: "0" },
-    sliced: { qty: "0", shipping: "0", total: "0" },
+    bags: { qty: 0, shipping: 0, total: 0, min: "none", vat: 0, bagCost: 0 },
+    sliced: { qty: 0, shipping: 0, total: 0, min: "none", vat: 0, bagCost: 0 },
+    wineGiftset: {
+      qty: 0,
+      shipping: 0,
+      total: 0,
+      min: "none",
+      vat: 0,
+      bagCost: 0,
+    },
+    biltongGiftset: {
+      qty: 0,
+      shipping: 0,
+      total: 0,
+      min: "none",
+      vat: 0,
+      bagCost: 0,
+    },
     total: "0",
   });
 
-  const handleUpdateOrder = (e) => {
+  //update order when someone changes the qty
+  function handleUpdateOrder(e) {
     e.preventDefault();
+
+    //update qty
     setOrder((prev) => ({
       ...prev,
       [e.target.name]: { ...prev[e.target.name], qty: e.target.value },
     }));
-  };
 
-  useEffect(() => {
-    if (isOrder.bags.qty > 0) {
+    //update min order status & shipping
+    if (e.target.value <= 0) {
       setOrder((prev) => ({
         ...prev,
-        bags: {
-          ...prev.bags,
-          shipping: isPricing.bags.shipping,
-          total:
-            isOrder.bags.qty * isPricing.bags.cost + isPricing.bags.shipping,
+        [e.target.name]: {
+          ...prev[e.target.name],
+          min: "none",
+          shipping: 0,
+        },
+      }));
+    } else if (e.target.value < isPricing[e.target.name].min) {
+      setOrder((prev) => ({
+        ...prev,
+        [e.target.name]: {
+          ...prev[e.target.name],
+          min: "under",
+          shipping: isPricing[e.target.name].shipping,
         },
       }));
     } else {
       setOrder((prev) => ({
         ...prev,
-        bags: {
-          ...prev.bags,
-          shipping: 0,
-          total: 0,
+        [e.target.name]: {
+          ...prev[e.target.name],
+          min: "over",
+          shipping: isPricing[e.target.name].shipping,
         },
       }));
     }
 
-    if (isOrder.sliced.qty > 0) {
+    //update VAT & totals
+    if (e.target.value <= 0) {
       setOrder((prev) => ({
         ...prev,
-        sliced: {
-          ...prev.sliced,
-          shipping: isPricing.sliced.shipping,
-          total:
-            isOrder.sliced.qty * isPricing.sliced.cost +
-            isPricing.sliced.shipping,
+        [e.target.name]: {
+          ...prev[e.target.name],
+          vat: 0,
+          total: 0,
         },
       }));
     } else {
       setOrder((prev) => ({
         ...prev,
-        sliced: {
-          ...prev.sliced,
-          shipping: 0,
-          total: 0,
+        [e.target.name]: {
+          ...prev[e.target.name],
+          vat:
+            e.target.value * isPricing[e.target.name].cost -
+            (e.target.value * isPricing[e.target.name].cost) / 1.1,
+          total:
+            e.target.value * isPricing[e.target.name].cost +
+            isPricing[e.target.name].shipping,
         },
       }));
     }
-  }, [isOrder.bags.qty, isOrder.sliced.qty]);
-
-  useEffect(() => {
-    setOrder((prev) => ({
-      ...prev,
-      total: isOrder.bags.total + isOrder.sliced.total,
-    }));
-  }, [isOrder.bags.total, isOrder.sliced.total]);
+  }
 
   function handlePlaceOrder(e) {
     e.preventDefault();
@@ -100,27 +121,31 @@ export default function b2b() {
       console.log(error);
     }
 
-    emailjs
-      .sendForm(
-        "service_gbnx6zl",
-        "template_br67bbm",
-        e.target,
-        "user_lJcArVfFvxowZmvIrQxgV"
-      )
-      .then(
-        (result) => {
-          console.log("email status:", result.text);
-        },
-        (error) => {
-          console.log("email status:", error.text);
-        }
-      );
-
-    //send email to OEM
-    //send email to Bilpo
-    //send email to Client
+    // emailjs
+    //   .sendForm(
+    //     "service_gbnx6zl",
+    //     "template_br67bbm",
+    //     e.target,
+    //     "user_lJcArVfFvxowZmvIrQxgV"
+    //   )
+    //   .then(
+    //     (result) => {
+    //       console.log("email status:", result.text);
+    //     },
+    //     (error) => {
+    //       console.log("email status:", error.text);
+    //     }
+    //   );
     setShowModal(true);
   }
+
+  //Calculate final invoice total
+  useEffect(() => {
+    setOrder((prev) => ({
+      ...prev,
+      total: isOrder.bags.total + isOrder.sliced.total,
+    }));
+  }, [isOrder.bags.total, isOrder.sliced.total]);
 
   return (
     <React.Fragment>
@@ -169,12 +194,14 @@ export default function b2b() {
                   type="number"
                   required
                   name="bags"
+                  // defaultValue="0"
                   onChange={handleUpdateOrder}
                 />
                 <span>How many 60g bags?</span>
               </div>
 
-              {isOrder.bags.qty && isOrder.bags.qty < isPricing.bags.min ? (
+              {isOrder.bags.min === "none" ? null : isOrder.bags.min ===
+                "under" ? (
                 <p className="rfq__underMinQty">
                   Minimum order quantity: {isPricing.bags.min} bags
                 </p>
@@ -195,18 +222,12 @@ export default function b2b() {
               </p>
               <p>
                 VAT (10%):
-                <label>
-                  {Math.round(
-                    isPricing.bags.cost * isOrder.bags.qty -
-                      (isOrder.bags.qty * isPricing.bags.cost) / 1.1
-                  ).toLocaleString()}
-                  ₩
-                </label>
+                <label>{Math.round(isOrder.bags.vat).toLocaleString()}₩</label>
               </p>
               <p>
                 Shipping:
                 {isOrder.bags.qty ? (
-                  <label>{isPricing.bags.shipping.toLocaleString()}₩</label>
+                  <label>{isOrder.bags.shipping.toLocaleString()}₩</label>
                 ) : (
                   <label>0₩</label>
                 )}
@@ -254,7 +275,8 @@ export default function b2b() {
               <span>How many 1kg bags?</span>
             </div>
 
-            {isOrder.sliced.qty && isOrder.sliced.qty < isPricing.sliced.min ? (
+            {isOrder.sliced.min === "none" ? null : isOrder.sliced.min ===
+              "under" ? (
               <p className="rfq__underMinQty">
                 Minimum order quantity: {isPricing.sliced.min} kg
               </p>
@@ -275,13 +297,7 @@ export default function b2b() {
             </p>
             <p>
               VAT (10%):
-              <label>
-                {Math.round(
-                  isPricing.sliced.cost * isOrder.sliced.qty -
-                    (isOrder.sliced.qty * isPricing.sliced.cost) / 1.1
-                ).toLocaleString()}
-                ₩
-              </label>
+              <label>{Math.round(isOrder.sliced.vat).toLocaleString()}₩</label>
             </p>
             <p>
               Shipping:
@@ -313,24 +329,24 @@ export default function b2b() {
             <label>{isOrder.bags.qty ? isOrder.bags.qty : 0} bags</label>
 
             {isOrder.bags.qty ? (
-              <label>{isOrder.bags.total.toLocaleString()}₩</label>
+              <label>{isOrder.bags.total.toLocaleString()} ₩</label>
             ) : (
-              <label>0</label>
+              <label>0 ₩</label>
             )}
           </p>
           <p>
             <label>Sliced:</label>
-            <label>{isOrder.sliced.qty ? isOrder.sliced.qty : 0} kg's</label>
+            <label>{isOrder.sliced.qty ? isOrder.sliced.qty : 0} kg</label>
 
             {isOrder.sliced.qty ? (
-              <label>{isOrder.sliced.total.toLocaleString()}₩</label>
+              <label>{isOrder.sliced.total.toLocaleString()} ₩</label>
             ) : (
-              <label>0</label>
+              <label>0 ₩</label>
             )}
           </p>
           <p className="rfq__orderSummary--total">
             <label>Total:</label>
-            {isOrder.total.toLocaleString()}₩
+            {isOrder.total.toLocaleString()} ₩
           </p>
           <div className="rfq__deliveryDetails">
             <p>Contact: {isContext.contactPerson}</p>
@@ -367,6 +383,11 @@ export default function b2b() {
             />
             <input
               type="number"
+              name="bagsShipping"
+              defaultValue={isOrder.bags.shipping}
+            />
+            <input
+              type="number"
               name="bagsTotal"
               defaultValue={isOrder.bags.total}
             />
@@ -374,6 +395,11 @@ export default function b2b() {
               type="number"
               name="slicedQty"
               defaultValue={isOrder.sliced.qty}
+            />
+            <input
+              type="number"
+              name="slicedShipping"
+              defaultValue={isOrder.sliced.shipping}
             />
             <input
               type="number"
@@ -391,9 +417,9 @@ export default function b2b() {
           <Modal
             id="placeOrderUsModal"
             title="Order placed"
-            description="Thank you for the message.  Please check your email inbox to complete your order."
+            description="Please check your email inbox to complete your order."
             button="Continue"
-            route="/dashboard"
+            route=""
             showModal={showModal}
             setShowModal={setShowModal}
           />

@@ -28,46 +28,30 @@ export default function account() {
       });
   }
 
-  function handleModifyField(e) {
+  function updateAccountDetails(e) {
     e.preventDefault();
-    const id = e.target.id;
-    let value = e.target.value.value;
-    if (!e.target.value.value) {
-      value = "_";
-    }
-    // const preValue = isContext[id]
-    console.log(`Changing ${id} from ${isContext[id]} to ${value}`);
+    console.log("saved");
+    const data = e.target;
     firebase
       .firestore()
       .collection("Users")
       .doc(isContext.uid)
       .set({
         ...isContext,
-        [id]: value,
+        email: data.email.value,
+        companyName: data.companyName.value,
+        contactPerson: data.contactPerson.value,
+        companyAddress: data.companyAddress.value,
+        deliveryAddress: data.deliveryAddress.value,
+        businessLicense: data.businessLicense.value,
       })
       .then(() => {
-        alert(`Changed ${id} from ${isContext[id]} to ${value}`);
+        alert("stuff changed");
       })
       .then(() => {
         window.location.reload();
       });
   }
-
-  const ProfileItem = ({ title, value, id }) => {
-    return (
-      <div className="profileItem">
-        <form onSubmit={handleModifyField} id={id}>
-          <label>{title}</label>
-          <input defaultValue={value} name="value" />
-          {id === "email" ? (
-            <button disabled>Modify</button>
-          ) : (
-            <button>Modify</button>
-          )}
-        </form>
-      </div>
-    );
-  };
 
   return (
     <React.Fragment>
@@ -78,40 +62,53 @@ export default function account() {
         <h1>Account</h1>
 
         <section className="account">
-          <ProfileItem title="Email: " value={isContext.email} id="email" />
-          <ProfileItem
-            title="Company name: "
-            id="companyName"
-            value={isContext.companyName}
-          />
-          <ProfileItem
-            title="Contact person: "
-            value={isContext.contactPerson}
-            id="contactPerson"
-          />
-          <ProfileItem title="Mobile: " value={isContext.phone} id="phone" />
-          <ProfileItem
-            title="Company address: "
-            value={isContext.companyAddress}
-            id="companyAddress"
-          />
-          <ProfileItem
-            title="Delivery address: "
-            value={isContext.deliveryAddress}
-            id="deliveryAddress"
-          />
-          <ProfileItem
-            title="Business License number: "
-            value={isContext.businessLicense}
-            id="businessLicense"
-          />
+          <form onSubmit={updateAccountDetails}>
+            <label>Email</label>
+            <input type="email" name="email" defaultValue={isContext.email} />
+            <label>Company name</label>
 
-          {/* <ProfileItem item="UserID: " value={isContext.uid} /> */}
+            <input
+              type="text"
+              name="companyName"
+              defaultValue={isContext.companyName}
+            />
+            <label>Mobile</label>
 
-          {/* <pre>{JSON.stringify(isContext, null, 1)}</pre> */}
+            <input type="text" name="phone" defaultValue={isContext.phone} />
+            <label>Contact person</label>
+
+            <input
+              type="text"
+              name="contactPerson"
+              defaultValue={isContext.contactPerson}
+            />
+            <label>Company address</label>
+
+            <input
+              type="text"
+              name="companyAddress"
+              defaultValue={isContext.companyAddress}
+            />
+            <label>Delivery address</label>
+
+            <input
+              type="text"
+              name="deliveryAddress"
+              defaultValue={isContext.deliveryAddress}
+            />
+            <label>Business license</label>
+
+            <input
+              type="text"
+              name="businessLicense"
+              defaultValue={isContext.businessLicense}
+            />
+            <button type="submit" className="button__lightPrimary">
+              Save changes
+            </button>
+          </form>
         </section>
-        {/* <hr width="500px" /> */}
-        <div>
+        <section>
           <button
             className="button__light account__resetButton"
             onClick={handleResetPassword}
@@ -123,7 +120,7 @@ export default function account() {
               Dashboard
             </button>
           </Link>
-        </div>
+        </section>
       </div>
     </React.Fragment>
   );

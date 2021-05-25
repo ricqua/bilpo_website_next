@@ -34,21 +34,22 @@ const backorder = () => {
     e.preventDefault();
     const payload = e.target;
 
-    emailjs
-      .sendForm(
-        "service_gbnx6zl",
-        "template_br67bbm",
-        e.target,
-        "user_lJcArVfFvxowZmvIrQxgV"
-      )
-      .then(
-        (result) => {
-          console.log("email status:", result.text);
-        },
-        (error) => {
-          console.log("email status:", error.text);
-        }
-      );
+    //limited number of emailjs templates so only using for rfq and contact us forms.
+    // emailjs
+    //   .sendForm(
+    //     "service_gbnx6zl",
+    //     "template_br67bbm",
+    //     e.target,
+    //     "user_lJcArVfFvxowZmvIrQxgV"
+    //   )
+    //   .then(
+    //     (result) => {
+    //       console.log("email status:", result.text);
+    //     },
+    //     (error) => {
+    //       console.log("email status:", error.text);
+    //     }
+    //   );
 
     sendData(payload);
     // e.target.reset();

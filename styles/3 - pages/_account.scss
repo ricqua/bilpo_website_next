@@ -1,6 +1,33 @@
 .account {
   width: 100%;
 
+  form {
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    // background: red;
+
+    label {
+      margin: 1.2rem 0 0.5rem 0;
+      color: white;
+      // width: 100%;
+      text-align: left;
+    }
+    input {
+      width: 100%;
+      color: black;
+      margin: 0;
+      font-weight: 100;
+    }
+    button {
+      margin: 1rem auto;
+      background: rgb(197, 0, 0);
+      font-size: 1rem;
+    }
+  }
+
   &__resetButton {
     // outline: 1px solid red;
     margin: 1rem;
@@ -12,35 +39,5 @@
     margin: 1rem;
     border-radius: 6px;
     font-size: 1rem;
-  }
-}
-
-.profileItem {
-  text-align: left;
-  margin: 1rem;
-
-  form {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    label {
-      margin: 0.5rem 1rem 0.5rem 0;
-      color: white;
-      width: 100%;
-    }
-    input {
-      // width: 50%;
-      color: black;
-      margin: 0;
-      font-weight: 100;
-      width: 80%;
-    }
-    button {
-      width: 20%;
-      // margin: 1rem;
-      padding: 1.2em 0.6em;
-      display: inline-block;
-      // width: 20%;
-    }
   }
 }
