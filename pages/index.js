@@ -118,38 +118,42 @@ const Home = () => {
         <section className="biltongVsJerky">
           <div>
             <table>
-              <tr>
-                <th>
-                  <h3>JERKY</h3>
-                </th>
-                <th>
-                  <h3>BILTONG</h3>
-                </th>
-              </tr>
-              <tr>
-                <td>USA</td>
-                <td>South Africa</td>
-              </tr>
-              <tr>
-                <td>Bulgogi</td>
-                <td>Steak</td>
-              </tr>
-              <tr>
-                <td>Sugar, Soy sauce</td>
-                <td>Salt, Pepper</td>
-              </tr>
-              <tr>
-                <td>Dry</td>
-                <td>Soft & fresh</td>
-              </tr>
-              <tr>
-                <td>Lots of sugar</td>
-                <td>Sugar free</td>
-              </tr>
-              <tr>
-                <td>Fast, Heat dried</td>
-                <td>Slow, Cold dried</td>
-              </tr>
+              <thead>
+                <tr>
+                  <th>
+                    <h3>JERKY</h3>
+                  </th>
+                  <th>
+                    <h3>BILTONG</h3>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>USA</td>
+                  <td>South Africa</td>
+                </tr>
+                <tr>
+                  <td>Bulgogi</td>
+                  <td>Steak</td>
+                </tr>
+                <tr>
+                  <td>Sugar, Soy sauce</td>
+                  <td>Salt, Pepper</td>
+                </tr>
+                <tr>
+                  <td>Dry</td>
+                  <td>Soft & fresh</td>
+                </tr>
+                <tr>
+                  <td>Lots of sugar</td>
+                  <td>Sugar free</td>
+                </tr>
+                <tr>
+                  <td>Fast, Heat dried</td>
+                  <td>Slow, Cold dried</td>
+                </tr>
+              </tbody>
             </table>
             {/* <img
               src="/homeImages/biltongVsJerky.png"
