@@ -790,9 +790,12 @@ textArea {
   -webkit-box-flex: 0;
   -ms-flex: 0 0 calc(100% / 2);
       flex: 0 0 calc(100% / 2);
-  padding: 0.3rem;
   display: block;
   position: relative;
+}
+
+.instagramItem:nth-child(5) {
+  display: none;
 }
 
 .instagramImg {
@@ -838,21 +841,44 @@ textArea {
 @media (min-width: 480px) {
   .instagramItem {
     -webkit-box-flex: 0;
-        -ms-flex: 0 0 calc(100% / 1);
-            flex: 0 0 calc(100% / 1);
-    padding: 10px;
+        -ms-flex: 0 0 calc(100% / 2);
+            flex: 0 0 calc(100% / 2);
+    padding: 0;
+  }
+  .instagramItem:nth-child(5) {
+    display: none;
   }
 }
 
 @media (min-width: 764px) {
   .instagramItems {
-    padding: 0 0.5rem;
+    padding: 0;
   }
   .instagramItem {
     -webkit-box-flex: 0;
-        -ms-flex: 0 0 calc(100% / 6);
-            flex: 0 0 calc(100% / 6);
-    padding: 1rem 0.5rem;
+        -ms-flex: 0 0 calc(100% / 3);
+            flex: 0 0 calc(100% / 3);
+    padding: 0;
+  }
+  .instagramItem:nth-child(4),
+  .instagramItem:nth-child(5) {
+    display: none;
+  }
+}
+
+@media (min-width: 1279px) {
+  .instagramItems {
+    padding: 0;
+  }
+  .instagramItem {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 calc(100% / 5);
+            flex: 0 0 calc(100% / 5);
+    padding: 0;
+  }
+  .instagramItem:nth-child(4),
+  .instagramItem:nth-child(5) {
+    display: block;
   }
 }
 
@@ -964,25 +990,6 @@ textArea {
 }
 
 @media (min-width: 768px) {
-  .giveaway__imageDiv {
-    min-width: 500px;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: row nowrap;
-            flex-flow: row nowrap;
-  }
-  .giveaway form {
-    width: 500px;
-    margin: 0;
-  }
-  .giveaway form button {
-    width: 200px;
-    margin: auto;
-    margin-bottom: 5rem;
-  }
-}
-
-@media (min-width: 768px) {
   .giveaway {
     min-height: 800px;
   }
@@ -996,13 +1003,13 @@ textArea {
             flex-flow: row nowrap;
   }
   .giveaway form {
+    width: 500px;
     margin: 0;
   }
-  .giveaway form p {
-    margin: 1rem;
-  }
   .giveaway form button {
+    width: 200px;
     margin: auto;
+    margin-bottom: 5rem;
   }
 }
 
@@ -1035,6 +1042,23 @@ textArea {
 
 .biltongVsJerky img {
   width: 100%;
+}
+
+.biltongVsJerky table {
+  width: 350px;
+  margin: 1.5rem auto;
+}
+
+.biltongVsJerky th,
+.biltongVsJerky td {
+  text-align: center;
+  margin: 1rem;
+  padding: 0.4rem 1rem;
+  font-size: 1rem;
+}
+
+.biltongVsJerky th {
+  border-bottom: 1px solid black;
 }
 
 .biltongVsJerky iframe {
@@ -1070,6 +1094,9 @@ textArea {
     position: relative;
     width: 560px;
     height: 315px;
+  }
+  .biltongVsJerky table {
+    margin: 3rem auto;
   }
   .biltongVsJerky img {
     max-width: 500px;
@@ -1305,7 +1332,7 @@ textArea {
     max-width: 800px;
   }
   .biltong__cards {
-    max-width: 1600;
+    max-width: 1800px;
   }
   .biltong__card {
     margin: 1rem;
@@ -1314,7 +1341,7 @@ textArea {
 
 .merch__heroSection {
   height: 65vh;
-  background-image: url("../public/biltong/307A0480.jpg");
+  background-image: url("../public/merchandise/20200905_183457.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -1356,13 +1383,26 @@ textArea {
 }
 
 .merch__card {
-  margin-bottom: 3rem;
   width: 100vw;
   max-width: 500px;
   background: white;
+  -webkit-filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.2));
+          filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.2));
+}
+
+@media (min-width: 500px) {
+  .merch__card {
+    margin-bottom: 3rem;
+  }
 }
 
 @media (min-width: 768px) {
+  .merch__heroSection {
+    display: none;
+  }
+  .merch__description {
+    max-width: 70%;
+  }
   .merch__cards {
     width: 100%;
     display: -webkit-box;
@@ -1375,17 +1415,17 @@ textArea {
     -ms-flex-pack: distribute;
         justify-content: space-around;
   }
-  .merch__card {
-    max-width: 350px;
-  }
 }
 
 @media (min-width: 1279px) {
+  .merch__description {
+    max-width: 800px;
+  }
   .merch__cards {
-    width: 1200px;
+    max-width: 1800px;
   }
   .merch__card {
-    max-width: 400px;
+    margin: 1rem;
   }
 }
 

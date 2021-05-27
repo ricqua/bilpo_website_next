@@ -3,7 +3,7 @@
 
   &__heroSection {
     height: 65vh;
-    background-image: url("../public/biltong/307A0480.jpg");
+    background-image: url("../public/merchandise/20200905_183457.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -36,17 +36,31 @@
 
   &__card {
     // margin: 1rem;
-    margin-bottom: 3rem;
+    // margin-bottom: 3rem;
     width: 100vw;
     max-width: 500px;
     // max-width: 400px;
     background: white;
-    // filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.2));
+    filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.2));
+  }
+}
+
+@media (min-width: 500px) {
+  .merch {
+    &__card {
+      margin-bottom: 3rem;
+    }
   }
 }
 
 @media (min-width: 768px) {
   .merch {
+    &__heroSection {
+      display: none;
+    }
+    &__description {
+      max-width: 70%;
+    }
     &__cards {
       width: 100%;
       display: flex;
@@ -56,19 +70,22 @@
     }
 
     &__card {
-      max-width: 350px;
+      // max-width: 350px;
     }
   }
 }
 
 @media (min-width: 1279px) {
   .merch {
-    &__cards {
-      width: 1200px;
+    &__description {
+      max-width: 800px;
     }
 
+    &__cards {
+      max-width: 1800px;
+    }
     &__card {
-      max-width: 400px;
+      margin: 1rem;
     }
   }
 }

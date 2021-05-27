@@ -60,7 +60,7 @@ class InstagramFeed extends Component {
     } else if (!isLoaded) {
       return <div> Loading... </div>;
     } else {
-      console.log(feeds);
+      // console.log(feeds);
       return (
         <div className="instagramItems">
           {feeds

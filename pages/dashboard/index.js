@@ -62,6 +62,16 @@ export default function index() {
               <label>Wholesale Orders</label>
             </div>
           </Link>
+          {/* <Link href="./dashboard/orderhistory">
+            <div className="dashboard__tools__tool">
+              <img
+                src="dashboard/wholesale.svg"
+                alt="wholesale order hisotry icon"
+                className="dashboardToolIcon"
+              />
+              <label>Wholesale Orders - History</label>
+            </div>
+          </Link> */}
           {isContext.bilpoteam === true ? (
             // <div className="dashboard__tools__backorder">
             // <strong>Backorder tools:</strong>

@@ -14,6 +14,7 @@ const Merchandise = () => {
         <title>Bilpo - Merchandise</title>
       </Head>
       <main className="merch">
+        <section className="merch__heroSection"></section>
         <h2 className="merch__title">추가상품</h2>
         <p className="merch__description">
           This is a description of all the products Bilpo offers.

@@ -9,10 +9,12 @@ export default function Modal({
   showModal,
   setShowModal,
 }) {
+  const router = useRouter();
+
   function handleCloseModal() {
     // console.log("closing modal");
     setShowModal(false);
-    // useRouter().router.push(route);
+    router.replace(route);
   }
 
   return (

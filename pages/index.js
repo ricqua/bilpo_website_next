@@ -112,15 +112,49 @@ const Home = () => {
         </section>
 
         <section className="instagram">
-          <InstagramFeed counterStart="0" counterEnd="6" />
+          <InstagramFeed counterStart="0" counterEnd="5" />
         </section>
 
         <section className="biltongVsJerky">
           <div>
-            <img
+            <table>
+              <tr>
+                <th>
+                  <h3>JERKY</h3>
+                </th>
+                <th>
+                  <h3>BILTONG</h3>
+                </th>
+              </tr>
+              <tr>
+                <td>USA</td>
+                <td>South Africa</td>
+              </tr>
+              <tr>
+                <td>Bulgogi</td>
+                <td>Steak</td>
+              </tr>
+              <tr>
+                <td>Sugar, Soy sauce</td>
+                <td>Salt, Pepper</td>
+              </tr>
+              <tr>
+                <td>Dry</td>
+                <td>Soft & fresh</td>
+              </tr>
+              <tr>
+                <td>Lots of sugar</td>
+                <td>Sugar free</td>
+              </tr>
+              <tr>
+                <td>Fast, Heat dried</td>
+                <td>Slow, Cold dried</td>
+              </tr>
+            </table>
+            {/* <img
               src="/homeImages/biltongVsJerky.png"
               alt="chart showing difference between Biltong and Jerky"
-            />
+            /> */}
           </div>
           <div>
             <div>
@@ -140,7 +174,7 @@ const Home = () => {
 
         <section className="instagram">
           {/* <h2>Instagram</h2> */}
-          <InstagramFeed counterStart="7" counterEnd="13" />
+          <InstagramFeed counterStart="6" counterEnd="11" />
         </section>
 
         <section className="shipping">
@@ -152,7 +186,7 @@ const Home = () => {
         </section>
 
         <section className="instagram">
-          <InstagramFeed counterStart="14" counterEnd="20" />
+          <InstagramFeed counterStart="12" counterEnd="17" />
         </section>
       </main>
     </LayoutPublic>

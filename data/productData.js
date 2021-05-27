@@ -1,7 +1,7 @@
 export const biltongSliced = [
   {
     id: 1,
-    title: "빌통 - 오리지널 페퍼 스테이크 (60g)",
+    title: "Sliced Biltong 1kg",
     description: "",
     img: "/biltong/biltongBag_1bag.jpg",
     alt: "photo of Bilpo biltong bag",
@@ -17,7 +17,7 @@ export const biltongSliced = [
   },
   {
     id: 2,
-    title: "빌통 - 오리지널 페퍼 스테이크 (60g x 5)",
+    title: "Sliced Biltong 1kg",
     description: "",
     img: "/biltong/biltongBag_5bag.jpg",
     alt: "photo of Bilpo biltong bag",
@@ -33,7 +33,7 @@ export const biltongSliced = [
 export const biltongBags = [
   {
     id: 1,
-    title: "빌통 - 오리지널 페퍼 스테이크 (60g)",
+    title: "오리지널 페퍼 스테이크 (60g)",
     description: "",
     img: "/biltong/biltongBag_1bag.jpg",
     alt: "photo of Bilpo biltong bag",
@@ -49,7 +49,7 @@ export const biltongBags = [
   },
   {
     id: 2,
-    title: "빌통 - 오리지널 페퍼 스테이크 (60g x 5)",
+    title: "오리지널 페퍼 스테이크 (300g / 5팍)",
     description: "",
     img: "/biltong/biltongBag_5bag.jpg",
     alt: "photo of Bilpo biltong bag",
@@ -62,7 +62,7 @@ export const biltongBags = [
   },
   {
     id: 3,
-    title: "빌통 - 오리지널 페퍼 스테이크 (60g x 8)",
+    title: "빌통 - 오리지널 페퍼 스테이크 (480g / 8팍)",
     description: "",
     img: "/biltong/biltongBag_8bag.jpg",
     alt: "photo of Bilpo biltong bag",
@@ -83,8 +83,8 @@ export const merch = [
       "Out bottle openers are made from amazing wood with a steel insert ensuring long lasting quality.  A emblam is laser engraved eto ensure a long lasting qulity image.",
     img: "/merchandise/bottleOpeners2.jpg",
     alt: "Bilpo bottle openers",
-    price: "10,000₩",
-    sale: "7,800₩",
+    priceOnline: "10,000₩",
+    pricePromotion: "7,800₩",
     naver: "https://smartstore.naver.com/bilpo/products/5353311067",
     coupang: "",
     loading: "eager",
@@ -93,11 +93,23 @@ export const merch = [
     id: 2,
     title: "빌포 코르크 코스터 컵받침대",
     description:
-      "Out bottle openers are made from amazing wood with a steel insert ensuring long lasting quality.  A emblam is laser engraved eto ensure a long lasting qulity image.",
+      "Out bottle openers are made from amazing wood with a steel insert ensuring long lasting quality.  A emblam is laser engraved to ensure a long lasting qulity image.",
     img: "/merchandise/coaster.jpg",
     alt: "Bilpo laser engraved coasters",
-    price: "3,500₩",
-    sale: "2,800₩",
+    priceOnline: "3,500₩",
+    pricePromotion: "2,800₩",
+    naver: "https://smartstore.naver.com/bilpo/products/5345113612",
+    coupang: "",
+    loading: "eager",
+  },
+  {
+    id: 3,
+    title: "Wooden bowl",
+    description: `Out bottle openers are made from amazing wood with a steel insert ensuring long lasting quality.  A emblam is laser engraved eto ensure a long lasting qulity image.`,
+    img: "/merchandise/coaster.jpg",
+    alt: "Bilpo laser engraved coasters",
+    priceOnline: "3,500₩",
+    pricePromotion: "2,800₩",
     naver: "https://smartstore.naver.com/bilpo/products/5345113612",
     coupang: "",
     loading: "eager",

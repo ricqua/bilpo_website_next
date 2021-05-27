@@ -38,9 +38,10 @@ const Biltong = () => {
             );
           })}
         </div>
+
         <section className="instagram">
           {/* <h2>Instagram</h2> */}
-          <InstagramFeed counterStart="12" counterEnd="15" />
+          {/* <InstagramFeed counterStart="12" counterEnd="15" /> */}
         </section>
       </main>
     </LayoutPublic>

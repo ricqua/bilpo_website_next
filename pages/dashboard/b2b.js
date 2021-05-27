@@ -6,14 +6,13 @@ import { biltongBags, biltongSliced } from "../../data/productData";
 import firebase from "firebase/app";
 import emailjs from "emailjs-com";
 import Modal from "../../components/Modal";
-import { useRouter } from "next/router";
 
 export default function b2b() {
   const [showModal, setShowModal] = useState(false);
   const { isContext, setContext } = useContext(UserContext);
   const [isPricing, setPricing] = useState({
-    bags: { cost: 6800, min: 15, shipping: 3600 },
-    sliced: { cost: 95000, min: 2, shipping: 5000 },
+    bags: { cost: 6800, min: 15, shipping: 3600, shippingMultiplier: 30 },
+    sliced: { cost: 95000, min: 2, shipping: 5000, shippingMultiplier: 5 },
   });
   const [isOrder, setOrder] = useState({
     bags: { qty: 0, shipping: 0, total: 0, min: "none", vat: 0, bagCost: 0 },
@@ -66,13 +65,25 @@ export default function b2b() {
           shipping: isPricing[e.target.name].shipping,
         },
       }));
-    } else {
+    } else if (
+      e.target.value >= isPricing[e.target.name].min &&
+      e.target.value < isPricing[e.target.name].shippingMultiplier
+    ) {
       setOrder((prev) => ({
         ...prev,
         [e.target.name]: {
           ...prev[e.target.name],
           min: "over",
           shipping: isPricing[e.target.name].shipping,
+        },
+      }));
+    } else {
+      setOrder((prev) => ({
+        ...prev,
+        [e.target.name]: {
+          ...prev[e.target.name],
+          min: "over",
+          shipping: 3600,
         },
       }));
     }
@@ -97,11 +108,19 @@ export default function b2b() {
             (e.target.value * isPricing[e.target.name].cost) / 1.1,
           total:
             e.target.value * isPricing[e.target.name].cost +
-            isPricing[e.target.name].shipping,
+            isOrder[e.target.name].shipping,
         },
       }));
     }
   }
+
+  //Calculate final invoice total
+  useEffect(() => {
+    setOrder((prev) => ({
+      ...prev,
+      total: isOrder.bags.total + isOrder.sliced.total,
+    }));
+  }, [isOrder.bags.total, isOrder.sliced.total]);
 
   function handlePlaceOrder(e) {
     e.preventDefault();
@@ -121,31 +140,23 @@ export default function b2b() {
       console.log(error);
     }
 
-    // emailjs
-    //   .sendForm(
-    //     "service_gbnx6zl",
-    //     "template_br67bbm",
-    //     e.target,
-    //     "user_lJcArVfFvxowZmvIrQxgV"
-    //   )
-    //   .then(
-    //     (result) => {
-    //       console.log("email status:", result.text);
-    //     },
-    //     (error) => {
-    //       console.log("email status:", error.text);
-    //     }
-    //   );
+    emailjs
+      .sendForm(
+        "service_gbnx6zl",
+        "template_br67bbm",
+        e.target,
+        "user_lJcArVfFvxowZmvIrQxgV"
+      )
+      .then(
+        (result) => {
+          console.log("email status:", result.text);
+        },
+        (error) => {
+          console.log("email status:", error.text);
+        }
+      );
     setShowModal(true);
   }
-
-  //Calculate final invoice total
-  useEffect(() => {
-    setOrder((prev) => ({
-      ...prev,
-      total: isOrder.bags.total + isOrder.sliced.total,
-    }));
-  }, [isOrder.bags.total, isOrder.sliced.total]);
 
   return (
     <React.Fragment>
@@ -247,6 +258,14 @@ export default function b2b() {
                   ₩
                 </label>
               </p>
+              {/* <p>
+                shipping boxes:
+                <label>
+                  {Math.ceil(
+                    isOrder.bags.qty / isPricing.bags.shippingMultiplier
+                  )}
+                </label>
+              </p> */}
             </div>
           </section>
         </section>
@@ -419,7 +438,7 @@ export default function b2b() {
             title="Order placed"
             description="Please check your email inbox to complete your order."
             button="Continue"
-            route=""
+            route="/dashboard"
             showModal={showModal}
             setShowModal={setShowModal}
           />
