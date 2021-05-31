@@ -39,7 +39,14 @@ export default function spicecalc() {
           </Link>
 
           <hr color="#b8b8b8" />
-          <p>Biltong Spice Calculator</p>
+          <p>
+            Biltong Spice Calculator
+            <Link href="/dashboard">
+              <button className="button__light dashboard__backToWebsiteButton">
+                Dashboard
+              </button>
+            </Link>
+          </p>
           <hr color="#b8b8b8" />
         </div>
         <div className="spiceCalc__form">

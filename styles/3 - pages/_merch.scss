@@ -1,5 +1,6 @@
 .merch {
   // background: var(--clr-light-bg);
+  padding: 2rem 0 4rem 0;
 
   &__heroSection {
     height: 65vh;
@@ -31,15 +32,11 @@
   }
   &__cards {
     margin: auto;
-    // margin-bottom: 5rem;
   }
 
   &__card {
-    // margin: 1rem;
-    // margin-bottom: 3rem;
     width: 100vw;
-    max-width: 500px;
-    // max-width: 400px;
+    max-width: 400px;
     background: white;
     filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.2));
   }
@@ -66,11 +63,9 @@
       display: flex;
       flex-flow: row wrap;
       justify-content: space-around;
-      // border: 1px solid black;
     }
 
     &__card {
-      // max-width: 350px;
     }
   }
 }

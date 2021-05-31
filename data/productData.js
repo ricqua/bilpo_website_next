@@ -94,7 +94,7 @@ export const merch = [
     title: "빌포 코르크 코스터 컵받침대",
     description:
       "Out bottle openers are made from amazing wood with a steel insert ensuring long lasting quality.  A emblam is laser engraved to ensure a long lasting qulity image.",
-    img: "/merchandise/coaster.jpg",
+    img: "/merchandise/KakaoTalk_20210531_180422245.jpg",
     alt: "Bilpo laser engraved coasters",
     priceOnline: "3,500₩",
     pricePromotion: "2,800₩",
@@ -106,7 +106,7 @@ export const merch = [
     id: 3,
     title: "Wooden bowl",
     description: `Out bottle openers are made from amazing wood with a steel insert ensuring long lasting quality.  A emblam is laser engraved eto ensure a long lasting qulity image.`,
-    img: "/merchandise/coaster.jpg",
+    img: "/merchandise/KakaoTalk_20210531_180155965.jpg",
     alt: "Bilpo laser engraved coasters",
     priceOnline: "3,500₩",
     pricePromotion: "2,800₩",

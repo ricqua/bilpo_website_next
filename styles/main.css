@@ -639,21 +639,15 @@ textArea {
 }
 
 .GiftsetCard {
-  margin: auto;
-  margin-bottom: 3rem;
   max-width: 400px;
-  padding: 1rem;
   background: white;
-  -webkit-filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.4));
-          filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.4));
 }
 
 .GiftsetCard section {
-  padding: 1rem;
+  padding: 1.5rem;
 }
 
 .GiftsetCard__title {
-  margin-top: 1rem;
   margin-bottom: 1rem;
 }
 
@@ -799,6 +793,7 @@ textArea {
 }
 
 .instagramImg {
+  position: relative;
   display: block;
   width: 100%;
   height: 100%;
@@ -883,81 +878,27 @@ textArea {
 }
 
 .home__heroSection {
-  height: 95vh;
-  background-image: url("../public/homeImages/heroSectionBackground.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column wrap;
-          flex-flow: column wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
+  height: 100vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  position: relative;
 }
 
 .home__heroSection__logo {
-  max-height: 30%;
-  margin: 0 1rem 10rem 1rem;
-}
-
-.home__heroSection__links {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  border-radius: 5px;
-  padding: 0.5rem 0;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.home__heroSection__links img {
-  border-radius: 10px;
-  height: 2rem;
-  cursor: pointer;
-  margin-right: 1rem;
-  -webkit-transition: -webkit-transform ease-in-out 250ms;
-  transition: -webkit-transform ease-in-out 250ms;
-  transition: transform ease-in-out 250ms;
-  transition: transform ease-in-out 250ms, -webkit-transform ease-in-out 250ms;
-}
-
-.home__heroSection__links img:hover {
-  -webkit-transform: scale(1.05, 1.05);
-          transform: scale(1.05, 1.05);
-  -webkit-transition: -webkit-transform ease-in-out 250ms;
-  transition: -webkit-transform ease-in-out 250ms;
-  transition: transform ease-in-out 250ms;
-  transition: transform ease-in-out 250ms, -webkit-transform ease-in-out 250ms;
-}
-
-.home__heroSection__links img:nth-child(2) {
-  border: 1px solid rgba(73, 73, 73, 0.5);
-  margin-right: 0;
-}
-
-.home__heroSection__links p {
-  margin: 1rem;
+  height: 90%;
+  width: 55%;
+  max-width: 300px;
+  margin: 0 auto;
+  position: relative;
 }
 
 .giveaway {
+  position: relative;
   width: 100%;
   text-align: center;
-  padding: 3rem 0 0rem 0;
-  background-image: url("../public/giveawayImages/whiteMarbleBackground.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  -webkit-filter: drop-shadow(0px 0px 15px #bfbfbf);
+          filter: drop-shadow(0px 0px 15px #bfbfbf);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -974,11 +915,15 @@ textArea {
 }
 
 .giveaway__imageDiv {
-  margin: 1.6rem 4rem 1.6rem 2rem;
+  height: 350px;
+  width: 90%;
+  margin: 1.6rem;
+  position: relative;
 }
 
 .giveaway form {
   margin: 1rem;
+  z-index: 1;
 }
 
 .giveaway form p {
@@ -994,17 +939,13 @@ textArea {
     min-height: 800px;
   }
   .giveaway__imageDiv {
-    max-width: 650px;
-    margin-bottom: 4rem;
-    margin-right: 10rem;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: row nowrap;
-            flex-flow: row nowrap;
+    width: 40%;
+    height: 650px;
+    margin: 0;
   }
   .giveaway form {
-    width: 500px;
-    margin: 0;
+    width: 50%;
+    margin: 1rem;
   }
   .giveaway form button {
     width: 200px;
@@ -1166,7 +1107,6 @@ textArea {
 
 .giftsets {
   width: 100%;
-  background: var(--clr-light-bg);
 }
 
 .giftsets__header {
@@ -1174,10 +1114,6 @@ textArea {
   padding-bottom: 3rem;
   text-align: center;
   margin: 0 1rem;
-}
-
-.giftsets__section {
-  margin: 1rem;
 }
 
 .giftsets__company__logos {
@@ -1249,6 +1185,10 @@ textArea {
   }
 }
 
+.biltong {
+  padding: 2rem 0 4rem 0;
+}
+
 .biltong__heroSection {
   height: 65vh;
   background-image: url("../public/biltong/307A0480.jpg");
@@ -1294,10 +1234,8 @@ textArea {
 
 .biltong__card {
   width: 100vw;
-  max-width: 500px;
+  max-width: 400px;
   background: white;
-  -webkit-filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.2));
-          filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.2));
 }
 
 @media (min-width: 500px) {
@@ -1337,6 +1275,10 @@ textArea {
   .biltong__card {
     margin: 1rem;
   }
+}
+
+.merch {
+  padding: 2rem 0 4rem 0;
 }
 
 .merch__heroSection {
@@ -1384,7 +1326,7 @@ textArea {
 
 .merch__card {
   width: 100vw;
-  max-width: 500px;
+  max-width: 400px;
   background: white;
   -webkit-filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.2));
           filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.2));
@@ -1435,15 +1377,17 @@ textArea {
 }
 
 .about__splash {
+  position: relative;
   height: 65vh;
   width: 100%;
-  background-image: url("../public/aboutImages/Cape-Town-Table-Mountain.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
 
 .about__splash h1 {
+  position: absolute;
+  z-index: 1;
   color: white;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1452,10 +1396,11 @@ textArea {
       -ms-flex-pack: center;
           justify-content: center;
   height: 100%;
+  width: 100%;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 0;
+  margin: auto;
 }
 
 .about section {
@@ -1503,37 +1448,21 @@ textArea {
 .about__bil-po div:nth-child(2) {
   min-height: 350px;
   margin: auto;
-  background-image: url("../public/aboutImages/307A0318.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
 }
 
 .about__history div:nth-child(2) {
   height: 350px;
   margin: auto;
-  background-image: url("../public/aboutImages/about biltong 4 (1800px).png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: left;
 }
 
 .about__VsJerky div:nth-child(2) {
   height: 350px;
   margin: auto;
-  background-image: url("../public/aboutImages/20210314_145454.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: bottom;
 }
 
 .about__owners div:nth-child(2) {
   height: 350px;
   margin: auto;
-  background-image: url("../public/aboutImages/about biltong 3 (1800px).png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
   margin-bottom: 3rem;
 }
 
@@ -1545,6 +1474,12 @@ textArea {
 @media screen and (min-width: 768px) {
   .about__imageDiv {
     max-width: 850px;
+  }
+}
+
+@media screen and (min-width: 850px) {
+  .about {
+    padding: 0 0 3rem 0;
   }
 }
 
@@ -2114,7 +2049,7 @@ textArea {
 }
 
 .authPage button {
-  margin: 1rem;
+  margin: 1rem auto;
 }
 
 .authPage__confirmButton {

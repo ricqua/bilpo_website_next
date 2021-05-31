@@ -11,10 +11,59 @@ const About = () => {
       </Head>
       <main className="about">
         <div className="about__splash">
+          <Image
+            src="/aboutImages/Cape-Town-Table-Mountain.jpg"
+            alt="Background"
+            layout="fill"
+            objectFit="cover"
+          />
           <h1>회사소개</h1>
         </div>
 
         {/* <section className="about__info"> */}
+
+        <section className="about__bil-po">
+          <div>
+            <h2>Bil (빌) / po(포)</h2>
+            <p>
+              빌통: 빌통이라는 단어는 네덜란드의 빌 (엉덩이) 와 통 (조각 혹은
+              혀)라는 단어에서 유래되었어요. 육포: 육포는 한국말로 건육 이라는
+              뜻으로 (흔히 미국에서는 절키 Jerky ) 알려져 있어요. 빌통과 육포의
+              글자를 따서 문화를 함께 상징하는 육포회사 ‘빌포’가 탄생했어요.
+            </p>
+          </div>
+          <div className="about__imageDiv">
+            <Image
+              src="/aboutImages/307A0318.jpg"
+              alt="Background"
+              layout="fill"
+              objectFit="cover"
+            />
+          </div>
+        </section>
+
+        <section className="about__owners">
+          <div>
+            <h2>스토리</h2>
+            <p>
+              한국인 문성씨와 남아프리카 공화국인 리처드씨는 남아프리카 공화국
+              케이프 타운으로 신혼여행을 갔어요. 그 곳에서 문성씨는 빌통에 완전
+              반해버렸죠. 한국으로 돌아온 이후, 리처드씨는 아내를 위해 특별
+              제작한 상자안에 빌통을 만들기 시작하였고, 주위의 친구들에게도
+              나눠주기 시작했죠. 남아공 향수병에 걸린 친구들과 독특한 맛을 맛본
+              친구들은 계속 빌통을 만들어 달라고 부탁하였고, 그렇게 ‘빌포’
+              회사가 탄생하였어요!
+            </p>
+          </div>
+          <div className="about__imageDiv">
+            <Image
+              src="/aboutImages/about biltong 3 (1800px).png"
+              alt="Background"
+              layout="fill"
+              objectFit="cover"
+            />
+          </div>
+        </section>
 
         <section className="about__history">
           <div>
@@ -44,14 +93,12 @@ const About = () => {
             </p>
           </div>
           <div className="about__imageDiv">
-            {/* <Image
-              src={"/aboutImages/about biltong 4 (1800px).png"}
-              alt="drawing of original settlers with thier wagons."
-              width={1800}
-              height={600}
-              // layout="fill"
-              loading="eager"
-            /> */}
+            <Image
+              src="/aboutImages/about biltong 4 (1800px).png"
+              alt="Background"
+              layout="fill"
+              objectFit="cover"
+            />
           </div>
         </section>
 
@@ -81,59 +128,12 @@ const About = () => {
             </p>
           </div>
           <div className="about__imageDiv">
-            {/* <Image
-              src={"/aboutImages/about biltong 1 (1800px).png"}
-              alt="Photo of Biltong"
-              width={1800}
-              height={600}
-              loading="lazy"
-            /> */}
-          </div>
-        </section>
-
-        <section className="about__bil-po">
-          <div>
-            <h2>Bil (빌) / po(포)</h2>
-            <p>
-              빌통: 빌통이라는 단어는 네덜란드의 빌 (엉덩이) 와 통 (조각 혹은
-              혀)라는 단어에서 유래되었어요. 육포: 육포는 한국말로 건육 이라는
-              뜻으로 (흔히 미국에서는 절키 Jerky ) 알려져 있어요. 빌통과 육포의
-              글자를 따서 문화를 함께 상징하는 육포회사 ‘빌포’가 탄생했어요.
-            </p>
-          </div>
-          <div className="about__imageDiv">
-            {/* <Image
-              src={"/aboutImages/about biltong 2 (1800px).png"}
-              alt="knife cutting biltong"
-              className="about__image"
-              width={1800}
-              height={600}
-              loading="eager"
-            /> */}
-          </div>
-        </section>
-
-        <section className="about__owners">
-          <div>
-            <h2>스토리</h2>
-            <p>
-              한국인 문성씨와 남아프리카 공화국인 리처드씨는 남아프리카 공화국
-              케이프 타운으로 신혼여행을 갔어요. 그 곳에서 문성씨는 빌통에 완전
-              반해버렸죠. 한국으로 돌아온 이후, 리처드씨는 아내를 위해 특별
-              제작한 상자안에 빌통을 만들기 시작하였고, 주위의 친구들에게도
-              나눠주기 시작했죠. 남아공 향수병에 걸린 친구들과 독특한 맛을 맛본
-              친구들은 계속 빌통을 만들어 달라고 부탁하였고, 그렇게 ‘빌포’
-              회사가 탄생하였어요!
-            </p>
-          </div>
-          <div className="about__imageDiv">
-            {/* <Image
-              src={"/aboutImages/about biltong 3 (1800px).png"}
-              alt="Photo of Moonsung and Richard.  The founders of Bilpo"
-              width={1800}
-              height={600}
-              loading="lazy"
-            /> */}
+            <Image
+              src="/aboutImages/20210314_145454.jpg"
+              alt="Background"
+              layout="fill"
+              objectFit="cover"
+            />
           </div>
         </section>
       </main>

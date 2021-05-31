@@ -98,8 +98,19 @@ export default function index() {
                 <label>Backorder log</label>
               </div>
             </Link>
-          ) : // </div>
-          null}
+          ) : null}
+          {isContext.bilpoteam === true ? (
+            <Link href="./dashboard/signup">
+              <div className="dashboard__tools__tool">
+                <img
+                  src="dashboard/addUser.svg"
+                  alt="backorder log"
+                  className="dashboardToolIcon"
+                />
+                <label>Add new user</label>
+              </div>
+            </Link>
+          ) : null}
         </div>
         <div>
           <Link href="./">

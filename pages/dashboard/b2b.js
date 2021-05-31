@@ -178,6 +178,11 @@ export default function b2b() {
             website's contact form, email us on info@bilpo.co.kr, DM us on
             Instagram/Facebook or Kakao message Moonsung (ID: green4life)
           </p>
+          <Link href="/dashboard">
+            <button className="button__light dashboard__backToWebsiteButton">
+              Dashboard
+            </button>
+          </Link>
         </header>
         <section className="rfq__BagsWholesale">
           <section>

@@ -50,12 +50,12 @@ const Header = () => {
               </Link>
             </li>
             <li>
-              <Link className="link" href="/biltong">
+              <Link className="link" href="/#biltong">
                 <label>빌통</label>
               </Link>
             </li>
             <li>
-              <Link className="link" href="/merchandise">
+              <Link className="link" href="/#merchandise">
                 <label>상품</label>
               </Link>
             </li>
@@ -65,7 +65,7 @@ const Header = () => {
               </Link>
             </li>
             <li>
-              <Link className="link" href="/contact">
+              <Link className="link" href="/#contactSection">
                 <label>고객센터</label>
               </Link>
             </li>

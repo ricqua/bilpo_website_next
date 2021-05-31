@@ -72,9 +72,9 @@ export default function index() {
             {/* <hr /> */}
           </div>
           <div>
-            <Link href="./login/signup">
+            {/* <Link href="./login/signup">
               <button className="button__light">Sign up</button>
-            </Link>
+            </Link> */}
             <Link href="./login/resetpassword">
               <button className="button__light">Forgot password</button>
             </Link>

@@ -1,40 +1,14 @@
 import Head from "next/head";
-import React, { useState } from "react";
+import React from "react";
 import Image from "next/image";
 import LayoutPublic from "../components/LayoutPublic";
-import Modal from "../components/Modal";
-import firebase from "firebase/app";
-import Link from "next/link";
 import InstagramFeed from "../components/InstagramFeed";
+import BiltongComponent from "../components/BiltongComponent";
+import MerchComponent from "../components/MerchComponent";
+import GiveawayComponent from "../components/GiveawayComponent";
+import BiltongVsJerkyComponent from "../components/BiltongVsJerkyComponent";
 
 const Home = () => {
-  const [showModal, setShowModal] = useState(false);
-
-  function sendDataToFirestore(props) {
-    try {
-      firebase
-        .firestore()
-        .collection("Giveaway")
-        .doc(props.name.value)
-        .set({
-          date: new Date().toLocaleString(),
-          name: props.name.value,
-          phone: props.phone.value,
-        })
-        .then(console.log("Sent to Firestore"));
-    } catch (error) {
-      console.log(error);
-    }
-  }
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const payload = e.target;
-    sendDataToFirestore(payload);
-    e.target.reset();
-    setShowModal(true);
-  };
-
   return (
     <LayoutPublic>
       <Head>
@@ -42,142 +16,34 @@ const Home = () => {
       </Head>
       <main className="home">
         <section className="home__heroSection">
-          <img
-            className="home__heroSection__logo"
-            src="/bilpoLogos/Bilpo Logo Hv4 (Full-white).svg"
-            alt="Bilpo logo"
+          <Image
+            src="/homeImages/heroSectionBackground.png"
+            alt={"Background"}
+            layout="fill"
+            objectFit="cover"
+            object-position="bottom"
           />
-          {/* <div className="home__heroSection__links">
-            <Link href="https://smartstore.naver.com/bilpo">
-              <img
-                src="socialIcons/NaverButtonAv1.svg"
-                alt="Link to Naver smart store"
-              />
-            </Link>
-            <Link href="https://store.coupang.com/vp/vendors/A00419049/products?vendorName=%EB%B9%8C%ED%8F%AC%ED%91%B8%EB%93%9C&productId=0&outboundShippingPlaceId=3473799&freeShipOverAmount=0">
-              <img
-                src="socialIcons/CoupangButtonAv1.svg"
-                alt="Link to Coupang store"
-              />
-            </Link>
-          </div> */}
-        </section>
-
-        <section className="giveaway">
-          <div className="giveaway__imageDiv">
+          <div className="home__heroSection__logo">
             <Image
-              src="/giveawayImages/307A0400 edit01.png"
-              alt="marble background"
-              width={958}
-              height={768}
-              loading="eager"
+              src="/bilpoLogos/Bilpo Logo Hv4 (Full-white).svg"
+              alt={"Bilpo logo"}
+              layout="fill"
+              objectFit="contain"
             />
           </div>
-          {showModal ? (
-            <Modal
-              id="giveawayModal"
-              title="Success"
-              description="Thank you for entering the giveaway. Winner will be contacted
-            directly using the email provided and an announcement will be posted
-            to Instagram."
-              button="Continue"
-              route=""
-              showModal={showModal}
-              setShowModal={setShowModal}
-            />
-          ) : null}
-
-          <form onSubmit={handleSubmit}>
-            <h2>Giveaway</h2>
-            <p>- 무료 빌통 응모하기 -</p>
-
-            <p>(5월 1일 ~ 5월 31일)</p>
-            <p>
-              빌포팀이 고객님께 선물하는 빌통! 경품응모하고 무료 빌통 2봉을
-              받아가세요. 추첨발표는 마감일 다음에 발표됩니다.
-            </p>
-            <div className="inputBox_effect1">
-              <input type="text" required name="name" />
-              <span>이름</span>
-            </div>
-            <div className="inputBox_effect1">
-              <input type="text" required name="phone" />
-              <span>Phone</span>
-            </div>
-
-            <button className="button__lightPrimary">
-              경품응모하기 <span>❯</span>
-            </button>
-          </form>
         </section>
+        <BiltongComponent />
+
+        <GiveawayComponent />
+
+        <MerchComponent />
 
         <section className="instagram">
           <InstagramFeed counterStart="0" counterEnd="5" />
         </section>
-
-        <section className="biltongVsJerky">
-          <div>
-            <table>
-              <thead>
-                <tr>
-                  <th>
-                    <h3>JERKY</h3>
-                  </th>
-                  <th>
-                    <h3>BILTONG</h3>
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>USA</td>
-                  <td>South Africa</td>
-                </tr>
-                <tr>
-                  <td>Bulgogi</td>
-                  <td>Steak</td>
-                </tr>
-                <tr>
-                  <td>Sugar, Soy sauce</td>
-                  <td>Salt, Pepper</td>
-                </tr>
-                <tr>
-                  <td>Dry</td>
-                  <td>Soft & fresh</td>
-                </tr>
-                <tr>
-                  <td>Lots of sugar</td>
-                  <td>Sugar free</td>
-                </tr>
-                <tr>
-                  <td>Fast, Heat dried</td>
-                  <td>Slow, Cold dried</td>
-                </tr>
-              </tbody>
-            </table>
-            {/* <img
-              src="/homeImages/biltongVsJerky.png"
-              alt="chart showing difference between Biltong and Jerky"
-            /> */}
-          </div>
-          <div>
-            <div>
-              <iframe
-                // width="560"
-                // height="315"
-                src="https://www.youtube.com/embed/ieOMtTYUAmA"
-                title="YouTube video player"
-                frameBorder="0"
-                background="none"
-                // allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              />
-            </div>
-          </div>
-        </section>
+        <BiltongVsJerkyComponent />
 
         <section className="instagram">
-          {/* <h2>Instagram</h2> */}
           <InstagramFeed counterStart="6" counterEnd="11" />
         </section>
 
@@ -187,10 +53,6 @@ const Home = () => {
             <h2>무료배송</h2>
             <p>5봉/ 8봉 묶음상품 주문시</p>
           </div>
-        </section>
-
-        <section className="instagram">
-          <InstagramFeed counterStart="12" counterEnd="17" />
         </section>
       </main>
     </LayoutPublic>
