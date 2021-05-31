@@ -7,6 +7,7 @@ import BiltongComponent from "../components/BiltongComponent";
 import MerchComponent from "../components/MerchComponent";
 import GiveawayComponent from "../components/GiveawayComponent";
 import BiltongVsJerkyComponent from "../components/BiltongVsJerkyComponent";
+import OnlineStoresComponent from "../components/OnlineStoresComponent";
 
 const Home = () => {
   return (
@@ -32,6 +33,8 @@ const Home = () => {
             />
           </div>
         </section>
+
+        {/* <OnlineStoresComponent /> */}
         <BiltongComponent />
 
         <GiveawayComponent />

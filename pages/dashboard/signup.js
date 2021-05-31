@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import firebase from "firebase/app";
-const auth = firebase.auth();
-const db = firebase.firestore();
+// const auth = firebase.auth();
+// const db = firebase.firestore();
 
 export default function signup() {
   const [isSignUpError, setSignUpError] = useState("");
@@ -17,14 +17,17 @@ export default function signup() {
     // if (payload.password.value !== payload.passwordCheck.value) {
     //   setSignUpError("Error: Passwords do not match");
     // }
-    auth
+    firebase
+      .auth()
       .createUserWithEmailAndPassword(
         payload.email.value,
         payload.password.value
       )
       .then((cred) => {
         console.log(cred);
-        db.collection("Users")
+        firebase
+          .firestore()
+          .collection("Users")
           .doc(cred.user.uid)
           .set({
             companyName: payload.companyName.value,

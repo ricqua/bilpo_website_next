@@ -3,7 +3,7 @@
 export default function BiltongVsJerkyComponent() {
   return (
     <section className="biltongVsJerky">
-      <div>
+      <section>
         <table>
           <thead>
             <tr>
@@ -42,21 +42,21 @@ export default function BiltongVsJerkyComponent() {
             </tr>
           </tbody>
         </table>
-      </div>
-      <div>
-        <div>
+      </section>
+      <section>
+        <div className="biltongVsJerky__videoDiv">
           <iframe
             // width="560"
             // height="315"
             src="https://www.youtube.com/embed/ieOMtTYUAmA"
             title="YouTube video player"
             frameBorder="0"
-            background="none"
+            // background="none"
             // allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
           />
         </div>
-      </div>
+      </section>
     </section>
   );
 }

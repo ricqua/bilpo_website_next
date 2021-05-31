@@ -693,7 +693,7 @@ textArea {
 
 .modal {
   display: none;
-  z-index: 1;
+  z-index: 99999999;
   background: rgba(100, 100, 100, 0.308);
   position: fixed;
   top: 0rem;
@@ -970,39 +970,34 @@ textArea {
           justify-content: center;
 }
 
-.biltongVsJerky div {
+.biltongVsJerky section {
   padding: 1rem;
   width: 100%;
 }
 
-.biltongVsJerky div div {
-  position: relative;
-  width: 100%;
-  padding-bottom: 56.25%;
-}
-
-.biltongVsJerky img {
-  width: 100%;
-}
-
 .biltongVsJerky table {
-  width: 350px;
-  margin: 1.5rem auto;
+  margin: 1rem auto;
 }
 
-.biltongVsJerky th,
-.biltongVsJerky td {
+.biltongVsJerky table th,
+.biltongVsJerky table td {
   text-align: center;
   margin: 1rem;
   padding: 0.4rem 1rem;
   font-size: 1rem;
 }
 
-.biltongVsJerky th {
+.biltongVsJerky table th {
   border-bottom: 1px solid black;
 }
 
-.biltongVsJerky iframe {
+.biltongVsJerky__videoDiv {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+}
+
+.biltongVsJerky__videoDiv iframe {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -1016,9 +1011,9 @@ textArea {
     -webkit-box-direction: normal;
         -ms-flex-flow: row nowrap;
             flex-flow: row nowrap;
-    max-height: 600px;
+    height: 650px;
   }
-  .biltongVsJerky div {
+  .biltongVsJerky section {
     width: 50vw;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1030,23 +1025,8 @@ textArea {
         -ms-flex-align: center;
             align-items: center;
   }
-  .biltongVsJerky div div {
-    all: unset;
-    position: relative;
-    width: 560px;
-    height: 315px;
-  }
-  .biltongVsJerky table {
-    margin: 3rem auto;
-  }
-  .biltongVsJerky img {
-    max-width: 500px;
-    margin: 3rem;
-  }
-  .biltongVsJerky iframe {
-    all: unset;
+  .biltongVsJerky__videoDiv {
     width: 100%;
-    height: 100%;
   }
 }
 

@@ -3,7 +3,7 @@ import React from "react";
 import Image from "next/image";
 import LayoutPublic from "../components/LayoutPublic";
 
-const About = () => {
+export default function About() {
   return (
     <LayoutPublic>
       <Head>
@@ -139,6 +139,4 @@ const About = () => {
       </main>
     </LayoutPublic>
   );
-};
-
-export default About;
+}

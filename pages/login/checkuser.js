@@ -1,6 +1,5 @@
 import React from "react";
 import Link from "next/link";
-
 import firebase from "firebase/app";
 import "firebase/auth";
 
