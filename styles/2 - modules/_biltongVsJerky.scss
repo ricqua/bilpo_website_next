@@ -1,0 +1,76 @@
+.biltongVsJerky {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+
+  section {
+    padding: 1rem;
+    width: 100%;
+  }
+
+  table {
+    margin: 1rem auto;
+
+    th,
+    td {
+      text-align: center;
+      margin: 1rem;
+      padding: 0.4rem 1rem;
+      font-size: 1rem;
+    }
+
+    th {
+      border-bottom: 1px solid black;
+    }
+  }
+
+  &__videoDiv {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+
+    iframe {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+    }
+  }
+}
+
+@media (min-width: 950px) {
+  .biltongVsJerky {
+    flex-flow: row nowrap;
+    height: 500px;
+    max-width: 1400px;
+    margin: auto;
+    // background: red;
+
+    section {
+      width: 50vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &__videoDiv {
+      width: 100%;
+    }
+  }
+}
+
+@media (min-width: 1279px) {
+  .biltongVsJerky {
+    // background: green;
+    max-width: 1820px;
+    section {
+      margin: 3rem 0;
+    }
+    &__videoDiv {
+    }
+  }
+}

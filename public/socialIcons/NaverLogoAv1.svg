@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="30mm"
+   height="6mm"
+   viewBox="0 0 29.999999 6.0000006"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)"
+   sodipodi:docname="NaverLogoAv1.svg">
+  <defs
+     id="defs2">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient851">
+      <stop
+         style="stop-color:#1eb601;stop-opacity:1"
+         offset="0"
+         id="stop847" />
+      <stop
+         style="stop-color:#1fe200;stop-opacity:1"
+         offset="1"
+         id="stop849" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient851"
+       id="linearGradient962"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.60179913,0,0,0.23241095,-746.13477,-634.68962)"
+       x1="158.74303"
+       y1="296.99997"
+       x2="158.74303"
+       y2="84.734131" />
+    <filter
+       style="color-interpolation-filters:sRGB"
+       inkscape:label="Drop Shadow"
+       id="filter1199">
+      <feFlood
+         flood-opacity="0.498039"
+         flood-color="rgb(0,0,0)"
+         result="flood"
+         id="feFlood1189" />
+      <feComposite
+         in="flood"
+         in2="SourceGraphic"
+         operator="in"
+         result="composite1"
+         id="feComposite1191" />
+      <feGaussianBlur
+         in="composite1"
+         stdDeviation="4.7"
+         result="blur"
+         id="feGaussianBlur1193" />
+      <feOffset
+         dx="0"
+         dy="0"
+         result="offset"
+         id="feOffset1195" />
+      <feComposite
+         in="SourceGraphic"
+         in2="offset"
+         operator="over"
+         result="composite2"
+         id="feComposite1197" />
+    </filter>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1221">
+      <rect
+         style="opacity:1;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.16627999;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:3.5999999;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
+         id="rect1223"
+         width="96.640022"
+         height="78.642899"
+         x="-461.465"
+         y="-638.72144" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1392">
+      <rect
+         inkscape:export-filename="D:\Ricqua\2019 - CMC Korea\2019 - Bilpo\Marketing\Email Marketing\Naver launch banner Av2.png"
+         y="-950.53839"
+         x="-132.26608"
+         height="221.30901"
+         width="88.97216"
+         id="rect1394"
+         style="opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#ff0000;stroke-width:0.52992809;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
+         inkscape:export-xdpi="96"
+         inkscape:export-ydpi="96" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1398">
+      <rect
+         y="-638.72144"
+         x="-461.465"
+         height="78.642899"
+         width="47.136391"
+         id="rect1400"
+         style="opacity:1;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.11612871;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:3.5999999;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal" />
+    </clipPath>
+    <filter
+       style="color-interpolation-filters:sRGB"
+       inkscape:label="Drop Shadow"
+       id="filter1858">
+      <feFlood
+         flood-opacity="0.498039"
+         flood-color="rgb(0,0,0)"
+         result="flood"
+         id="feFlood1848" />
+      <feComposite
+         in="flood"
+         in2="SourceGraphic"
+         operator="in"
+         result="composite1"
+         id="feComposite1850" />
+      <feGaussianBlur
+         in="composite1"
+         stdDeviation="4.7"
+         result="blur"
+         id="feGaussianBlur1852" />
+      <feOffset
+         dx="0"
+         dy="0"
+         result="offset"
+         id="feOffset1854" />
+      <feComposite
+         in="SourceGraphic"
+         in2="offset"
+         operator="over"
+         result="composite2"
+         id="feComposite1856" />
+    </filter>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1864">
+      <rect
+         style="opacity:1;fill:#008000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.21183908;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
+         id="rect1866"
+         width="130.66042"
+         height="221.30902"
+         x="-66.442513"
+         y="-950.53839" />
+    </clipPath>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient851"
+       id="linearGradient962-8"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.60179912,0,0,0.23241095,64.318652,151.29719)"
+       x1="158.74303"
+       y1="296.99997"
+       x2="158.74303"
+       y2="84.734131" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.2738079"
+     inkscape:cx="215.76651"
+     inkscape:cy="129.31029"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     units="mm"
+     inkscape:snap-page="true"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="1912"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:snap-bbox="true" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-290.99998)">
+    <g
+       id="g879"
+       transform="translate(0.25655824,-0.222525)">
+      <path
+         inkscape:connector-curvature="0"
+         id="path858"
+         d="m -0.25655848,291.44503 v 5.55491 H 1.7886606 v -2.80271 l 1.9442208,2.80271 h 2.0681564 v -5.55491 H 3.7120992 v 2.80478 l -1.9193241,-2.80478 z"
+         style="fill:#2db400;fill-opacity:1;stroke:none;stroke-width:0.06432633px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path860"
+         d="m 8.4345909,291.44505 -2.1961411,5.55493 h 2.3031846 l 0.205291,-0.7326 h 1.7140706 l 0.205291,0.7326 h 2.294265 l -2.151415,-5.55493 z m 1.1783528,1.65314 0.5088313,1.88368 H 9.0951928 Z"
+         style="fill:#2db400;fill-opacity:1;stroke:none;stroke-width:0.06432633px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path864"
+         d="m 11.907166,291.44503 h 2.276408 l 1.035542,3.42075 1.080178,-3.42075 h 2.240699 l -2.321043,5.55491 h -1.972887 z"
+         style="fill:#2db400;fill-opacity:1;stroke:none;stroke-width:0.06432633px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path
+         sodipodi:nodetypes="ccccccccccccc"
+         inkscape:connector-curvature="0"
+         id="path866"
+         d="m 18.995275,291.44503 h 4.204658 v 1.4568 h -2.169282 v 0.63381 h 1.999668 v 1.36585 h -1.99074 v 0.65168 h 2.222843 v 1.44677 h -4.267147 z"
+         style="fill:#2db400;fill-opacity:1;stroke:none;stroke-width:0.06432633px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path868"
+         d="m 24.048048,291.44505 v 5.55493 h 2.079926 v -1.70565 l 1.249843,1.70565 h 2.365625 l -1.687185,-2.08068 c 0,0 0.937346,-0.23209 1.142674,-1.00874 0.205322,-0.77666 -0.03569,-1.49083 -0.348143,-1.79436 0,0 -0.553489,-0.67115 -1.955044,-0.67115 z m 2.008565,1.38541 h 0.44639 c 0.37494,0 0.714124,0.16062 0.714124,0.56234 0,0.40173 -0.33922,0.55344 -0.669523,0.55344 h -0.490991 z"
+         style="fill:#2db400;fill-opacity:1;stroke:none;stroke-width:0.06432633px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+    </g>
+  </g>
+</svg>

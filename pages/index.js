@@ -34,21 +34,21 @@ const Home = () => {
           </div>
         </section>
 
-        {/* <OnlineStoresComponent /> */}
-        <BiltongComponent />
-
-        <GiveawayComponent />
-
-        <MerchComponent />
+        <OnlineStoresComponent />
 
         <section className="instagram">
           <InstagramFeed counterStart="0" counterEnd="5" />
         </section>
-        <BiltongVsJerkyComponent />
+
+        <BiltongComponent />
+        <GiveawayComponent />
+        <MerchComponent />
 
         <section className="instagram">
           <InstagramFeed counterStart="6" counterEnd="11" />
         </section>
+
+        <BiltongVsJerkyComponent />
 
         <section className="shipping">
           <img src="/homeImages/shippingImage.png" alt="shipping image" />

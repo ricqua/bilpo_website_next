@@ -51,8 +51,8 @@ export default function BiltongVsJerkyComponent() {
             src="https://www.youtube.com/embed/ieOMtTYUAmA"
             title="YouTube video player"
             frameBorder="0"
-            // background="none"
-            // allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            background="none"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
           />
         </div>

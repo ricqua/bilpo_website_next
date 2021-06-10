@@ -612,7 +612,7 @@ textArea {
 
 .ProductCard__links img {
   border-radius: 10px;
-  height: 2rem;
+  height: 2.5rem;
   cursor: pointer;
   margin-right: 1rem;
   -webkit-transition: -webkit-transform ease-in-out 250ms;
@@ -622,8 +622,8 @@ textArea {
 }
 
 .ProductCard__links img:hover {
-  -webkit-transform: scale(1.05, 1.05);
-          transform: scale(1.05, 1.05);
+  -webkit-transform: scale(1.1, 1.1);
+          transform: scale(1.1, 1.1);
   -webkit-transition: -webkit-transform ease-in-out 250ms;
   transition: -webkit-transform ease-in-out 250ms;
   transition: transform ease-in-out 250ms;
@@ -877,22 +877,6 @@ textArea {
   }
 }
 
-.home__heroSection {
-  height: 100vh;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  position: relative;
-}
-
-.home__heroSection__logo {
-  height: 90%;
-  width: 55%;
-  max-width: 300px;
-  margin: 0 auto;
-  position: relative;
-}
-
 .giveaway {
   position: relative;
   width: 100%;
@@ -1005,13 +989,15 @@ textArea {
   top: 0;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 950px) {
   .biltongVsJerky {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-flow: row nowrap;
             flex-flow: row nowrap;
-    height: 650px;
+    height: 500px;
+    max-width: 1400px;
+    margin: auto;
   }
   .biltongVsJerky section {
     width: 50vw;
@@ -1028,6 +1014,31 @@ textArea {
   .biltongVsJerky__videoDiv {
     width: 100%;
   }
+}
+
+@media (min-width: 1279px) {
+  .biltongVsJerky {
+    max-width: 1820px;
+  }
+  .biltongVsJerky section {
+    margin: 3rem 0;
+  }
+}
+
+.home__heroSection {
+  height: 100vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.home__heroSection__logo {
+  height: 90%;
+  width: 55%;
+  max-width: 300px;
+  margin: 0 auto;
+  position: relative;
 }
 
 .shipping {
@@ -1082,6 +1093,56 @@ textArea {
   }
   .shipping div {
     margin: 3rem;
+  }
+}
+
+.onlineStores {
+  width: 100%;
+}
+
+.onlineStores h2 {
+  padding-top: 3rem;
+}
+
+.onlineStores section {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 1rem;
+}
+
+.onlineStores__logoDiv {
+  position: relative;
+  width: 40%;
+  max-width: 200px;
+  height: 100px;
+  margin: 1rem;
+  -webkit-transition: -webkit-transform ease-in-out 250ms;
+  transition: -webkit-transform ease-in-out 250ms;
+  transition: transform ease-in-out 250ms;
+  transition: transform ease-in-out 250ms, -webkit-transform ease-in-out 250ms;
+}
+
+.onlineStores__logoDiv:hover {
+  -webkit-transform: scale(1.1, 1.1);
+          transform: scale(1.1, 1.1);
+  -webkit-transition: -webkit-transform ease-in-out 250ms;
+  transition: -webkit-transform ease-in-out 250ms;
+  transition: transform ease-in-out 250ms;
+  transition: transform ease-in-out 250ms, -webkit-transform ease-in-out 250ms;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .onlineStores section {
+    padding: 3rem;
   }
 }
 
@@ -1214,8 +1275,10 @@ textArea {
 
 .biltong__card {
   width: 100vw;
-  max-width: 400px;
+  max-width: 450px;
   background: white;
+  -webkit-filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.2));
+          filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.2));
 }
 
 @media (min-width: 500px) {
@@ -1306,7 +1369,7 @@ textArea {
 
 .merch__card {
   width: 100vw;
-  max-width: 400px;
+  max-width: 450px;
   background: white;
   -webkit-filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.2));
           filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.2));

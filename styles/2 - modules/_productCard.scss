@@ -53,13 +53,13 @@
 
     img {
       border-radius: 10px;
-      height: 2rem;
+      height: 2.5rem;
       cursor: pointer;
       margin-right: 1rem;
       transition: transform ease-in-out 250ms;
 
       &:hover {
-        transform: scale(1.05, 1.05);
+        transform: scale(1.1, 1.1);
         transition: transform ease-in-out 250ms;
       }
     }
