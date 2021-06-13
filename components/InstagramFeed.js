@@ -83,6 +83,14 @@ class InstagramFeed extends Component {
                         src={feed.media_url}
                         alt="description"
                       />
+                      {/* <Image
+                        src={feed.media_url}
+                        alt="description"
+                        key={index}
+                        loading="eager"
+                        layout="fill"
+                        objectFit="contain"
+                      /> */}
                     </div>
                   ) : (
                     <video

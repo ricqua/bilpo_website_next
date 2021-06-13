@@ -8,6 +8,7 @@ import MerchComponent from "../components/MerchComponent";
 import GiveawayComponent from "../components/GiveawayComponent";
 import BiltongVsJerkyComponent from "../components/BiltongVsJerkyComponent";
 import OnlineStoresComponent from "../components/OnlineStoresComponent";
+import AboutComponent from "../components/AboutComponent";
 
 const Home = () => {
   return (
@@ -41,6 +42,13 @@ const Home = () => {
         </section>
 
         <BiltongComponent />
+        <section className="shipping">
+          <img src="/homeImages/shippingImage.png" alt="shipping image" />
+          <div>
+            <h2>무료배송</h2>
+            <p>5봉/ 8봉 묶음상품 주문시</p>
+          </div>
+        </section>
         <GiveawayComponent />
         <MerchComponent />
 
@@ -49,14 +57,7 @@ const Home = () => {
         </section>
 
         <BiltongVsJerkyComponent />
-
-        <section className="shipping">
-          <img src="/homeImages/shippingImage.png" alt="shipping image" />
-          <div>
-            <h2>무료배송</h2>
-            <p>5봉/ 8봉 묶음상품 주문시</p>
-          </div>
-        </section>
+        <AboutComponent />
       </main>
     </LayoutPublic>
   );

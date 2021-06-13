@@ -4,6 +4,8 @@ import Link from "next/link";
 
 function ProductCard(props) {
   const data = props.data;
+
+  console.log(data.priceOnline);
   return (
     <React.Fragment>
       <div className="ProductCard">
@@ -19,18 +21,26 @@ function ProductCard(props) {
         </div>
         <section>
           <h4 className="ProductCard__title">{data.title}</h4>
-          <hr />
-          <div>
-            {data.priceOnline ? (
-              <p className="ProductCard__priceOnline">{data.priceOnline}</p>
-            ) : null}
-            <p className="ProductCard__pricePromotion">{data.pricePromotion}</p>
-          </div>
+          {/* <hr /> */}
           {data.description ? (
             <div className="ProductCard__info">
               <p className="ProductCard__description">{data.description}</p>
             </div>
           ) : null}
+          <div>
+            {data.priceOnline ? (
+              <p className="ProductCard__priceOnline">{data.priceOnline} won</p>
+            ) : null}
+            <p className="ProductCard__pricePromotion">
+              {data.pricePromotion} won
+            </p>
+            {data.priceOnline ? (
+              <p className="ProductCard__priceDifference">
+                -{data.priceOnline - data.pricePromotion} SALE
+              </p>
+            ) : null}
+          </div>
+
           <div className="ProductCard__links">
             {/* <label>Online stores: </label> */}
             <Link href={data.naver}>

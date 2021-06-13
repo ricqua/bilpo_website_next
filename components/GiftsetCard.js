@@ -4,7 +4,8 @@ import Link from "next/link";
 
 function GiftsetCard(props) {
   const data = props.data;
-  //   console.log(companyLogo);
+  // const giftsetPageRoute = props.giftsetPageRoute;
+  console.log(props.giftsetPageRoute);
 
   return (
     <React.Fragment>
@@ -50,9 +51,11 @@ function GiftsetCard(props) {
                 alt="Link to Naver smart store"
               />
             </Link> */}
-            <Link href="">
-              <button className="button__light">Find out more</button>
-            </Link>
+            {props.giftsetPageRoute ? (
+              <Link href={props.giftsetPageRoute}>
+                <button className="button__light">Find out more</button>
+              </Link>
+            ) : null}
           </div>
         </section>
       </main>

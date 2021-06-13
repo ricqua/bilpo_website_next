@@ -2,12 +2,14 @@
   // max-width: 0%;
 
   &__title {
+    font-size: 1.6rem;
     margin-bottom: 1rem;
+    color: #585858;
   }
 
   section {
     // margin: 1rem;
-    padding: 1rem;
+    padding-top: 1.5rem;
   }
 
   &__info {
@@ -16,31 +18,35 @@
   }
 
   &__description {
-    font-style: italic;
-    margin-bottom: 2rem;
+    // font-style: italic;
+    margin-bottom: 1.6rem;
   }
 
   &__priceOnline {
     // text-decoration: line-through;
     // font-size: 0.8rem;
     // margin: 0;
-    text-align: right;
-    color: grey;
+    // text-align: right;
+    color: #585858;
+    text-decoration: line-through;
     display: inline-block;
     margin-right: 1rem;
   }
 
   &__pricePromotion {
-    // color: red;
-    font-weight: bold;
-    display: inline-block;
-    text-align: right;
+    font-size: 1.7rem;
+    color: #585858;
     margin: 0.5rem 0;
+  }
+  &__priceDifference {
+    color: hsl(0, 100%, 25%);
+    font-size: 1.7rem;
+    font-weight: bold;
   }
 
   &__links {
     width: 100%;
-    margin: auto;
+    margin: 1rem auto;
     display: flex;
     align-items: center;
 
@@ -53,7 +59,7 @@
 
     img {
       border-radius: 10px;
-      height: 2.5rem;
+      height: 3.5rem;
       cursor: pointer;
       margin-right: 1rem;
       transition: transform ease-in-out 250ms;

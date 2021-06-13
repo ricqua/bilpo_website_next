@@ -1,12 +1,14 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import Link from "next/link";
 // import { useUser } from "../firebase/auth/useUser";
+import { UserContext } from "../pages/_app";
 import firebase from "firebase/app";
 
 const Header = () => {
   // const { user, logout } = useUser();
   const auth = firebase.auth();
   const [isLoggedIn, setLoggedIn] = useState(false);
+  const { isContext, setContext } = useContext(UserContext);
 
   useEffect(() => {
     document.addEventListener("click", (e) => {
@@ -41,46 +43,57 @@ const Header = () => {
           <ul>
             <li>
               <Link className="link" href="/">
-                <label>홈</label>
+                <label>HOME</label>
               </Link>
             </li>
             <li>
               <Link className="link" href="/giftsets">
-                <label>선물세트</label>
+                <label>GIFTSETS</label>
               </Link>
             </li>
             <li>
               <Link className="link" href="/#biltong">
-                <label>빌통</label>
+                <label>BILTONG BAGS</label>
+              </Link>
+            </li>
+            <li>
+              <Link className="link" href="/#biltong">
+                <label>BILTONG STICKS</label>
+              </Link>
+            </li>
+            <li>
+              <Link className="link" href="/#biltong">
+                <label>SALAMI</label>
               </Link>
             </li>
             <li>
               <Link className="link" href="/#merchandise">
-                <label>상품</label>
+                <label>MERCHANDISE</label>
               </Link>
             </li>
-            <li>
+            {/* <li>
               <Link className="link" href="/about">
-                <label>회사소개</label>
+                <label>ABOUT</label>
               </Link>
-            </li>
+            </li> */}
             <li>
               <Link className="link" href="/#contactSection">
-                <label>고객센터</label>
+                <label>CONTACT</label>
               </Link>
             </li>
-
-            {firebase.auth().currentUser ? (
-              <Link className="link" href="./dashboard">
-                <div className="header__login">Dashboard</div>
-              </Link>
-            ) : (
-              <Link className="link" href="./login">
-                <div className="header__login">Login</div>
-              </Link>
-            )}
           </ul>
         </nav>
+        {firebase.auth().currentUser ? (
+          <Link className="link" href="./dashboard">
+            <div className="header__login">
+              {isContext.companyName} dashboard
+            </div>
+          </Link>
+        ) : (
+          <Link className="link" href="./login">
+            <div className="header__login">Login</div>
+          </Link>
+        )}
       </div>
     </React.Fragment>
   );

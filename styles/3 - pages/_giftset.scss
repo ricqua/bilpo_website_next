@@ -1,0 +1,141 @@
+.giftset {
+  background: white;
+
+  &__imageDiv {
+    height: 65vh;
+    width: 100%;
+    position: relative;
+  }
+
+  &__logoDiv {
+    height: 25vh;
+    width: 70%;
+    margin: auto;
+    position: relative;
+  }
+
+  &__infoDiv {
+    padding: 1.5rem;
+  }
+
+  &__title {
+    margin-bottom: 1rem;
+  }
+
+  &__description {
+    font-style: italic;
+    margin-bottom: 1.6rem;
+  }
+
+  &__inventory {
+    margin-bottom: 1.6rem;
+    margin-left: 1.6rem;
+
+    li {
+    }
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  button {
+    margin-bottom: 1rem;
+  }
+
+  &__galleryItems {
+    // background: red;
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+  }
+
+  &__galleryItem {
+    // outline: 3px solid yellow;
+    // padding: 0.25rem;
+    width: 50%;
+  }
+
+  //   &__galleryItems {
+  //     display: -webkit-box;
+  //     display: flex;
+  //     flex-wrap: wrap;
+  //     outline: 3px solid green;
+  //   }
+
+  //   &__galleryItem {
+  //     // -webkit-box-flex: 0;
+  //     flex: 0 0 calc(100% / 2);
+  //     display: block;
+  //     position: relative;
+  //     outline: 1px solid red;
+  //   }
+
+  //   &__galleryImage {
+  //     position: relative;
+  //     display: block;
+  //     width: 100%;
+  //     height: 100%;
+  //   }
+}
+
+@media (min-width: 768px) {
+  .GiftsetCard {
+    max-width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+
+    section {
+      width: 60%;
+      margin-left: 1.6rem;
+    }
+  }
+}
+
+// @media (min-width: 480px) {
+//   .instagramItem {
+//     flex: 0 0 calc(100% / 2);
+//     // margin: 5px;
+//     // padding: 10px;
+//     padding: 0;
+//   }
+//   .instagramItem:nth-child(5) {
+//     display: none;
+//   }
+// }
+
+// @media (min-width: 764px) {
+//   .instagramItems {
+//     // padding: 0 0.5rem;
+//     padding: 0;
+//   }
+//   .instagramItem {
+//     flex: 0 0 calc(100% / 3);
+//     // margin: 5px;
+//     // padding: 1rem 0.5rem;
+//     padding: 0;
+//   }
+
+//   .instagramItem:nth-child(4),
+//   .instagramItem:nth-child(5) {
+//     display: none;
+//   }
+// }
+
+// @media (min-width: 1279px) {
+//   .instagramItems {
+//     padding: 0;
+//   }
+//   .instagramItem {
+//     flex: 0 0 calc(100% / 5);
+//     // margin: 5px;
+//     // padding: 1rem 0.5rem;
+//     padding: 0;
+//   }
+
+//   .instagramItem:nth-child(4),
+//   .instagramItem:nth-child(5) {
+//     display: block;
+//   }
+// }

@@ -5,7 +5,7 @@ import Image from "next/image";
 export default function OnlineStoresComponent() {
   return (
     <main className="onlineStores">
-      <h2>Visit our online stores</h2>
+      {/* <h2>Visit our online stores</h2> */}
       <section>
         <Link href="https://smartstore.naver.com/bilpo">
           <div className="onlineStores__logoDiv">
@@ -52,6 +52,16 @@ export default function OnlineStoresComponent() {
             <Image
               src="/socialIcons/GMarketLogoAv1.svg"
               alt="GMarket Icon"
+              layout="fill"
+              objectFit="contain"
+            />
+          </div>
+        </Link>
+        <Link href="https://smartstore.naver.com/bilpo">
+          <div className="onlineStores__logoDiv">
+            <Image
+              src="/socialIcons/auctionLogoAv1.svg"
+              alt="Auction store icon"
               layout="fill"
               objectFit="contain"
             />

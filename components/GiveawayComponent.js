@@ -69,7 +69,7 @@ export default function GiveawayComponent() {
         <p>- 무료 빌통 응모하기 -</p>
 
         <p>(5월 1일 ~ 5월 31일)</p>
-        <p>
+        <p className="giveaway__description">
           빌포팀이 고객님께 선물하는 빌통! 경품응모하고 무료 빌통 2봉을
           받아가세요. 추첨발표는 마감일 다음에 발표됩니다.
         </p>

@@ -1,6 +1,8 @@
 import React from "react";
 import Head from "next/head";
 import Header from "./Header";
+import Link from "next/link";
+
 import Footer from "./Footer";
 import ContactComponent from "../components/ContactComponent";
 
@@ -90,6 +92,23 @@ function LayoutPublic({ children }) {
         <main>{children}</main>
         <ContactComponent />
         <Footer />
+
+        <div className="floatingSocialIcons">
+          <Link href="https://pf.kakao.com/_nSgus">
+            <img
+              src="/socialIcons/KakaoLogoAv1.svg"
+              alt="kakao logo"
+              className="kakaoContactIcon"
+            />
+          </Link>
+          <Link href="https://www.instagram.com/bilpofood/">
+            <img
+              src="/socialIcons/instagramIcon(colorGradients).png"
+              alt="kakao logo"
+              className="kakaoContactIcon"
+            />
+          </Link>
+        </div>
       </div>
     </React.Fragment>
   );

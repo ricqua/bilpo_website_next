@@ -2,7 +2,8 @@ export const biltongSliced = [
   {
     id: 1,
     title: "Sliced Biltong 1kg",
-    description: "",
+    description:
+      "Out bottle openers are made from amazing wood with a steel insert ensuring long lasting quality.  A emblam is laser engraved eto ensure a long lasting qulity image.",
     img: "/biltong/biltongBag_1bag.jpg",
     alt: "photo of Bilpo biltong bag",
     priceOnline: "",
@@ -18,7 +19,8 @@ export const biltongSliced = [
   {
     id: 2,
     title: "Sliced Biltong 1kg",
-    description: "",
+    description:
+      "Out bottle openers are made from amazing wood with a steel insert ensuring long lasting quality.  A emblam is laser engraved eto ensure a long lasting qulity image.",
     img: "/biltong/biltongBag_5bag.jpg",
     alt: "photo of Bilpo biltong bag",
     priceOnline: "₩55,000",
@@ -34,14 +36,15 @@ export const biltongBags = [
   {
     id: 1,
     title: "오리지널 페퍼 스테이크 (60g)",
-    description: "",
+    description:
+      "Out bottle openers are made from amazing wood with a steel insert ensuring long lasting quality.  A emblam is laser engraved eto ensure a long lasting qulity image.",
     img: "/biltong/biltongBag_1bag.jpg",
     alt: "photo of Bilpo biltong bag",
     priceOnline: "",
-    pricePromotion: "11,000₩",
-    priceWholesale: "7500",
-    minQty: "15",
-    wholesaleShipping: "3600",
+    pricePromotion: 11000,
+    priceWholesale: 7500,
+    minQty: 15,
+    wholesaleShipping: 3600,
     naver: "https://smartstore.naver.com/bilpo/products/5105201791",
     coupang:
       "https://www.coupang.com/vp/products/5076930986?itemId=6881678443&vendorItemId=74174262901&q=biltong&itemsCount=36&searchId=488bd561b9084ce5bfd6a22eb1a857ab&rank=1&isAddedCart=",
@@ -50,11 +53,12 @@ export const biltongBags = [
   {
     id: 2,
     title: "오리지널 페퍼 스테이크 (300g / 5팍)",
-    description: "",
+    description:
+      "Out bottle openers are made from amazing wood with a steel insert ensuring long lasting quality.  A emblam is laser engraved eto ensure a long lasting qulity image.",
     img: "/biltong/biltongBag_5bag.jpg",
     alt: "photo of Bilpo biltong bag",
-    priceOnline: "55,000₩",
-    pricePromotion: "48,000₩",
+    priceOnline: 55000,
+    pricePromotion: 48000,
     naver: "https://smartstore.naver.com/bilpo/products/5105188060",
     coupang:
       "https://www.coupang.com/vp/products/5091623438?itemId=6923565061&vendorItemId=74216084595&q=biltong&itemsCount=36&searchId=488bd561b9084ce5bfd6a22eb1a857ab&rank=2&isAddedCart=",
@@ -63,11 +67,12 @@ export const biltongBags = [
   {
     id: 3,
     title: "빌통 - 오리지널 페퍼 스테이크 (480g / 8팍)",
-    description: "",
+    description:
+      "Out bottle openers are made from amazing wood with a steel insert ensuring long lasting quality.  A emblam is laser engraved eto ensure a long lasting qulity image.",
     img: "/biltong/biltongBag_8bag.jpg",
     alt: "photo of Bilpo biltong bag",
-    priceOnline: "88,000₩",
-    pricePromotion: "75,000₩",
+    priceOnline: 88000,
+    pricePromotion: 75000,
     naver: "https://smartstore.naver.com/bilpo/products/5105187287",
     coupang:
       "https://www.coupang.com/vp/products/5091623443?itemId=6923565078&vendorItemId=74216084611&q=biltong&itemsCount=36&searchId=488bd561b9084ce5bfd6a22eb1a857ab&rank=15&isAddedCart=",
@@ -83,8 +88,8 @@ export const merch = [
       "Out bottle openers are made from amazing wood with a steel insert ensuring long lasting quality.  A emblam is laser engraved eto ensure a long lasting qulity image.",
     img: "/merchandise/bottleOpeners2.jpg",
     alt: "Bilpo bottle openers",
-    priceOnline: "10,000₩",
-    pricePromotion: "7,800₩",
+    priceOnline: 10000,
+    pricePromotion: 7800,
     naver: "https://smartstore.naver.com/bilpo/products/5353311067",
     coupang: "",
     loading: "eager",
@@ -96,8 +101,8 @@ export const merch = [
       "Out bottle openers are made from amazing wood with a steel insert ensuring long lasting quality.  A emblam is laser engraved to ensure a long lasting qulity image.",
     img: "/merchandise/KakaoTalk_20210531_180422245.jpg",
     alt: "Bilpo laser engraved coasters",
-    priceOnline: "3,500₩",
-    pricePromotion: "2,800₩",
+    priceOnline: 3500,
+    pricePromotion: 2800,
     naver: "https://smartstore.naver.com/bilpo/products/5345113612",
     coupang: "",
     loading: "eager",
@@ -108,8 +113,8 @@ export const merch = [
     description: `Out bottle openers are made from amazing wood with a steel insert ensuring long lasting quality.  A emblam is laser engraved eto ensure a long lasting qulity image.`,
     img: "/merchandise/KakaoTalk_20210531_180155965.jpg",
     alt: "Bilpo laser engraved coasters",
-    priceOnline: "3,500₩",
-    pricePromotion: "2,800₩",
+    priceOnline: 3500,
+    pricePromotion: 2800,
     naver: "https://smartstore.naver.com/bilpo/products/5345113612",
     coupang: "",
     loading: "eager",
@@ -126,7 +131,7 @@ export const giftsets = [
     products: [
       {
         title: "와인 & 빌통 선물세트",
-        img: "/giftsets/MishMash - GiftsetAv1.jpg",
+        img: "/giftsets/mishmash/MishMash - GiftsetAv1.jpg",
         alt: "mishash giftset",
         description:
           "빌포(Bilpo) 와 미쉬매쉬(Mishmash) 가 함께 준비한 남아공 수제육포 빌통 & 와인 페어링 선물세트를 소개합니다. Michelin Guide Seoul에 선정된 한식 레스토랑을 운영하는 미쉬매쉬 쉐프님이 직접 여러 와인 테이스팅을 거쳐 빌통과 가장 잘 어울리는 와인을 선별하였습니다.",
@@ -141,7 +146,9 @@ export const giftsets = [
         orderNote: "주문안내: 주류법상 예약주문 받고있습니다.",
         wholesaleNote:
           "와인바, 레스토랑, 기업체 대량주문을 상시 받고있습니다. 홈 페이지 왼쪽하단 전화번호로 연락주세요.",
-        otherNote: "",
+        otherNote: "-",
+        sale: 89000,
+        price: 72000,
       },
     ],
   },

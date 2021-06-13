@@ -23,7 +23,7 @@
     border-radius: 4px;
     box-sizing: border-box;
     outline: none;
-    font-size: 1rem;
+    font-size: 1.6rem;
 
     &:focus {
       border: 2px solid hsl(202, 70%, 40%);
@@ -32,7 +32,7 @@
     &:focus ~ span,
     &:valid ~ span {
       transform: translateY(-1rem) translateX(0.75rem);
-      font-size: 1rem;
+      font-size: 1.6rem;
       color: hsl(202, 70%, 40%);
       background: white;
       padding: 0.2rem 0.5rem;
@@ -49,7 +49,7 @@
     pointer-events: none;
     transition: 0.5s;
     color: hsl(0, 0%, 60%);
-    font-size: 1rem;
+    font-size: 1.6rem;
     // background: white;
   }
 }

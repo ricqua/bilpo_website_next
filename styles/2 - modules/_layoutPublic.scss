@@ -2,3 +2,29 @@
   &__main {
   }
 }
+
+.floatingSocialIcons {
+  // background: white;
+  position: sticky;
+  bottom: 3rem;
+  right: 0rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-end;
+  margin: 3rem;
+  // display: inline-block;
+
+  img {
+    width: 5rem;
+    height: 5rem;
+    margin: 1rem;
+    cursor: pointer;
+    transition: ease-in-out 250ms;
+
+    &:hover {
+      transform: scale(1.1, 1.1);
+    }
+  }
+}
