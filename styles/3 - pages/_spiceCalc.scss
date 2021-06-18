@@ -5,7 +5,7 @@
   padding: 0;
   min-height: 100vh;
   width: 100vw;
-  font-size: 1rem;
+  // font-size: 1rem;
   font-family: "Montserrat", sans-serif;
   color: white;
   background: linear-gradient(to right, #485563, #29323c);
@@ -20,7 +20,7 @@
       width: 150px;
     }
     p {
-      font-size: 20pt;
+      // font-size: 20pt;
       font-style: "trajan";
       margin: 0.5rem 1rem;
     }
@@ -37,7 +37,7 @@
     input {
       text-align: center;
       width: 50pt;
-      font-size: 1rem;
+      // font-size: 1rem;
       color: black;
       margin: 0 5pt 0 10pt;
       padding: 0.5rem;
@@ -56,7 +56,7 @@
       margin: 10pt 30pt;
 
       &__item {
-        font-size: 12pt;
+        // font-size: 12pt;
         margin: 0 0px 0 0;
       }
       &__qty {
@@ -64,7 +64,7 @@
         margin: 0 6px 0 0;
       }
       &__unit {
-        font-size: 12pt;
+        // font-size: 12pt;
         margin: 0;
       }
     }
@@ -76,13 +76,20 @@
       margin: 0.5rem 3rem;
     }
   }
+
+  &__backToWebsiteButton {
+    // color: red;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+  }
 }
 
 .spiceCalc__copyrightNotice {
   // position: sticky;
   // bottom: 0;
   margin-top: auto;
-  font-size: 10pt;
+  // font-size: 10pt;
   font-style: italic;
   text-align: center;
 }

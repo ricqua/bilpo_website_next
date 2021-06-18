@@ -6,20 +6,20 @@
 .floatingSocialIcons {
   // background: white;
   position: sticky;
-  bottom: 3rem;
+  bottom: 0rem;
   right: 0rem;
   padding: 1rem;
   border-radius: 1rem;
   display: flex;
   flex-flow: column nowrap;
   align-items: flex-end;
-  margin: 3rem;
+  // margin: 3rem;
   // display: inline-block;
 
   img {
-    width: 5rem;
-    height: 5rem;
-    margin: 1rem;
+    width: 4rem;
+    height: 4rem;
+    margin: 0.5rem;
     cursor: pointer;
     transition: ease-in-out 250ms;
 

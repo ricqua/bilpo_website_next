@@ -39,14 +39,7 @@ export default function spicecalc() {
           </Link>
 
           <hr color="#b8b8b8" />
-          <p>
-            Biltong Spice Calculator
-            <Link href="/dashboard">
-              <button className="button__light dashboard__backToWebsiteButton">
-                Dashboard
-              </button>
-            </Link>
-          </p>
+          <h1>Biltong Spice Calculator</h1>
           <hr color="#b8b8b8" />
         </div>
         <div className="spiceCalc__form">
@@ -58,13 +51,7 @@ export default function spicecalc() {
           ></input>
           <label>kg</label>
         </div>
-        <section className="spiceCalc__est">
-          <strong>Estimations:</strong>
-          <ul>
-            <li># of 60g bags: {meatInput * 6.5}</li>
-            <li>Final dry weight: {(meatInput / 2.4).toFixed(2)} kg</li>
-          </ul>
-        </section>
+
         {!meatInput >= 1 ? null : (
           <React.Fragment>
             <section className="spiceCalc__outputArea">
@@ -89,8 +76,20 @@ export default function spicecalc() {
                 );
               })}
             </section>
+            <section className="spiceCalc__est">
+              <strong>Estimations:</strong>
+              <ul>
+                <li># of 60g bags: {meatInput * 6.5}</li>
+                <li>Final dry weight: {(meatInput / 2.4).toFixed(2)} kg</li>
+              </ul>
+            </section>
           </React.Fragment>
         )}
+        <Link href="/dashboard">
+          <button className="button__light spiceCalc__backToWebsiteButton">
+            Dashboard
+          </button>
+        </Link>
         <p className="copyrightNotice spiceCalc__copyrightNotice ">
           Copyright @ Bilpo 2021
         </p>

@@ -45,7 +45,9 @@ export default function index() {
             src="/bilpoLogos/Bilpo Logo Hv4 (Full-white).svg"
             alt="Bilpo logo"
           />
-          <h2>Log In</h2>
+          {/* <h1>Wholesale</h1> */}
+          <h1>Log In</h1>
+
           {/* <p>
           Note: This is a log in portal for Bilpo's wholesale clients and
           contractors only. If you do not have credentials or want to inquire
@@ -76,16 +78,16 @@ export default function index() {
               <button className="button__light">Sign up</button>
             </Link> */}
             <Link href="./login/resetpassword">
-              <button className="button__light">Forgot password</button>
+              {/* <button className="button__light">Forgot password</button> */}
+              <a>Forgot password</a>
             </Link>
             {/* <Link href="./login/checkuser">
             <button className="button__light">Check user</button>
           </Link> */}
-            <p>
-              <Link href="/">
-                <a>Back to website</a>
-              </Link>
-            </p>
+
+            <Link href="https://bilpo.co.kr/">
+              <a>Back to website</a>
+            </Link>
           </div>
         </div>
       </div>

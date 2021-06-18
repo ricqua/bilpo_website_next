@@ -113,7 +113,7 @@ export default function index() {
           ) : null}
         </div>
         <div>
-          <Link href="./">
+          <Link href="https://bilpo.co.kr/">
             <button className="button__light dashboard__backToWebsiteButton">
               Back to website
             </button>

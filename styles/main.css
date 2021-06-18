@@ -58,15 +58,6 @@ main {
   margin-left: 1rem;
 }
 
-.button__light:hover {
-  -webkit-transform: scale(1.05, 1.05);
-          transform: scale(1.05, 1.05);
-  -webkit-transition: -webkit-transform ease-in-out 250ms;
-  transition: -webkit-transform ease-in-out 250ms;
-  transition: transform ease-in-out 250ms;
-  transition: transform ease-in-out 250ms, -webkit-transform ease-in-out 250ms;
-}
-
 .button__dark {
   background: black;
   color: white;
@@ -127,25 +118,25 @@ main {
 }
 
 h1 {
-  font-size: 40pt;
+  font-size: 3rem;
   font-weight: 100;
   margin: 2rem;
   line-height: 4rem;
 }
 
 h2 {
-  font-size: 2.8rem;
+  font-size: 1.8rem;
   font-weight: 100;
   text-align: center;
 }
 
 h3 {
   font-weight: bold;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
 }
 
 p {
-  font-size: 1.6em;
+  font-size: 1.4em;
   line-height: 1.8rem;
   font-weight: 300;
   color: #585858;
@@ -158,7 +149,9 @@ textArea {
   color: black;
   padding: 1rem 1.6rem;
   display: inline;
-  font-size: 1rem;
+  font-size: 1.4rem;
+  margin: 0.5rem 1rem;
+  height: 15rem;
   resize: none;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
@@ -183,12 +176,15 @@ input {
   color: black;
   padding: 1rem 1.6rem;
   display: inline;
-  font-size: 1rem;
+  font-size: 1.4rem;
 }
 
-textArea {
-  margin: 0.5rem 1rem;
-  height: 15rem;
+button,
+a,
+label,
+li,
+strong {
+  font-size: 1.4rem;
 }
 
 .inputBox_effect1 {
@@ -255,7 +251,7 @@ textArea {
 .floatingSocialIcons {
   position: -webkit-sticky;
   position: sticky;
-  bottom: 3rem;
+  bottom: 0rem;
   right: 0rem;
   padding: 1rem;
   border-radius: 1rem;
@@ -269,13 +265,12 @@ textArea {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
-  margin: 3rem;
 }
 
 .floatingSocialIcons img {
-  width: 5rem;
-  height: 5rem;
-  margin: 1rem;
+  width: 4rem;
+  height: 4rem;
+  margin: 0.5rem;
   cursor: pointer;
   -webkit-transition: ease-in-out 250ms;
   transition: ease-in-out 250ms;
@@ -288,6 +283,7 @@ textArea {
 
 .footerSection {
   width: 100%;
+  font-family: dotum;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -324,8 +320,8 @@ textArea {
 .footerSection__wrapper div p,
 .footerSection__wrapper div strong,
 .footerSection__wrapper div a {
-  font-size: 1.6rem;
-  line-height: 1.6rem;
+  font-size: 1.4rem;
+  line-height: 1.4rem;
   margin: 1rem;
 }
 
@@ -347,7 +343,8 @@ textArea {
 
 .socialCard label {
   cursor: pointer;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
+  line-height: 1.4rem;
 }
 
 .socialCard:hover {
@@ -372,7 +369,8 @@ textArea {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
+  line-height: 1.4rem;
   margin: 1em 0;
 }
 
@@ -530,7 +528,6 @@ textArea {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    height: 75px;
     font-weight: bold;
     background: white;
     -webkit-box-align: center;
@@ -1084,7 +1081,7 @@ textArea {
 }
 
 .home__heroSection {
-  height: 100vh;
+  height: 95vh;
   width: 100%;
   margin: 0;
   padding: 0;
@@ -1094,7 +1091,7 @@ textArea {
 .home__heroSection__logo {
   height: 90%;
   width: 55%;
-  max-width: 300px;
+  max-width: 250px;
   margin: 0 auto;
   position: relative;
 }
@@ -1169,8 +1166,8 @@ textArea {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
   -ms-flex-pack: distribute;
       justify-content: space-around;
   padding: 1rem;
@@ -1181,7 +1178,7 @@ textArea {
   width: 40%;
   max-width: 200px;
   height: 100px;
-  margin: 1rem;
+  margin: 2rem;
   -webkit-transition: -webkit-transform ease-in-out 250ms;
   transition: -webkit-transform ease-in-out 250ms;
   transition: transform ease-in-out 250ms;
@@ -1200,7 +1197,7 @@ textArea {
 
 @media (min-width: 768px) {
   .onlineStores section {
-    padding: 3rem;
+    padding: 2rem;
   }
 }
 
@@ -1428,7 +1425,7 @@ textArea {
     display: none;
   }
   .biltong__description {
-    max-width: 70%;
+    max-width: 500px;
   }
   .biltong__cards {
     width: 100%;
@@ -1437,23 +1434,20 @@ textArea {
     display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-flow: row wrap;
-            flex-flow: row wrap;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
   }
+  .biltong__card {
+    margin: 1rem;
+  }
 }
 
 @media (min-width: 1279px) {
-  .biltong__description {
-    max-width: 500px;
-  }
   .biltong__cards {
     max-width: 1800px;
-  }
-  .biltong__card {
-    margin: 1rem;
   }
 }
 
@@ -1610,8 +1604,8 @@ textArea {
     display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-flow: row wrap;
-            flex-flow: row wrap;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -1619,9 +1613,6 @@ textArea {
 }
 
 @media (min-width: 1279px) {
-  .merch__description {
-    max-width: 800px;
-  }
   .merch__cards {
     max-width: 1800px;
   }
@@ -1945,7 +1936,6 @@ textArea {
   padding: 0;
   min-height: 100vh;
   width: 100vw;
-  font-size: 1rem;
   font-family: "Montserrat", sans-serif;
   color: white;
   background: -webkit-gradient(linear, left top, right top, from(#485563), to(#29323c));
@@ -1971,7 +1961,6 @@ textArea {
 }
 
 .spiceCalc__header p {
-  font-size: 20pt;
   font-style: "trajan";
   margin: 0.5rem 1rem;
 }
@@ -1998,7 +1987,6 @@ textArea {
 .spiceCalc__form input {
   text-align: center;
   width: 50pt;
-  font-size: 1rem;
   color: black;
   margin: 0 5pt 0 10pt;
   padding: 0.5rem;
@@ -2027,7 +2015,6 @@ textArea {
 }
 
 .spiceCalc__outputArea__spiceItem__item {
-  font-size: 12pt;
   margin: 0 0px 0 0;
 }
 
@@ -2037,7 +2024,6 @@ textArea {
 }
 
 .spiceCalc__outputArea__spiceItem__unit {
-  font-size: 12pt;
   margin: 0;
 }
 
@@ -2050,9 +2036,14 @@ textArea {
   margin: 0.5rem 3rem;
 }
 
+.spiceCalc__backToWebsiteButton {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
 .spiceCalc__copyrightNotice {
   margin-top: auto;
-  font-size: 10pt;
   font-style: italic;
   text-align: center;
 }
@@ -2253,7 +2244,7 @@ textArea {
   padding: 0;
   min-height: 100vh;
   width: 100vw;
-  font-size: 1rem;
+  font-size: 1.4rem;
   font-family: "Montserrat", sans-serif;
   color: white;
   background: -webkit-gradient(linear, left top, right top, from(#485563), to(#29323c));
@@ -2263,6 +2254,7 @@ textArea {
 
 .authPage__wrapper {
   margin: auto;
+  padding: 1rem;
 }
 
 .authPage__errorMessage {
@@ -2274,27 +2266,45 @@ textArea {
 }
 
 .authPage img {
-  width: 150px;
-  margin: 3rem auto;
+  max-width: 200px;
+  margin: 0 auto 3rem auto;
+}
+
+.authPage input,
+.authPage button {
+  margin: 0;
+  margin: 0.5rem 0;
+  min-width: 320px;
 }
 
 .authPage a {
+  display: inline-block;
+  margin-top: 3rem;
   color: white;
+}
+
+.authPage a:first-child {
+  margin-right: 2rem;
 }
 
 .authPage p {
   max-width: 650px;
-  margin: 1rem;
 }
 
 .authPage button {
-  margin: 1rem auto;
+  width: 100%;
+  margin: 2rem 0;
 }
 
 .authPage__confirmButton {
-  background: darkred;
+  background: #cc0000;
   color: white;
+  border: none;
   margin-bottom: 10rem;
+}
+
+.authPage__confirmButton:hover {
+  background: #b30000;
 }
 
 .dashboard {
@@ -2313,7 +2323,7 @@ textArea {
   padding-bottom: 2rem;
   min-height: 100vh;
   width: 100vw;
-  font-size: 1rem;
+  font-size: 1.4rem;
   font-family: "Montserrat", sans-serif;
   color: white;
   background: -webkit-gradient(linear, left top, right top, from(#485563), to(#29323c));
@@ -2323,19 +2333,14 @@ textArea {
 
 .dashboard__backToWebsiteButton {
   margin: 1rem;
-  border-radius: 6px;
-  font-size: 1rem;
 }
 
 .dashboard__signOutButton {
   margin: 1rem;
-  border-radius: 6px;
-  font-size: 1rem;
 }
 
 .dashboard__tools {
   width: 100%;
-  border-radius: 1rem;
   margin: 3rem auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2348,23 +2353,10 @@ textArea {
       justify-content: space-around;
 }
 
-.dashboard__tools p {
-  margin: 1rem;
-  padding: 0.25em;
-  background: white;
-  color: black;
-  list-style: none;
-  cursor: pointer;
-}
-
-.dashboard__tools p:hover {
-  background: #dedede;
-}
-
 .dashboard__tools__tool {
   border: 3px solid white;
-  padding: 1rem;
-  margin: 1rem;
+  padding: 1.4rem;
+  margin: 1.4rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2379,11 +2371,11 @@ textArea {
       -ms-flex-pack: center;
           justify-content: center;
   width: 150px;
-  border-radius: 25px;
+  border-radius: 1rem;
 }
 
 .dashboard__tools__tool label {
-  margin-top: 0.75rem;
+  margin-top: 1.4rem;
   font-weight: bold;
 }
 
@@ -2464,20 +2456,16 @@ textArea {
 }
 
 .account form button {
-  margin: 1rem auto;
+  margin: 3rem auto;
   background: #c50000;
-  font-size: 1rem;
+  width: 100%;
 }
 
-.account__resetButton {
-  margin: 1rem;
-  border-radius: 6px;
-  font-size: 1rem;
+.account__saveButton {
+  margin-top: 2rem;
 }
 
-.account__dashboardButton {
+.account__resetButton, .account__dashboardButton {
   margin: 1rem;
-  border-radius: 6px;
-  font-size: 1rem;
 }
 /*# sourceMappingURL=main.css.map */

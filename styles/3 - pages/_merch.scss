@@ -61,7 +61,7 @@
     &__cards {
       width: 100%;
       display: flex;
-      flex-flow: row wrap;
+      flex-flow: row nowrap;
       justify-content: center;
     }
 
@@ -73,7 +73,6 @@
 @media (min-width: 1279px) {
   .merch {
     &__description {
-      max-width: 800px;
     }
 
     &__cards {

@@ -1,6 +1,6 @@
 .home {
   &__heroSection {
-    height: 100vh;
+    height: 95vh;
     width: 100%;
     margin: 0;
     padding: 0;
@@ -17,7 +17,7 @@
     &__logo {
       height: 90%;
       width: 55%;
-      max-width: 300px;
+      max-width: 250px;
       margin: 0 auto;
       position: relative;
     }
@@ -70,7 +70,7 @@
   section {
     width: 100%;
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: row nowrap;
     justify-content: space-around;
     padding: 1rem;
   }
@@ -80,7 +80,7 @@
     max-width: 200px;
     height: 100px;
     // padding: 1rem;
-    margin: 1rem;
+    margin: 2rem;
     // outline: 1px solid yellow;
     transition: transform ease-in-out 250ms;
 
@@ -95,7 +95,7 @@
 @media (min-width: 768px) {
   .onlineStores {
     section {
-      padding: 3rem;
+      padding: 2rem;
     }
   }
 }

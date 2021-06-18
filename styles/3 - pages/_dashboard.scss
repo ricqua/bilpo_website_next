@@ -7,71 +7,55 @@
   padding-bottom: 2rem;
   min-height: 100vh;
   width: 100vw;
-  font-size: 1rem;
+  font-size: 1.4rem;
   font-family: "Montserrat", sans-serif;
   color: white;
   background: linear-gradient(to right, #485563, #29323c);
   text-align: center;
 
-  h2 {
-    // margin: 2rem;
-  }
   &__backToWebsiteButton {
     margin: 1rem;
-    border-radius: 6px;
-    font-size: 1rem;
   }
   &__signOutButton {
     margin: 1rem;
-    border-radius: 6px;
-    font-size: 1rem;
   }
 
   &__tools {
     width: 100%;
-    // border: 1px solid white;
-    border-radius: 1rem;
     margin: 3rem auto;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
 
-    p {
-      margin: 1rem;
-      padding: 0.25em;
-      background: hsl(0, 0%, 100%);
-      //   border: 1px solid white;
-      color: black;
-      list-style: none;
-      cursor: pointer;
-      &:hover {
-        background: hsl(0, 0%, 87%);
-      }
-    }
+    // p {
+    //   margin: 1rem;
+    //   padding: 0.25em;
+    //   background: hsl(0, 0%, 100%);
+    //   color: black;
+    //   list-style: none;
+    //   cursor: pointer;
+    //   &:hover {
+    //     background: hsl(0, 0%, 87%);
+    //   }
+    // }
+
     &__tool {
-      // background: hsl(0, 0%, 92%);
       border: 3px solid white;
-      padding: 1rem;
-      margin: 1rem;
+      padding: 1.4rem;
+      margin: 1.4rem;
       display: flex;
       flex-flow: column wrap;
       align-items: center;
       justify-content: center;
       width: 150px;
-      // height: 150px;
-      border-radius: 25px;
-      // filter: drop-shadow(0, 0, 25, black);
+      border-radius: 1rem;
 
       label {
-        margin-top: 0.75rem;
-        // margin: auto;
-
-        // color: black;
+        margin-top: 1.4rem;
         font-weight: bold;
       }
       &:hover {
         cursor: pointer;
-        // outline: 5px solid white;
         background: rgba(255, 255, 255, 0.185);
       }
     }

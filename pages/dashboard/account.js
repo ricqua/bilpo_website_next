@@ -103,7 +103,10 @@ export default function account() {
               name="businessLicense"
               defaultValue={isContext.businessLicense}
             />
-            <button type="submit" className="button__lightPrimary">
+            <button
+              type="submit"
+              className="button__lightPrimary account__saveButton"
+            >
               Save changes
             </button>
           </form>
@@ -115,6 +118,7 @@ export default function account() {
           >
             Reset password
           </button>
+
           <Link href="/dashboard">
             <button className="button__light account__dashboardButton">
               Dashboard
